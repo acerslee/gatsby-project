@@ -1,0 +1,29 @@
+/*Welcome section */
+
+#welcome-section{
+  color: #8D8741;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  height:60vh;
+  font-family:'Roboto',serif;
+}
+
+.welcome-section-heading{
+  font-size:7rem !important;
+  margin: 2px auto 0.5px auto !important;
+}
+
+.welcome-section-paragraph{
+  font-size:2rem;
+  color: #8D8741;
+}
+
+/* End welcome section */
+@media only screen and (max-width: 1000px) {
+ body{
+   display:flex;
+   flex-direction: column;
+ }
+}

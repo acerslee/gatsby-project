@@ -1,0 +1,59 @@
+#personal-section{
+  height:100%;
+  padding-top:2rem;
+  width:80%;
+  margin: 0 auto 0 auto;
+}
+
+.biography{
+  display:flex;
+  flex-direction:row;
+  width:90%;
+}
+
+#portrait{
+  width:40rem;
+  height:40rem;
+  margin: 0 auto 0 auto;
+}
+
+.about_me{
+  width:50%;
+  margin-left: 1vw;
+  font-size:1.7rem;
+  color: #8D8741;
+}
+
+.language_list{
+  list-style: none;
+}
+
+.language_list li:before {
+  content: "\00BB \0020";
+}
+
+#personal-section p,h2,.language_list{
+  color: #8D8741;
+}
+
+/* for the smaller screen */
+@media only screen and (max-width:1000px) {
+  .biography {
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+  }
+
+  #portrait{
+    width: 80%;
+    height:80%;
+    margin: 0 auto 0 auto;
+  }
+
+  .about_me {
+    text-align:center;
+    font-size:1.7rem;
+    width: 82%;
+    margin: 0 auto 0 auto;
+  }
+}
