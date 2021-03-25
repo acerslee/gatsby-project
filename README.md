@@ -1,3 +1,7 @@
+### Personal Portfolio - v2.5
+1. Please note that this is only a migration from pure React to Gatsby. No major design changes from v2.
+2. Please see below for standard Gatsby installation
+
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
