@@ -1,7 +1,7 @@
+import React from 'react';
 import Footer from '../components/Footer.js';
 import {socials} from '../data/portfolioData.js';
-
-import React from 'react';
+import '../../styles/footer.css'
 
 const date = new Date().getFullYear();
 

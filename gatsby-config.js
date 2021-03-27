@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "My Gatsby Site",
+    title: "Alex Lee Personal Portfolio",
   },
   plugins: [
     "gatsby-plugin-sass",
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
     {
       resolve: "gatsby-plugin-google-analytics",

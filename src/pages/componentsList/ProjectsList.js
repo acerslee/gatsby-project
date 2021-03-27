@@ -3,9 +3,9 @@ import Project from '../components/Project.js';
 import {projects} from '../data/portfolioData.js';
 import CarouselProjects from '../components/Carousel.js';
 import {Link} from 'react-router-dom';
+import '../../styles/project-section.css';
 
 const ProjectsList = () => (
-
   //in a smaller window resolution, turn your projects into a carousel
     <div id = 'projects-section'>
       <h2 className = 'project-headline'>Some projects I've worked on</h2>

@@ -1,9 +1,11 @@
 import React from 'react';
+import Me from '../../images/portfolio_bw.png';
+import '../../styles/personal-section.css'
 
 const PersonalSection = () => (
   <div id = "personal-section">
     <div className = "biography">
-      <img id = "portrait" src= "../images/portfolio_bw.png" alt="brand logo" />
+      <img id = "portrait" src= {Me} alt="brand logo" />
       <div className = "about_me">
         <p>I previously came from an Operations & Project Management background. Technology has always been an interest and I wanted to find a way to be creative and build new things! See my growth as a software engineer below.</p>
         <h2>Experienced, or learning the following:</h2>

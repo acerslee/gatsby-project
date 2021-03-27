@@ -1,4 +1,6 @@
 import React from 'react';
+import '../../styles/welcome-section.css';
+import '../../styles/global.css'
 
 const Welcome = () => (
   <div id= "welcome-section">

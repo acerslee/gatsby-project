@@ -1,5 +1,6 @@
 import React from 'react';
 import {Window, Github} from 'react-bootstrap-icons';
+import '../../styles/project-section.css';
 
 const Project = ({heading, description, tools, link, img_link}) => {
 
