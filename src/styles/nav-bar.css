@@ -16,12 +16,6 @@ tan - #FBEEC1
   background-color: #8D8741;
 }
 
-#logo{
-  width:100px;
-  height:100px;
-  background-color: #8D8741;
-}
-
 .nav-list{
   display:flex;
   justify-content:space-evenly;

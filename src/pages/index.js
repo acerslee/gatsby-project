@@ -4,7 +4,7 @@ import Welcome from './components/Welcome.js';
 import PersonalSection from './components/Personal.js';
 import ProjectsList from './componentsList/ProjectsList';
 import AllProjects from './components/AllProjects.js';
-import FootersList from './componentsList/FootersList.js';
+import Footer from './components/Footer.js';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 const IndexPage = () => {
@@ -18,7 +18,7 @@ const IndexPage = () => {
                 <Welcome />
                 <PersonalSection />
                 <ProjectsList />
-                <FootersList />
+                <Footer />
               </div>
             }
             />
