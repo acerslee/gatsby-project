@@ -11,32 +11,28 @@ const Footer = () => (
     <p className = 'footer-paragraph'>Always in the mood to chat about coding, photography, or even coffee.</p>
     <div className = 'socials-links'>
       <a
-        className = 'socials'
         href = 'https://www.linkedin.com/in/alexander-lee-35351374'
         rel="noreferrer"
         target = "_blank">
-        <Linkedin />
+        <Linkedin className = 'socials'/>
       </a>
       <a
-        className = 'socials'
         href = 'https://github.com/acerslee'
         rel="noreferrer"
         target = "_blank">
-        <Github />
+        <Github className = 'socials'/>
       </a>
       <a
-        className = 'socials'
         href = 'https://acerslee.medium.com'
         rel="noreferrer"
         target = "_blank">
-        <Newspaper />
+        <Newspaper className = 'socials' />
       </a>
       <a
-        className = 'socials'
         href = 'mailto:ahjlee712@gmail.com'
         rel="noreferrer"
         target = "_blank">
-         <Envelope />
+        <Envelope className = 'socials'/>
       </a>
     </div>
     <p className='copyright'>©{date} Designed and Built by Alex Lee</p>
