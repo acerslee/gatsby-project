@@ -9,13 +9,17 @@
   height:60vh;
 }
 
+.welcome-text{
+  text-align: center;
+}
+
 .welcome-section-heading{
-  font-size:7rem !important;
+  font-size:9vw !important;
   margin: 2px auto 0.5px auto !important;
 }
 
 .welcome-section-paragraph{
-  font-size:2rem;
+  font-size:3vw;
   color: #8D8741;
 }
 

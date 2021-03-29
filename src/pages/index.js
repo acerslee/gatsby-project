@@ -15,14 +15,14 @@ const IndexPage = () => {
           <Switch>
             <Route path = '/' exact render = {() =>
               <div>
-                <Welcome />
+                {/* <Welcome /> */}
                 <PersonalSection />
-                <ProjectsList />
-                <Footer />
+                {/* <ProjectsList />
+                <Footer /> */}
               </div>
             }
             />
-            <Route path = '/projects' exact component = {AllProjects} />
+            {/* <Route path = '/projects' exact component = {AllProjects} /> */}
         </Switch>
       </div>
     </BrowserRouter>
