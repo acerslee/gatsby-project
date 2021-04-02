@@ -25,6 +25,12 @@ const otherProjects = [
     heading: 'Github Repo Dashboard',
     tools: ['React-  ', 'Node.js-  ', 'Express-  ','Github Repo API'],
     link: 'https://github.com/acerslee/github-repo'
+  },
+  {
+    id: 2,
+    heading: 'Photo Editor',
+    tools: ['Gatsby-  ', 'Google Firebase-  ', 'Material UI  '],
+    link: 'https://github.com/acerslee/github-repo'
   }
 ];
 
