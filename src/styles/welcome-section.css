@@ -14,12 +14,12 @@
 }
 
 .welcome-section-heading{
-  font-size:9vw !important;
-  margin: 2px auto 0.5px auto !important;
+  font-size:5vw;
+  margin: 2px auto 0.5px auto;
 }
 
 .welcome-section-paragraph{
-  font-size:3vw;
+  font-size:2vw;
   color: #8D8741;
 }
 
@@ -28,5 +28,13 @@
  body{
    display:flex;
    flex-direction: column;
+ }
+
+ .welcome-section-heading{
+   font-size: 9vw;
+ }
+
+ .welcome-section-paragraph{
+   font-size:3vw;
  }
 }
