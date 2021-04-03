@@ -1,39 +1,57 @@
 import React from 'react';
-import {FaLinkedin, FaGithub, FaMedium, FaEnvelope} from 'react-icons/fa';
+import data from './data/socialLinks.js'
 
 const date = new Date().getFullYear();
 
+const renderData = data.map(datalink => {
+  return(
+    <a
+      key = {datalink.id}
+      href = {datalink.href}
+      rel = 'noreferrer'
+      target = '_blank'
+    >
+       {datalink.icon}
+    </a>
+  )
+});
+
 const Footer = () => (
-  <div id = 'closer'>
-    <h1 className = 'footer-header'>Check out my socials below!</h1>
-    <p className = 'footer-paragraph'>Always in the mood to chat about coding, photography, or even coffee.</p>
-    <div className = 'socials-links'>
-      <a
-        href = 'https://www.linkedin.com/in/alexanderhjlee'
-        rel="noreferrer"
-        target = "_blank">
-        <FaLinkedin className = 'socials'/>
-      </a>
-      <a
-        href = 'https://github.com/acerslee'
-        rel="noreferrer"
-        target = "_blank">
-        <FaGithub className = 'socials'/>
-      </a>
-      <a
-        href = 'https://acerslee.medium.com'
-        rel="noreferrer"
-        target = "_blank">
-        <FaMedium className = 'socials' />
-      </a>
-      <a
-        href = 'mailto:ahjlee712@gmail.com'
-        rel="noreferrer"
-        target = "_blank">
-        <FaEnvelope className = 'socials'/>
-      </a>
+  <div
+    id = 'closer'
+    style = {{
+      paddingTop: '2rem',
+      margin: '0 auto 0 auto',
+      textAlign: 'center'
+    }}
+  >
+    <h1
+      className = 'footer-header'
+      style = {{
+        fontSize: '5vh'
+      }}
+    >
+      Check out my socials below!</h1>
+    <div
+      className = 'socials-links'
+      style = {{
+        width: '50%',
+        display: 'flex',
+        justifyContent: 'space-around',
+        margin: '2rem auto 2rem auto'
+      }}
+    >
+      {renderData}
     </div>
-    <p className='copyright'>©{date} Designed and Built by Alex Lee</p>
+    <p
+      className='copyright'
+      style = {{
+        fontFamily: 'Courier New',
+        fontSize: '2vw',
+        textAlign: 'center'
+      }}
+    >
+      ©{date} Designed and Built by Alex Lee</p>
   </div>
 );
 

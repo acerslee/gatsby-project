@@ -1,12 +1,4 @@
-/* COLORWAYS
-Olive green - #8D8741
-Blue - #659D8D
-Darker peach - #DAAD86
-Brown - #BC986A
-cream - #FBEEC1
-*/
-
-*{
+body{
   background: #00416A;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -17,7 +9,6 @@ cream - #FBEEC1
   justify-content: space-around;
   align-items: flex-end;
   min-height: 3vh;
-  background-color: #8D8741;
 }
 
 .nav-list{
@@ -61,7 +52,7 @@ cream - #FBEEC1
     height:100%;
     top:0.1vh;
     width:50%;
-    background-color: #BC986A;
+    background-color:#265e96;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -93,43 +84,12 @@ cream - #FBEEC1
   }
 }
 
-/* footer css */
-#closer{
-  padding-top:2rem;
-  margin: 0 auto 0 auto;
-  text-align:center;
-  background-color: #8D8741;
-}
-
-#closer h1{
-  color:#FBEEC1;
-  font-size: 5vh;
-}
-
-#closer p{
-  color:#FBEEC1;
-  font-family:'Courier New', Courier, monospace;
-  font-size: 1vw;
-  text-align:center;
-}
-
-.socials-links {
-  width:50%;
-  display:flex;
-  justify-content: space-around;
-  margin: 2rem auto 2rem auto;
-}
-
 .socials{
-    height: 4vh;
-    width: 4vh;
-    color:#FBEEC1;
+  height: 4vh;
+  width: 4vh;
+  color: black;
 }
 
 .socials :hover{
   color:#DAAD86;
-}
-
-.copyright{
-  margin :0;
 }

@@ -10,9 +10,7 @@
 }
 
 .project-headline{
-  /* text-align:left !important; */
   font-size: 2.5rem;
-  color: #8D8741 !important;
 }
 
 .project-content, .project-details, .project-heading, .project-description, .coding-list, .project-links, .languages{
@@ -30,12 +28,10 @@
 }
 
 #projects-section h3{
-  color:white;
   font-size:3.5rem;
 }
 
 #projects-section p{
-  color:white;
   font-size:2rem;
 }
 
@@ -74,12 +70,11 @@
   margin: 0 0.5rem 0 0.5rem;
 }
 
-.modal-click{
-  color: #8D8741 !important;
+.project-list-click{
   font-size: 25vh;
 }
 
-.modal-click:hover{
+.project-list-click:hover{
   cursor:pointer;
   color: #8D4752 !important;
 }

@@ -12,12 +12,13 @@ const IndexPage = () => {
   return (
     <BrowserRouter>
       <div id = 'app-list'>
+        <Helmet title = 'Alex Lee Portfolio' />
         <Header />
           <Switch>
             <Route path = '/' exact render = {() =>
               <div>
-                {/* <Welcome />
-                <PersonalSection /> */}
+                <Welcome />
+                <PersonalSection />
                 <ProjectsList />
                 <Footer />
               </div>
@@ -30,4 +31,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default IndexPage;

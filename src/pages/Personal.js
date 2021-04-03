@@ -16,11 +16,11 @@ const PersonalSection = () => {
     <div id = "personal-section">
       <div className = "biography">
           <StaticImage
-            src = '../../images/portfolio_bw.png'
+            src = '../images/portfolio_bw.png'
             alt = 'portrait image'
             style = {{
-              height: '40rem',
-              width: '40rem',
+              height: '35rem',
+              width: '35rem',
               margin: 'auto'
             }}
           />

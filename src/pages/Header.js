@@ -18,6 +18,7 @@ const Header = () => (
   <nav id="navbar">
     <Link to = '/'>
       <img
+        className = 'logo'
         src = {logo}
         alt = 'brand logo'
         style = {{

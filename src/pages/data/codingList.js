@@ -21,7 +21,11 @@ const languageList = [
   },
   {
     id: 6,
-    text: 'React (Hooks, Jest)'
+    text: 'React (Hooks)'
+  },
+  {
+    id: 7,
+    text: 'Gatsby'
   },
 ];
 

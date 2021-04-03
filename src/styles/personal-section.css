@@ -15,19 +15,15 @@
   width:50%;
   margin-left: 1vw;
   font-size:1.7rem;
-  color: #8D8741;
+  color: #FBEEC1;
 }
 
 .language_list{
   list-style: none;
 }
 
-.language_list li:before {
-  content: "\00BB \0020";
-}
-
 #personal-section p,h2,.language_list{
-  color: #8D8741;
+  color: #FBEEC1;
 }
 
 /* for the smaller screen */
