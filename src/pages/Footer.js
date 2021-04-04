@@ -47,7 +47,7 @@ const Footer = () => (
       className='copyright'
       style = {{
         fontFamily: 'Courier New',
-        fontSize: '2vw',
+        fontSize: '1vw',
         textAlign: 'center'
       }}
     >

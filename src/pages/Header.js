@@ -1,5 +1,4 @@
 import React from 'react';
-import showNav from './javascript/query.js';
 import listlinks from './data/list.js';
 import {Link} from 'react-router-dom';
 import logo from '../images/alex-lee-logo.png';
@@ -13,6 +12,25 @@ const links = listlinks.map(link => {
     </li>
   )
 })
+
+const showNav = () => {
+  const listing = document.querySelector('.button-display');
+  const nav = document.querySelector('.nav-list');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // listing.addEventListener('click', () => {
+  nav.classList.toggle('nav-active');
+
+  navLinks.forEach((link, index)=>{
+      if(link.style.animation){
+          link.style.animation = '';
+      } else{
+          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 9}s`
+      }
+      });
+  // });
+};
+
 
 const Header = () => (
   <nav id="navbar">
@@ -40,7 +58,7 @@ const Header = () => (
       style = {{
         color: '#FBEEC1'
       }}
-      onClick = {() => showNav()}
+      onClick = {showNav}
     />
   </nav>
 );

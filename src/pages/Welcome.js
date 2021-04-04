@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/welcome-section.css';
 
+
 const Welcome = () => (
   <div id= "welcome-section">
     <div className = 'border-box'>

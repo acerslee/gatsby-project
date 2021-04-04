@@ -6,7 +6,8 @@
   flex-direction: column;
   justify-content:center;
   align-items: center;
-  height:60vh;
+  height: auto;
+  margin: 10vh 0 10vh 0;
 }
 
 .border-box{
