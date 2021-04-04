@@ -1,7 +1,7 @@
 import React from 'react';
 import listlinks from './data/list.js';
 import {Link} from 'react-router-dom';
-import logo from '../images/alex-lee-logo.png';
+import logo from '../images/alex-lee-logo-white-blackoutline.png';
 import {FilterRight} from 'react-bootstrap-icons';
 import PDF from '../static/Alexander_Lee_Resume.pdf';
 
@@ -14,21 +14,15 @@ const links = listlinks.map(link => {
 })
 
 const showNav = () => {
-  const listing = document.querySelector('.button-display');
   const nav = document.querySelector('.nav-list');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // listing.addEventListener('click', () => {
   nav.classList.toggle('nav-active');
 
   navLinks.forEach((link, index)=>{
-      if(link.style.animation){
-          link.style.animation = '';
-      } else{
-          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 9}s`
-      }
-      });
-  // });
+    if (link.style.animation) link.style.animation = '';
+    else  link.style.animation = `navLinkFade 0.1s ease forwards ${index / 20}s`
+    });
 };
 
 

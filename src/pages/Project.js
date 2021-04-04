@@ -1,31 +1,38 @@
 import React from 'react';
-import {Window, Github} from 'react-bootstrap-icons';
-import '../styles/project-section.css';
+import { FaGithubSquare } from 'react-icons/fa';
+// import {StaticImage, getImage } from 'gatsby-plugin-image'
+import Img from 'gatsby-image'
+// import '../styles/project-section.css';
 
-const Project = ({heading, description, tools, link, img_link}) => {
+const Project = ({github, name, description, stack, image}) => {
 
-  let toolsArray;
-  toolsArray = tools.map(tool => (
-      <li className = 'languages'>{tool}</li>
-  ))
+  // let toolsArray;
+  // toolsArray = tools.map(tool => (
+  //     <li className = 'languages'>{tool}</li>
+  // ))
 
   return(
-    <div className = "project-content">
-      <img className = "project-images" src  = {img_link} alt={heading} />
-        <div className = "project-details">
-          <h3 className = "project-heading">{heading}</h3>
-          <p className = 'project-description'>{description}</p>
-          <ul className = "coding-list">
-          {toolsArray}
-          </ul>
-          <a className = "project-links" rel = 'noreferrer' title="Github" href={link} target="_blank">
-            <Github size = {25} style = {{backgroundColor: '#BC986A'}}/>
-          </a>
-          <a className = "project-links" rel = 'noreferrer' title="External link" href={link} target="_blank">
-            <Window size = {25} style = {{backgroundColor: '#BC986A'}}/>
-          </a>
-        </div>
-    </div>
+    <article className = "project">
+      <Img
+        fluid = {image.childImageSharp.fluid}
+        className = "project-img"
+      />
+      <div className = 'project-info'>
+        <h3>{name}</h3>
+        <p className = 'project-desc'>{description}</p>
+          <div className = 'project-stack'>
+            {stack.map(item => {
+              return <span key = {item.id}>{item.stack}</span>
+            })}
+          </div>
+          <div className=  'project-links'>
+            <a href = {github}>
+              <FaGithubSquare className = 'project-icon' />
+            </a>
+          </div>
+      </div>
+    </article>
+
   );
 };
 

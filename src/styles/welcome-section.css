@@ -15,34 +15,20 @@
   border-width: 10px;
   font-size: 8vw;
   text-align:center;
-  margin-bottom: 1vh;
+  margin-bottom: 1.5vh;
 }
 
 .border-box p{
   padding:4vw;
 }
 
-.welcome-text{
-  text-align: center;
+.welcome-caption{
+  font-size: 2rem;
 }
 
-.welcome-section-paragraph{
-  font-size:2vw;
-  color:#FBEEC1;
-}
-
-/* End welcome section */
 @media only screen and (max-width: 1000px) {
- body{
+ #welcome-section{
    display:flex;
    flex-direction: column;
- }
-
- .welcome-section-heading{
-   font-size: 9vw;
- }
-
- .welcome-section-paragraph{
-   font-size:3vw;
  }
 }

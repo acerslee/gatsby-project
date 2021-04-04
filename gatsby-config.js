@@ -12,7 +12,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "712",
       },
@@ -25,11 +25,12 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-strapi`,
       options: {
-        name: `data`,
-        path: `${__dirname}/src/pages/data/`
-      }
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000,
+        contentTypes: [`projects`],
+      },
     },
   ],
 };

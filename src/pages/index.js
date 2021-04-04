@@ -1,4 +1,5 @@
-import * as React from "react"
+import * as React from "react";
+import { graphql } from 'gatsby';
 import Header from './Header.js';
 import Welcome from './Welcome.js';
 import PersonalSection from './Personal.js';
@@ -8,7 +9,10 @@ import Footer from './Footer.js';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
-const IndexPage = () => {
+
+export default ({ data }) => {
+  const {allStrapiProjects:{nodes:projects}} = data;
+
   return (
     <BrowserRouter>
       <div id = 'app-list'>
@@ -19,7 +23,7 @@ const IndexPage = () => {
               <div>
                 <Welcome />
                 <PersonalSection />
-                <ProjectsList />
+                <ProjectsList projects = {projects} title = 'featured projects' showLink/>
                 <Footer />
               </div>
             }
@@ -31,4 +35,26 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage;
+export const query = graphql`
+  {
+    allStrapiProjects(filter: {feature: {eq: true}}) {
+      nodes {
+        github
+        name
+        description
+        id
+        stack {
+          id
+          stack
+        }
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`

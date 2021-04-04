@@ -28,9 +28,15 @@ const otherProjects = [
   },
   {
     id: 2,
+    heading: 'Catwalk Server Development',
+    tools: ['Node.js-  ', 'Express-  ', 'RESTful API-  ', 'Frisby-  ', 'Artillery.io-   ', 'Docker- ', 'ETL  '],
+    link: 'https://github.com/Team-Opportunity/products'
+  },
+  {
+    id: 3,
     heading: 'Photo Editor',
     tools: ['Gatsby-  ', 'Google Firebase-  ', 'Material UI  '],
-    link: 'https://github.com/acerslee/github-repo'
+    link: 'https://github.com/acerslee/photo-editor'
   }
 ];
 
