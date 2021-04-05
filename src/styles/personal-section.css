@@ -22,10 +22,6 @@
   list-style: none;
 }
 
-#personal-section p,h2,.language_list{
-  color: #FBEEC1;
-}
-
 /* for the smaller screen */
 @media only screen and (max-width:1000px) {
   .biography {
@@ -45,5 +41,9 @@
     font-size:1.7rem;
     width: 82%;
     margin: 0 auto 0 auto;
+  }
+
+  .language_list{
+    padding-left: 0 !important;
   }
 }

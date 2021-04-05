@@ -1,13 +1,14 @@
 import * as React from "react";
 import { graphql } from 'gatsby';
-import Header from './Header.js';
-import Welcome from './Welcome.js';
-import PersonalSection from './Personal.js';
-import ProjectsList from './ProjectsList';
-import AllProjects from './AllProjects.js';
-import Footer from './Footer.js';
+import Header from './components/Header.js';
+import Welcome from './components/Welcome.js';
+import PersonalSection from './components/Personal.js';
+import ProjectsList from './components/ProjectsList';
+import AllProjects from './components/AllProjects.js';
+import Footer from './components/Footer.js';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import '@fontsource/lato';
 
 
 export default ({ data }) => {

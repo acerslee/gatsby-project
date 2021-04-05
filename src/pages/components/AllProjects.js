@@ -6,7 +6,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import { otherProjects } from './data/portfolioData.js';
+import { otherProjects } from '../data/portfolioData.js';
 
 const AllProjects = () => {
   const useStyles = makeStyles({

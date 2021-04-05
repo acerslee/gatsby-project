@@ -1,9 +1,9 @@
 import React from 'react';
-import listlinks from './data/list.js';
+import listlinks from '../data/list.js';
 import {Link} from 'react-router-dom';
-import logo from '../images/alex-lee-logo-white-blackoutline.png';
+import logo from '../../images/alex-lee-logo-white-blackoutline.png';
 import {FilterRight} from 'react-bootstrap-icons';
-import PDF from '../static/Alexander_Lee_Resume.pdf';
+import PDF from '../../static/Alexander_Lee_Resume.pdf';
 
 const links = listlinks.map(link => {
   return (

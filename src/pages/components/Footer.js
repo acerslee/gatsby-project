@@ -1,5 +1,5 @@
 import React from 'react';
-import data from './data/socialLinks.js'
+import data from '../data/socialLinks.js'
 
 const date = new Date().getFullYear();
 
