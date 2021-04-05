@@ -1,5 +1,5 @@
-### Personal Portfolio - v2.5
-1. Please note that this is only a migration from pure React to Gatsby. No major design changes from v2.
+### Personal Portfolio - v3
+1. Migration to Gatsby/Strapi. Additional style changes.
 2. Please see below for standard Gatsby installation
 
 <p align="center">
