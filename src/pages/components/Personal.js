@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import languageList from './data/codingList.js';
-import '../styles/personal-section.css';
+import languageList from '../data/codingList.js';
+import '../../styles/personal-section.css';
 
 const list = languageList.map(language => {
   return(
@@ -19,8 +19,8 @@ const PersonalSection = () => {
           src = '../images/portfolio_bw.png'
           alt = 'portrait image'
           style = {{
-            height: '20rem',
-            width: '20rem',
+            height: '37rem',
+            width: '37rem',
             margin: 'auto'
           }}
           loading = 'eager'

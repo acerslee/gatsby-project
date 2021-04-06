@@ -18,12 +18,10 @@
   color: #FBEEC1;
 }
 
-.language_list{
-  list-style: none;
-}
+
 
 /* for the smaller screen */
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:1400px) {
   .biography {
     display:flex;
     justify-content:center;
@@ -45,5 +43,6 @@
 
   .language_list{
     padding-left: 0 !important;
+    list-style: none;
   }
 }
