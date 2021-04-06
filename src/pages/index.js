@@ -8,7 +8,6 @@ import AllProjects from './components/AllProjects.js';
 import Footer from './components/Footer.js';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import '@fontsource/lato';
 
 
 export default ({ data }) => {
