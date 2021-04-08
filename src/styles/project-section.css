@@ -1,8 +1,3 @@
-/*Projects section */
-.project-headline{
-  font-size: 2.5rem;
-}
-
 .projects-center{
   display:flex;
   flex-direction: column;

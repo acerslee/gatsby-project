@@ -1,6 +1,6 @@
 import React from 'react';
 import listlinks from '../data/list.js';
-import {Link} from 'react-router-dom';
+import { Link } from 'gatsby'
 import logo from '../../images/alex-lee-logo-white-blackoutline.png';
 import {FilterRight} from 'react-bootstrap-icons';
 import PDF from '../../static/Alexander_Lee_Resume.pdf';

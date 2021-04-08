@@ -12,11 +12,11 @@ const data = [
     href: 'https://github.com/acerslee',
     icon: <FaGithub className = 'socials'/>
   },
-  {
-    id: 3,
-    href: 'https://acerslee.medium.com',
-    icon: <FaMedium className = 'socials'/>
-  },
+  // {
+  //   id: 3,
+  //   href: 'https://acerslee.medium.com',
+  //   icon: <FaMedium className = 'socials'/>
+  // },
   {
     id: 4,
     href: 'mailto:ahjlee712@gmail.com',
