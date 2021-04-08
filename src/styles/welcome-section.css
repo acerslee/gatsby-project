@@ -22,10 +22,6 @@
   padding: 0 3.5vw 0 3.5vw;
 }
 
-.welcome-caption{
-  font-size: 2rem;
-}
-
 @media only screen and (max-width: 1000px) {
  #welcome-section{
    display:flex;

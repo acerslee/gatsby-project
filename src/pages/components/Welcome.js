@@ -4,9 +4,23 @@ import '../../styles/welcome-section.css';
 const Welcome = () => (
   <div id= "welcome-section">
     <div className = 'border-box'>
-      <p>A L E X <br /> L E E</p>
+      <p
+        style = {{
+          letterSpacing: '10px'
+        }}
+      >
+        ALEX
+        <br />
+        LEE
+      </p>
     </div>
-    <p className = 'welcome-caption'>SOFTWARE ENGINEER / PHOTOGRAPHER</p>
+    <p
+      className = 'welcome-caption'
+      style = {{
+        letterSpacing: '5px',
+        fontSize: '2rem'
+      }}
+    >SOFTWARE ENGINEER / PHOTOGRAPHER</p>
   </div>
 );
 

@@ -36,7 +36,7 @@
 }
 
 .project-info {
-  background: white;
+  background: #f0f0f0;
   padding: 1rem 2rem;
   width: 55%;
   float:right;
@@ -48,6 +48,7 @@
 }
 
 .project-info h3 {
+  color: black !important;
   font-weight: 500;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
@@ -85,7 +86,7 @@
   color: var(--clr-primary-1);
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:1400px) {
   .projects{
     width:70%;
     height: 100%;

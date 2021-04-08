@@ -21,7 +21,7 @@ const showNav = () => {
 
   navLinks.forEach((link, index)=>{
     if (link.style.animation) link.style.animation = '';
-    else  link.style.animation = `navLinkFade 0.1s ease forwards ${index / 20}s`
+    link.style.animation = `navLinkFade 0.1s ease forwards ${index / 20}s`
     });
 };
 

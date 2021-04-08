@@ -4,11 +4,10 @@ import Header from './components/Header.js';
 import Welcome from './components/Welcome.js';
 import PersonalSection from './components/Personal.js';
 import ProjectsList from './components/ProjectsList';
-import AllProjects from './components/AllProjects.js';
 import Footer from './components/Footer.js';
 import { Helmet } from 'react-helmet';
 
-export default ({ data }) => {
+export default function IndexPage ({ data }) {
   const {allStrapiProjects:{nodes:projects}} = data;
 
   return (

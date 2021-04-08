@@ -29,15 +29,23 @@
 
 
 /* Global Font */
-p, h1, h2, h3, li{
+p, h1, h2, h3, li, .table-cell{
   font-family:'Lato';
+  color: #FBEEC1;
 }
 
+/* html {
+  height: 100%;
+} */
 
-body{
-  background: #00416A;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body {
+  background-color: #00416A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #c4c4c4, #00416A); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #c4c4c4, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* height: 100%; */
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #navbar {

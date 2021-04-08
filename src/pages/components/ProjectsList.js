@@ -7,13 +7,13 @@ import '../../styles/project-section.css';
 const ProjectsList = ({ projects, title, showLink }) => {
 
   return(
-    <section className = 'section projects'>
+    <section id = 'projects-section'>
       <div className = 'section-center projects-center'>
         <h2
           className = 'project-headline'
           style = {{
             fontSize: '2.5rem',
-            color: 'white'
+            color: '#f0f0f0'
           }}
         >
           Featured Projects

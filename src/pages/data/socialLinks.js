@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaLinkedin, FaGithub, FaMedium, FaEnvelope} from 'react-icons/fa';
+import {FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa';
 
 const data = [
   {
