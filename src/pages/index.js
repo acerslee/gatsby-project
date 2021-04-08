@@ -1,10 +1,10 @@
 import * as React from "react";
 import { graphql } from 'gatsby';
-import Header from './components/Header.js';
-import Welcome from './components/Welcome.js';
-import PersonalSection from './components/Personal.js';
-import ProjectsList from './components/ProjectsList';
-import Footer from './components/Footer.js';
+import Header from '../components/Header.js';
+import Welcome from '../components/Welcome.js';
+import PersonalSection from '../components/Personal.js';
+import ProjectsList from '../components/ProjectsList';
+import Footer from '../components/Footer.js';
 import { Helmet } from 'react-helmet';
 
 export default function IndexPage ({ data }) {
