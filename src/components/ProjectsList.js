@@ -1,10 +1,10 @@
 import React from 'react';
 import Project from './Project.js';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Button from '@material-ui/core/Button'
 import '../styles/project-section.css';
 
-const ProjectsList = ({ projects, title, showLink }) => {
+const ProjectsList = ({ title, nodes }) => {
 
   return(
     <section id = 'projects-section'>
@@ -17,7 +17,7 @@ const ProjectsList = ({ projects, title, showLink }) => {
         >
           Featured Projects
         </h2>
-        {projects.map(project => (
+        {nodes.map(project => (
           <Project
             key = {project.id}
             {...project}

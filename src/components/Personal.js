@@ -16,7 +16,7 @@ const PersonalSection = () => {
     <div id = "personal-section">
       <div className = "biography">
         <StaticImage
-          src = '../images/portfolio_bw.png'
+          src = '../data/images/portfolio_bw.png'
           alt = 'portrait image'
           className = 'portrait-image'
           style = {{

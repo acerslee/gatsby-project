@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "heading": "Catwalk",
+    "description": "In a team of 4, we've created a product-landing page with components that consist of Product Overview, Related Products & User Outfit, Questions & Answers, and Ratings & Review.",
+    "tools": [
+      {
+        "id": 1,
+        "tool":"React"
+      },
+      {
+        "id": 2,
+        "tool":"Bootstrap"
+      },
+      {
+        "id": 3,
+        "tool": "MaterialUI"
+      },
+      {
+        "id": 4,
+        "tool": "Jest & Enzyme"
+      }
+    ],
+    "link": "https://github.com/Team-Emus/FEC",
+    "image": "./images/woocommerce-placeholder.png"
+  },
+  {
+    "id": 2,
+    "heading": "Atlier",
+    "description": "Atlier is the back-end development for the Catwalk Project. This back-end is responsible for managing server calls between the client and the database, with millions of data entries to mimic real-user traffic.  Additional tools include API testing, ETL procedures, and Docker deployment.",
+    "tools": [
+      {
+        "id": 1,
+        "tool":"Node.js"
+      },
+      {
+        "id": 2,
+        "tool":"Express"
+      },
+      {
+        "id": 3,
+        "tool": "MongoDB (Mongoose)"
+      },
+      {
+        "id": 4,
+        "tool": "Frisby"
+      }
+    ],
+    "link": "https://github.com/Team-Opportunity/products",
+    "image": "./images/woocommerce-placeholder.png"
+  },
+  {
+    "id": 3,
+    "heading": "MVP Photo Editor",
+    "description": "In a 2-day sprint, I've created a photo editor. The user is able to login or signup, and be able to edit photos that have either been imported or stored in the user's Google Firebase.",
+    "tools": [
+      {
+        "id": 1,
+        "tool":"Gatsby.js"
+      },
+      {
+        "id": 2,
+        "tool":"Firebase"
+      }
+    ],
+    "link": "https://github.com/acerslee/photo-editor",
+    "image": "./images/woocommerce-placeholder.png"
+  }
+]

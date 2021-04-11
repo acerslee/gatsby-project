@@ -8,7 +8,7 @@ import Footer from '../components/Footer.js';
 import Seo from '../components/SEO.js';
 
 export default function IndexPage ({ data }) {
-  const {allStrapiProjects:{nodes:projects}} = data;
+  const {allProjectsDataJson:{nodes}} = data;
 
   return (
     <div id = 'app-list'>
@@ -16,23 +16,24 @@ export default function IndexPage ({ data }) {
       <Header />
         <Welcome />
         <PersonalSection />
-        <ProjectsList projects = {projects} title = 'featured projects' showLink/>
+        <ProjectsList title = 'featured projects' nodes = {nodes} />
         <Footer />
     </div>
   )
 }
 
+
 export const query = graphql`
   {
-    allStrapiProjects(filter: {feature: {eq: true}}) {
+    allProjectsDataJson {
       nodes {
-        github
-        name
         description
+        heading
         id
-        stack {
+        link
+        tools {
           id
-          stack
+          tool
         }
         image {
           childImageSharp {

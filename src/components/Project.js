@@ -3,24 +3,25 @@ import { FaGithubSquare } from 'react-icons/fa';
 import Img from 'gatsby-image'
 import '../styles/project-section.css';
 
-const Project = ({ github, name, description, stack, image }) => {
+const Project = ({ heading, description, tools, link, image }) => {
 
   return(
     <div className = "project">
       <Img
         fluid = {image.childImageSharp.fluid}
         className = "project-img"
+        alt = 'project-image-placeholder'
       />
       <div className = 'project-info'>
-        <h3>{name}</h3>
+        <h3>{heading}</h3>
         <p className = 'project-desc'>{description}</p>
           <div className = 'project-stack'>
-            {stack.map(item => {
-              return <span key = {item.id}>{item.stack}</span>
+            {tools.map(tool => {
+              return <span key = {tool.id}>{tool.tool}</span>
             })}
           </div>
           <div className=  'project-links'>
-            <a href = {github}>
+            <a href = {link}>
               <FaGithubSquare className = 'project-icon' />
             </a>
           </div>
