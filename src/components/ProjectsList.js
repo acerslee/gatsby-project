@@ -37,6 +37,9 @@ const ProjectsList = ({ title, nodes }) => {
             variant = 'contained'
             color = 'primary'
             className = 'project-list-button'
+            style = {{
+              padding: '5px'
+            }}
           >
             <p style ={{
                 textAlign: 'center'
