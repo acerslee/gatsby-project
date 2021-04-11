@@ -88,7 +88,7 @@
 
 @media only screen and (max-width:1400px) {
   .projects{
-    width:70%;
+    width: 70%;
     height: 100%;
     margin: 0 auto 0 auto;
   }
@@ -96,5 +96,24 @@
   .project-headline{
     text-align:center;
     font-size:3rem;
+  }
+
+  .project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .project-img{
+    width: 80%;
+    position: relative !important;
+  }
+
+  .project-info{
+    width: 80%;
+    margin: 0;
+    padding: 0;
   }
 }
