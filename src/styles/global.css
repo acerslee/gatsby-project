@@ -29,7 +29,7 @@
 
 
 /* Global Font */
-p, h1, h2, h3, li, .table-cell{
+p, h1, h2, h3, li{
   font-family:'Lato';
   color: #FBEEC1;
 }
@@ -61,13 +61,17 @@ body {
   width:50%;
   font-size:20px;
   list-style:none;
-  margin-top:1vh;
+  /* margin-top:1.5vh; */
 }
 
-.nav-list a{
+.header-links{
   color: #FBEEC1;
   text-decoration:none;
   font-family:'Courier New', Courier, monospace;
+}
+
+.pdf{
+  margin-top: 1.63vh;
 }
 
 .nav-link a:hover{

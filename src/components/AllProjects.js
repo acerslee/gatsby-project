@@ -14,6 +14,17 @@ const AllProjects = () => {
     table: {
       minWidth: 700,
     },
+    headCell: {
+      fontSize: 22,
+      whiteSpace: 'nowrap',
+      color: '#FBEEC1',
+      backgroundColor: 'transparent',
+    },
+    bodyCell: {
+      color: '#FBEEC1',
+      fontSize: 16,
+      whiteSpace: 'nowrap'
+    }
   });
 
   const classes = useStyles();
@@ -31,30 +42,13 @@ const AllProjects = () => {
         <Table className={classes.table} stickyHeader = {true} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell
-                align="center"
-                style ={{
-                  fontSize: 22,
-                  whiteSpace: 'nowrap'
-                }}
-              >
+              <TableCell className = {classes.headCell} align="center">
                 Project Name
               </TableCell>
-              <TableCell
-                align="center"
-                style ={{
-                  fontSize: 22,
-                  padding: 40,
-                }}
-              >
+              <TableCell className = {classes.headCell} align="center">
                 Tools Used
               </TableCell>
-              <TableCell
-                align="center"
-                style ={{
-                  fontSize: 22
-                }}
-              >
+              <TableCell className = {classes.headCell} align="center">
                 Link
               </TableCell>
             </TableRow>
@@ -62,36 +56,24 @@ const AllProjects = () => {
           <TableBody>
             {otherProjects.map(project => (
               <TableRow key = {project.id}>
-              <TableCell
-                className = 'table-cell'
-                align="center"
-                style ={{fontSize: 16, whiteSpace: 'nowrap'}}
-              >
-                {project.heading}
-              </TableCell>
-              <TableCell
-                className = 'table-cell'
-                align="center"
-                style ={{fontSize: 16, whiteSpace: 'nowrap'}}
-              >
-                {project.tools}
-              </TableCell>
-              <TableCell
-                className = 'table-cell'
-                align="center"
-                style ={{fontSize: 16, whiteSpace: 'nowrap'}}
-              >
-                <a href = {project.link} target = 'blank'>
-                <FaGithubSquare
-                  style = {{
-                    color: '#c4c4c4',
-                    height: '1.5vw',
-                    width: '1.5vw'
-                  }}
-                />
-               </a>
-              </TableCell>
-            </TableRow>
+                <TableCell className = {classes.bodyCell} align="center">
+                  {project.heading}
+                </TableCell>
+                <TableCell className = {classes.bodyCell} align="center">
+                  {project.tools}
+                </TableCell>
+                <TableCell className = {classes.bodyCell} align="center">
+                 <a href = {project.link} target = 'blank'>
+                  <FaGithubSquare
+                    style = {{
+                      color: '#c4c4c4',
+                      height: '1.5vw',
+                      width: '1.5vw'
+                    }}
+                  />
+                </a>
+                </TableCell>
+              </TableRow>
             ))}
           </TableBody>
         </Table>

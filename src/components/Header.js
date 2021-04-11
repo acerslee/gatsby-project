@@ -6,10 +6,14 @@ import {FilterRight} from 'react-bootstrap-icons';
 import PDF from '../static/Alexander_Lee_Resume.pdf';
 
 const links = listlinks.map(link => {
+  const routeLink = `/${link.href}`
   return (
-    <li key = {link.id} className = 'nav-link'>
-      <a href = {link.href}>{link.text}</a>
-    </li>
+    <Link to = {routeLink}>
+      <li key = {link.id} className = 'nav-link'>
+       <p className = 'header-links'>{link.text}</p>
+      </li>
+    </Link>
+
   )
 })
 
@@ -41,8 +45,14 @@ const Header = () => (
     </Link>
     <ul className = "nav-list" id="toggleMenu">
       {links}
-      <li className="nav-link">
-        <a href = {PDF} download= 'Alexander_Lee_Resume.pdf'>Resume</a>
+      <li className="nav-link pdf">
+        <a
+          href = {PDF}
+          download= 'Alexander_Lee_Resume.pdf'
+          className = 'header-links'
+        >
+          Resume
+        </a>
       </li>
     </ul>
 

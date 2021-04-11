@@ -21,4 +21,4 @@ const otherProjects = [
 ];
 
 
-module.exports = otherProjects;
+module.exports = { otherProjects };

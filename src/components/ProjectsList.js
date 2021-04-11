@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from './Project.js';
-import { Link, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 import Button from '@material-ui/core/Button'
 import '../styles/project-section.css';
 

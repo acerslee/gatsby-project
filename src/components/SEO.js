@@ -23,6 +23,7 @@ const Seo = ({ title, description }) => {
   return (
     <Helmet htmlAttributes = {{lang: 'en'}} title = {`${title} | ${siteTitle}`}>
       <meta name = 'description' content = {description || siteDesc} />
+      <meta property = 'og:url' content = {siteUrl} />
     </Helmet>
   )
 };
