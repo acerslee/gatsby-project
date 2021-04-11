@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "Alex Lee Personal Portfolio",
-    description: "Version 2.5 of my Software Engineering Portfolio",
+    description: "Version 3 of my Software Engineering Portfolio",
     author: "Alex Lee",
+    siteUrl: "https://alexanderhjlee.com"
   },
   plugins: [
     "gatsby-plugin-sass",

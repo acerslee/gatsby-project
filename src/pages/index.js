@@ -5,14 +5,14 @@ import Welcome from '../components/Welcome.js';
 import PersonalSection from '../components/Personal.js';
 import ProjectsList from '../components/ProjectsList';
 import Footer from '../components/Footer.js';
-import { Helmet } from 'react-helmet';
+import Seo from '../components/SEO.js';
 
 export default function IndexPage ({ data }) {
   const {allStrapiProjects:{nodes:projects}} = data;
 
   return (
     <div id = 'app-list'>
-      <Helmet title = 'Alex Lee Portfolio' />
+      <Seo title = 'Home'/>
       <Header />
         <Welcome />
         <PersonalSection />
