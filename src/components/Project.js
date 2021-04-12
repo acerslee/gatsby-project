@@ -13,7 +13,7 @@ const Project = ({ heading, description, tools, link, image }) => {
         alt = 'project-image-placeholder'
       />
       <div className = 'project-info'>
-        <h3>{heading}</h3>
+        <h3 className = 'project-heading'>{heading}</h3>
         <p className = 'project-desc'>{description}</p>
           <div className = 'project-stack'>
             {tools.map(tool => {

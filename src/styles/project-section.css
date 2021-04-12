@@ -9,7 +9,7 @@
 
 .project {
   margin-bottom: 4rem;
-  height: 30vh;
+  height: 34vh;
   position: relative;
 }
 
@@ -91,6 +91,10 @@
     width: 70%;
     height: 100%;
     margin: 0 auto 0 auto;
+  }
+
+  .project-heading, .project-desc, .project-stack, .project-icon{
+    margin: 0.5rem 2rem 0.5rem 2rem;
   }
 
   .project-headline{

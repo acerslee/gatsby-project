@@ -8,9 +8,13 @@ import PDF from '../static/Alexander_Lee_Resume.pdf';
 const links = listlinks.map(link => {
   const routeLink = `/${link.href}`
   return (
-    <Link to = {routeLink}>
-      <li key = {link.id} className = 'nav-link'>
-       <p className = 'header-links'>{link.text}</p>
+    <Link
+      to = {routeLink}
+      key = {link.id}
+      style = {{textDecoration: 'none'}}
+    >
+      <li className = 'nav-link'>
+       <a href = {link.href} className = 'header-links'>{link.text}</a>
       </li>
     </Link>
 
@@ -50,6 +54,7 @@ const Header = () => (
           href = {PDF}
           download= 'Alexander_Lee_Resume.pdf'
           className = 'header-links'
+
         >
           Resume
         </a>

@@ -61,17 +61,13 @@ body {
   width:50%;
   font-size:20px;
   list-style:none;
-  /* margin-top:1.5vh; */
+  margin-bottom: 3.3vh !important;
 }
 
 .header-links{
   color: #FBEEC1;
-  text-decoration:none;
+  text-decoration: none;
   font-family:'Courier New', Courier, monospace;
-}
-
-.pdf{
-  margin-top: 1.63vh;
 }
 
 .nav-link a:hover{
