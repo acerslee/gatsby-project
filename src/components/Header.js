@@ -3,6 +3,7 @@ import listlinks from '../data/list.js';
 import { Link } from 'gatsby'
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
 import {FilterRight} from 'react-bootstrap-icons';
+import Sidebar from 'react-sidebar';
 import PDF from '../static/Alexander_Lee_Resume.pdf';
 
 const links = listlinks.map(link => {
@@ -54,7 +55,6 @@ const Header = () => (
           href = {PDF}
           download= 'Alexander_Lee_Resume.pdf'
           className = 'header-links'
-
         >
           Resume
         </a>

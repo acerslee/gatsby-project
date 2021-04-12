@@ -22,7 +22,9 @@ const Seo = ({ title, description }) => {
 
   return (
     <Helmet htmlAttributes = {{lang: 'en'}} title = {`${title} | ${siteTitle}`}>
+      <meta name = 'viewpoint' content = 'width=device-width-scale=1,maximum-scale=1, user-scalable=no' />
       <meta name = 'description' content = {description || siteDesc} />
+      <meta name="HandheldFriendly" content="true"></meta>
       <meta property = 'og:url' content = {siteUrl} />
     </Helmet>
   )
