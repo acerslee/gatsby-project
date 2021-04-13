@@ -3,7 +3,7 @@ import listlinks from '../data/list.js';
 import { Link } from 'gatsby'
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
 import {FilterRight} from 'react-bootstrap-icons';
-import Sidebar from 'react-sidebar';
+// import Sidebar from 'react-sidebar';
 import PDF from '../static/Alexander_Lee_Resume.pdf';
 
 const links = listlinks.map(link => {
@@ -34,42 +34,44 @@ const showNav = () => {
     });
 };
 
+const Header = () => {
 
-const Header = () => (
-  <nav id="navbar">
-    <Link to = '/'>
-      <img
-        className = 'logo'
-        src = {logo}
-        alt = 'brand logo'
+  return(
+    <nav id="navbar">
+      <Link to = '/'>
+        <img
+          className = 'logo'
+          src = {logo}
+          alt = 'brand logo'
+          style = {{
+            height: '100px',
+            width: '100px'
+          }}
+        />
+      </Link>
+      <ul className = "nav-list" id="toggleMenu">
+        {links}
+        <li className="nav-link pdf">
+          <a
+            href = {PDF}
+            download= 'Alexander_Lee_Resume.pdf'
+            className = 'header-links'
+          >
+            Resume
+          </a>
+        </li>
+      </ul>
+
+      {/* only show once screen size reaches a certain width */}
+      <FilterRight
+        className = 'button-display'
         style = {{
-          height: '100px',
-          width: '100px'
+          color: '#FBEEC1'
         }}
+        onClick = {showNav}
       />
-    </Link>
-    <ul className = "nav-list" id="toggleMenu">
-      {links}
-      <li className="nav-link pdf">
-        <a
-          href = {PDF}
-          download= 'Alexander_Lee_Resume.pdf'
-          className = 'header-links'
-        >
-          Resume
-        </a>
-      </li>
-    </ul>
-
-    {/* only show once screen size reaches a certain width */}
-    <FilterRight
-      className = 'button-display'
-      style = {{
-        color: '#FBEEC1'
-      }}
-      onClick = {showNav}
-    />
-  </nav>
-);
+    </nav>
+  )
+};
 
 export default Header;
