@@ -121,3 +121,54 @@
     padding: 0;
   }
 }
+
+@media only screen and (max-width:700px) {
+  .projects-center{
+    width: 100%;
+  }
+
+  .project-heading{
+    margin-bottom: 0.5rem !important;
+  }
+
+  .project-heading, .project-desc{
+    font-size: 3.5vw;
+  }
+
+ .project-stack span{
+    font-size: 0.65rem;
+  }
+
+  .project-headline{
+    text-align:center;
+    font-size:3rem;
+  }
+
+  .project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .project-img{
+    width: 95%;
+    position: relative !important;
+  }
+
+  .project-info{
+    width: 95%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-list-button{
+    width: 50vw;
+    height: 15vw;
+  }
+
+  .project-list-button-text{
+    font-size: 1em;
+  }
+}

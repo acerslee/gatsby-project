@@ -41,7 +41,9 @@ const ProjectsList = ({ title, nodes }) => {
               padding: '5px'
             }}
           >
-            <p style ={{
+            <p
+              className = 'project-list-button-text'
+              style ={{
                 textAlign: 'center'
               }}
             >

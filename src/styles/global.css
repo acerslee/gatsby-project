@@ -1,30 +1,12 @@
 :root {
   /* dark shades of primary color*/
-  /* --clr-primary-1: hsl(43, 86%, 17%); */
   --clr-primary-1: hsl(184, 91%, 17%);
-  --clr-primary-2: hsl(185, 84%, 25%);
-  --clr-primary-3: hsl(185, 81%, 29%);
-  --clr-primary-4: hsl(184, 77%, 34%);
   --clr-primary-5: #2caeba;
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(185, 57%, 50%);
-  --clr-primary-7: hsl(184, 65%, 59%);
-  --clr-primary-8: hsl(184, 80%, 74%);
-  --clr-primary-9: hsl(185, 94%, 87%);
-  --clr-primary-10: hsl(186, 100%, 94%);
   /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-green-dark: hsl(125, 67%, 35%);
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-white: #fff;
+
 }
 
 
@@ -45,7 +27,7 @@ body {
   /* height: 100%; */
   margin: 0;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed !important;
 }
 
 #navbar {
@@ -78,11 +60,6 @@ body {
   display:none;
 }
 
-@media screen and (max-width:1000px){
-  .nav-list{
-    width:85%;
-  };
-}
 
 @media screen and (max-width:1000px){
   body{
@@ -92,7 +69,7 @@ body {
   .nav-list{
     position:absolute;
     right:0px;
-    z-index:2;
+    z-index:3;
     height:100%;
     top:0.1vh;
     width:50%;
@@ -133,6 +110,7 @@ body {
 }
 
 /**** footer ****/
+
 .socials{
   height: 4vh;
   width: 4vh;
@@ -140,5 +118,19 @@ body {
 }
 
 .socials :hover{
-  color:#DAAD86;
+  color:#755e4a;
+}
+
+.copyright{
+  font-size: 1vw;
+  color: black;
+}
+
+@media only screen and (max-width:700px){
+  .footer-header{
+    font-size: 3.5vh !important;
+  }
+  .copyright{
+    font-size: 3vw;
+  }
 }

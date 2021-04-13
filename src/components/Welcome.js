@@ -5,6 +5,7 @@ const Welcome = () => (
   <div id= "welcome-section">
     <div className = 'border-box'>
       <p
+        className = 'box-text'
         style = {{
           letterSpacing: '10px'
         }}

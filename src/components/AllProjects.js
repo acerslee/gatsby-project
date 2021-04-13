@@ -11,19 +11,48 @@ import { otherProjects } from '../data/portfolioData.js';
 
 const AllProjects = () => {
   const useStyles = makeStyles({
-    table: {
-      minWidth: 700,
-    },
     headCell: {
       fontSize: 22,
       whiteSpace: 'nowrap',
       color: '#FBEEC1',
       backgroundColor: 'transparent',
+      '@media(max-width: 700px)' : {
+        whiteSpace: 'normal'
+      }
+    },
+    uniqueHeadCell: {
+      fontSize: 22,
+      whiteSpace: 'nowrap',
+      color: '#FBEEC1',
+      backgroundColor: 'transparent',
+      '@media(max-width: 700px)' : {
+        display: 'none'
+      }
     },
     bodyCell: {
       color: '#FBEEC1',
       fontSize: 16,
-      whiteSpace: 'nowrap'
+      whiteSpace: 'nowrap',
+      '@media(max-width: 700px)' : {
+        whiteSpace: 'normal'
+      }
+    },
+    uniqueBodyCell: {
+      color: '#FBEEC1',
+      fontSize: 16,
+      whiteSpace: 'nowrap',
+      '@media(max-width: 700px)' : {
+        display:'none'
+      }
+    },
+    icon: {
+      color: '#c4c4c4',
+      height: '1.5vw',
+      width: '1.5vw',
+      '@media(max-width: 700px)' : {
+        height: '5vw',
+        width: '5vw'
+      }
     }
   });
 
@@ -39,39 +68,33 @@ const AllProjects = () => {
     >
       <h1 className = 'project-header'>Other Projects</h1>
       <TableContainer className = 'scroll-table'>
-        <Table className={classes.table} stickyHeader = {true} aria-label="simple table">
+        <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className = {classes.headCell} align="center">
+              <TableCell className = {classes.headCell}>
+                Link
+              </TableCell>
+              <TableCell className = {classes.headCell}>
                 Project Name
               </TableCell>
-              <TableCell className = {classes.headCell} align="center">
+              <TableCell className = {classes.uniqueHeadCell}>
                 Tools Used
-              </TableCell>
-              <TableCell className = {classes.headCell} align="center">
-                Link
               </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {otherProjects.map(project => (
               <TableRow key = {project.id}>
-                <TableCell className = {classes.bodyCell} align="center">
+                <TableCell className = {classes.bodyCell}>
+                   <a href = {project.link} target = 'blank'>
+                    <FaGithubSquare className = {classes.icon} />
+                   </a>
+                </TableCell>
+                <TableCell className = {classes.bodyCell}>
                   {project.heading}
                 </TableCell>
-                <TableCell className = {classes.bodyCell} align="center">
+                <TableCell className = {classes.uniqueBodyCell}>
                   {project.tools}
-                </TableCell>
-                <TableCell className = {classes.bodyCell} align="center">
-                 <a href = {project.link} target = 'blank'>
-                  <FaGithubSquare
-                    style = {{
-                      color: '#c4c4c4',
-                      height: '1.5vw',
-                      width: '1.5vw'
-                    }}
-                  />
-                </a>
                 </TableCell>
               </TableRow>
             ))}

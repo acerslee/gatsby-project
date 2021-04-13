@@ -13,7 +13,7 @@ const languageList = [
   },
   {
     id: 4,
-    text: 'SQL'
+    text: 'SQL (MySQL, PostgreSQL)'
   },
   {
     id: 5,

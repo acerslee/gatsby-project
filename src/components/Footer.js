@@ -28,7 +28,8 @@ const Footer = () => (
     <h1
       className = 'footer-header'
       style = {{
-        fontSize: '5vh'
+        fontSize: '5vh',
+        color: 'black'
       }}
     >
       Check out my socials below!</h1>
@@ -47,7 +48,6 @@ const Footer = () => (
       className='copyright'
       style = {{
         fontFamily: 'Courier New',
-        fontSize: '1vw',
         textAlign: 'center'
       }}
     >
