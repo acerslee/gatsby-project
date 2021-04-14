@@ -1,7 +1,38 @@
 import React from 'react';
 import data from '../data/socialLinks.js'
+import { makeStyles } from '@material-ui/core/styles';
 
 const date = new Date().getFullYear();
+
+const useStyles = makeStyles({
+  container: {
+    paddingTop: '2rem',
+    margin: '0 auto 0 auto',
+    textAlign: 'center'
+  },
+  header: {
+    fontSize: '5vh',
+    color: 'black',
+    '@media(max-width: 700px)' : {
+      fontSize: '3.5vh'
+    }
+  },
+  links: {
+    width: '50%',
+    display: 'flex',
+    justifyContent: 'space-around',
+    margin: '2rem auto 2rem auto'
+  },
+  copyright: {
+    fontSize: '1.6vh',
+    fontFamily: 'Courier New',
+    textAlign: 'center',
+    color: 'black',
+    '@media(max-width: 700px)' : {
+      fontSize: '1.5vh'
+    }
+  }
+});
 
 const renderData = data.map(datalink => {
   return(
@@ -16,43 +47,22 @@ const renderData = data.map(datalink => {
   )
 });
 
-const Footer = () => (
-  <div
-    id = 'closer'
-    style = {{
-      paddingTop: '2rem',
-      margin: '0 auto 0 auto',
-      textAlign: 'center'
-    }}
-  >
-    <h1
-      className = 'footer-header'
-      style = {{
-        fontSize: '5vh',
-        color: 'black'
-      }}
-    >
-      Check out my socials below!</h1>
-    <div
-      className = 'socials-links'
-      style = {{
-        width: '50%',
-        display: 'flex',
-        justifyContent: 'space-around',
-        margin: '2rem auto 2rem auto'
-      }}
-    >
-      {renderData}
+const Footer = () => {
+  const classes = useStyles();
+
+  return(
+    <div id = 'closer' className = {classes.container}>
+      <h1 className = {classes.header}>
+        Check out my socials below!
+      </h1>
+      <div className = {classes.links}>
+        {renderData}
+      </div>
+      <p className= {classes.copyright}>
+        ©{date} Designed and Built by Alex Lee
+      </p>
     </div>
-    <p
-      className='copyright'
-      style = {{
-        fontFamily: 'Courier New',
-        textAlign: 'center'
-      }}
-    >
-      ©{date} Designed and Built by Alex Lee</p>
-  </div>
-);
+  );
+}
 
 export default Footer;

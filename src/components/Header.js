@@ -3,7 +3,7 @@ import listlinks from '../data/list.js';
 import { Link } from 'gatsby'
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
 import {FilterRight} from 'react-bootstrap-icons';
-import PDF from '../static/Alexander_Lee_Resume.pdf';
+import PDF from '../static/Alex_Lee_SWE_Resume.pdf';
 
 const links = listlinks.map(link => {
   const routeLink = `/${link.href}`;
@@ -25,7 +25,6 @@ const Header = () => {
 
   const showNav = () => {
     const nav = document.querySelector('.nav-list');
-    const navLinks = document.querySelectorAll('.nav-link');
 
     nav.classList.toggle('nav-active');
     document.body.classList.toggle('scroll-lock');
@@ -51,7 +50,7 @@ const Header = () => {
             href = {PDF}
             target = '_blank'
             rel="noreferrer"
-            // download= 'Alexander_Lee_Resume.pdf'
+            // download= 'Alex_Lee_SWE_Resume.pdf'
             className = 'header-links'
           >
             Resume

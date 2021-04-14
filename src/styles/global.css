@@ -9,16 +9,11 @@
 
 }
 
-
-/* Global Font */
+/* Global Font & Color*/
 p, h1, h2, h3, li{
   font-family:'Lato';
   color: #FBEEC1;
 }
-
-/* html {
-  height: 100%;
-} */
 
 body {
   background-color: #00416A;  /* fallback for old browsers */
@@ -110,18 +105,4 @@ body {
 
 .socials :hover{
   color:#755e4a;
-}
-
-.copyright{
-  font-size: 1vw;
-  color: black;
-}
-
-@media only screen and (max-width:700px){
-  .footer-header{
-    font-size: 3.5vh !important;
-  }
-  .copyright{
-    font-size: 3vw;
-  }
 }

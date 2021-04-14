@@ -14,10 +14,10 @@ export default function IndexPage ({ data }) {
     <div id = 'app-list'>
       <Seo title = 'Home'/>
       <Header />
-        <Welcome />
-        <PersonalSection />
-        <ProjectsList title = 'featured projects' nodes = {nodes} />
-        <Footer />
+      <Welcome />
+      <PersonalSection />
+      <ProjectsList title = 'featured projects' nodes = {nodes} />
+      <Footer />
     </div>
   )
 }
