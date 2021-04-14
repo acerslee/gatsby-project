@@ -6,7 +6,8 @@ import {FilterRight} from 'react-bootstrap-icons';
 import PDF from '../static/Alexander_Lee_Resume.pdf';
 
 const links = listlinks.map(link => {
-  const routeLink = `/${link.href}`
+  const routeLink = `/${link.href}`;
+
   return (
     <Link
       to = {routeLink}
@@ -17,23 +18,18 @@ const links = listlinks.map(link => {
        <a href = {link.href} className = 'header-links'>{link.text}</a>
       </li>
     </Link>
-
   )
 })
 
-const showNav = () => {
-  const nav = document.querySelector('.nav-list');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  nav.classList.toggle('nav-active');
-
-  navLinks.forEach((link, index)=>{
-    if (link.style.animation) link.style.animation = '';
-    link.style.animation = `navLinkFade 0.1s ease forwards ${index / 20}s`
-    });
-};
-
 const Header = () => {
+
+  const showNav = () => {
+    const nav = document.querySelector('.nav-list');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    nav.classList.toggle('nav-active');
+    document.body.classList.toggle('scroll-lock');
+  };
 
   return(
     <nav id="navbar">
@@ -48,11 +44,13 @@ const Header = () => {
           }}
         />
       </Link>
-      <ul className = "nav-list" id="toggleMenu">
+      <ul className = "nav-list" onClick = {showNav}>
         {links}
         <li className="nav-link pdf">
           <a
             href = {PDF}
+            target = '_blank'
+            rel="noreferrer"
             // download= 'Alexander_Lee_Resume.pdf'
             className = 'header-links'
           >

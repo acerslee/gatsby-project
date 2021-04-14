@@ -20,7 +20,8 @@ const PersonalSection = () => {
           alt = 'portrait image'
           className = 'portrait-image'
           style = {{
-            margin: 'auto'
+            margin: 'auto',
+            borderRadius: '50%'
           }}
           loading = 'eager'
         />
