@@ -1,5 +1,5 @@
 ### Personal Portfolio - v3
-1. Migration to Gatsby/Strapi. Additional style changes.
+1. Migration to Gatsby. Additional style changes. Currently migrated via Netlify.
 2. Please see below for standard Gatsby installation
 
 <p align="center">
