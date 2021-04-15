@@ -1,4 +1,7 @@
 module.exports = {
+  flags:{
+    DEV_SSR: true
+  },
   siteMetadata: {
     title: "Alex Lee Personal Portfolio",
     description: "Version 3 of my Software Engineering Portfolio",

@@ -5,14 +5,13 @@ import { makeStyles } from '@material-ui/core/styles';
 const date = new Date().getFullYear();
 
 const useStyles = makeStyles({
-  container: {
+  footerContainer: {
     paddingTop: '2rem',
     margin: '0 auto 0 auto',
     textAlign: 'center'
   },
   header: {
     fontSize: '5vh',
-    color: 'black',
     '@media(max-width: 700px)' : {
       fontSize: '3.5vh'
     }
@@ -25,7 +24,6 @@ const useStyles = makeStyles({
   },
   copyright: {
     fontSize: '1.6vh',
-    fontFamily: 'Courier New',
     textAlign: 'center',
     color: 'black',
     '@media(max-width: 700px)' : {
@@ -51,16 +49,16 @@ const Footer = () => {
   const classes = useStyles();
 
   return(
-    <div id = 'closer' className = {classes.container}>
+    <div id = 'closer' className = {classes.footerContainer}>
       <h1 className = {classes.header}>
         Check out my socials below!
       </h1>
       <div className = {classes.links}>
         {renderData}
       </div>
-      <p className= {classes.copyright}>
+      <h6 className= {classes.copyright}>
         ©{date} Designed and Built by Alex Lee
-      </p>
+      </h6>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import listlinks from '../data/list.js';
 import { Link } from 'gatsby'
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
-import {FilterRight} from 'react-bootstrap-icons';
+import {FaAlignRight} from 'react-icons/fa';
 import PDF from '../static/Alex_Lee_SWE_Resume.pdf';
 
 const links = listlinks.map(link => {
@@ -13,9 +13,10 @@ const links = listlinks.map(link => {
       to = {routeLink}
       key = {link.id}
       style = {{textDecoration: 'none'}}
+      href = {link.href}
     >
       <li className = 'nav-link'>
-       <a href = {link.href} className = 'header-links'>{link.text}</a>
+        {link.text}
       </li>
     </Link>
   )
@@ -45,21 +46,22 @@ const Header = () => {
       </Link>
       <ul className = "nav-list" onClick = {showNav}>
         {links}
-        <li className="nav-link pdf">
           <a
             href = {PDF}
             target = '_blank'
             rel="noreferrer"
             // download= 'Alex_Lee_SWE_Resume.pdf'
-            className = 'header-links'
+            className = 'nav-link'
+            style = {{
+              marginTop: '0.35vh'
+            }}
           >
             Resume
           </a>
-        </li>
       </ul>
 
       {/* only show once screen size reaches a certain width */}
-      <FilterRight
+      <FaAlignRight
         className = 'button-display'
         style = {{
           color: '#FBEEC1'

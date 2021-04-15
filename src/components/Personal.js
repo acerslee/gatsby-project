@@ -4,7 +4,7 @@ import languageList from '../data/codingList.js';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
-  container: {
+  personalContainer: {
     height: '100%',
     width: '80%',
     paddingTop: '2rem',
@@ -43,11 +43,14 @@ const useStyles = makeStyles({
     '@media(max-width: 1400px)' : {
       paddingLeft: 0,
       listStyle: 'none'
+    },
+    '@media(max-width: 700px)' : {
+      fontSize: '5vw'
     }
   },
   headerCaption: {
     '@media(max-width: 700px)' : {
-      fontSize: '8vw'
+      fontSize: '5.5vw'
     }
   },
   paragraph: {
@@ -70,11 +73,11 @@ const PersonalSection = () => {
   const classes = useStyles();
 
   return(
-    <div id = "personal-section" className = {classes.container}>
+    <div id = "personal-section" className = {classes.personalContainer}>
       <div className = {classes.biography}>
         <StaticImage
           src = '../data/images/portfolio_bw.png'
-          alt = 'portrait image'
+          alt = 'self portrait'
           className = {classes.portrait}
           loading = 'eager'
         />
