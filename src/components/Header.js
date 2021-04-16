@@ -1,41 +1,37 @@
 import React from 'react';
 import listlinks from '../data/list.js';
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
 import {FaAlignRight} from 'react-icons/fa';
-import PDF from '../static/Alex_Lee_SWE_Resume.pdf';
+import PDF from '../static/Alexander_Lee_Resume.pdf';
 
 const links = listlinks.map(link => {
-  const routeLink = `/${link.href}`;
+  // const routeLink = `/${link.href}`;
 
   return (
-    <Link
-      to = {routeLink}
-      key = {link.id}
-      style = {{textDecoration: 'none'}}
-      href = {link.href}
-    >
-      <li className = 'nav-link'>
-        {link.text}
-      </li>
-    </Link>
+    // <Link
+    //   to = {routeLink}
+    //   key = {link.id}
+    //   style = {{textDecoration: 'none'}}
+    //   href = {link.href}
+    // >
+    <li key = {link.id} className = 'nav-link'>
+      <a
+        href = {link.href}
+        style = {{
+          textDecoration: 'none',
+          color: '#FBEEC1'
+        }}
+      >
+          {link.text}
+      </a>
+    </li>
+    // </Link>
 
   )
 })
 
 const Header = () => {
-
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     file(name: {eq: "Alex_Lee_SWE_Resume"}) {
-  //       extension
-  //       publicURL
-  //     }
-  //   }
-  // `)
-  // // , {data:{allFile:{edges}}
-  // const {file} = data;
-  // console.log(file.publicURL)
 
   const showNav = () => {
     const nav = document.querySelector('.nav-list');
@@ -46,7 +42,8 @@ const Header = () => {
 
   return(
     <nav id="navbar">
-      <Link to = '/'>
+      {/* <Link to = '/'> */}
+      <a href = '/'>
         <img
           className = 'logo'
           src = {logo}
@@ -56,9 +53,11 @@ const Header = () => {
             width: '100px'
           }}
         />
-      </Link>
+      </a>
+      {/* </Link> */}
       <ul className = "nav-list" onClick = {showNav}>
         {links}
+        <li className = 'nav-link'>
           <a
             href = {PDF}
             target = '_blank'
@@ -72,6 +71,7 @@ const Header = () => {
           >
             Resume
           </a>
+        </li>
       </ul>
 
       {/* only show once screen size reaches a certain width */}

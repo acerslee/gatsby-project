@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from './Project.js';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import Button from '@material-ui/core/Button'
 import '../styles/project-section.css';
 
@@ -32,7 +32,7 @@ const ProjectsList = ({ title, nodes }) => {
           justifyContent: 'center'
         }}
       >
-        <Link to = '/projects'>
+        {/* <Link to = '/projects'>
           <Button
             variant = 'contained'
             color = 'primary'
@@ -50,7 +50,7 @@ const ProjectsList = ({ title, nodes }) => {
               More projects here
             </p>
           </Button>
-         </Link>
+         </Link> */}
       </div>
     </section>
   );
