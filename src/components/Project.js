@@ -1,16 +1,15 @@
 import React from 'react';
-import { FaGithubSquare } from 'react-icons/fa';
+import { FaGithubSquare, FaExternalLinkSquareAlt } from 'react-icons/fa';
 import Img from 'gatsby-image'
 import '../styles/project-section.css';
 
-const Project = ({ heading, description, tools, link, image }) => {
+const Project = ({ heading, description, tools, link, image, deployment }) => {
 
   return(
     <div className = "project">
       <Img
         fluid = {image.childImageSharp.fluid}
         className = "project-img"
-        alt = 'project-image-placeholder'
       />
       <div className = 'project-info'>
         <h3 className = 'project-heading'>{heading}</h3>
@@ -24,6 +23,15 @@ const Project = ({ heading, description, tools, link, image }) => {
             <a href = {link}>
               <FaGithubSquare className = 'project-icon' />
             </a>
+            {deployment &&
+              <a
+                href = {deployment}
+                target = '_blank'
+                rel = 'noreferrer'
+              >
+                <FaExternalLinkSquareAlt className = 'project-icon' />
+              </a>
+            }
           </div>
       </div>
     </div>

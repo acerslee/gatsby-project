@@ -31,6 +31,7 @@ export const query = graphql`
         heading
         id
         link
+        deployment
         tools {
           id
           tool

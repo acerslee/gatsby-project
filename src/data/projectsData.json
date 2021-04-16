@@ -1,6 +1,40 @@
 [
   {
     "id": 1,
+    "heading": "InterMingle",
+    "description": "InterMingle is a social-media platform where users can either take quizzes made by the community, or create their own quizzes to share. Challenge yourself, your friends, or anyone else to see who prevails in the battle of smarts!",
+    "tools": [
+      {
+        "id": 1,
+        "tool":"React"
+      },
+      {
+        "id": 2,
+        "tool":"Material UI"
+      },
+      {
+        "id": 3,
+        "tool": "Node.js"
+      },
+      {
+        "id": 4,
+        "tool": "Express"
+      },
+      {
+        "id": 5,
+        "tool": "PostgreSQL"
+      },
+      {
+        "id": 6,
+        "tool": "OpenTDB API"
+      }
+    ],
+    "link": "https://github.com/TeamStrawberry/strawberry",
+    "deployment": "http://18.210.13.63:3000/#/",
+    "image": "./images/Blueocean.JPG"
+  },
+  {
+    "id": 2,
     "heading": "Catwalk",
     "description": "In a team of 4, we've created a product-landing page with components that consist of Product Overview, Related Products & User Outfit, Questions & Answers, and Ratings & Review.",
     "tools": [
@@ -14,7 +48,7 @@
       },
       {
         "id": 3,
-        "tool": "MaterialUI"
+        "tool": "Material UI"
       },
       {
         "id": 4,
@@ -22,10 +56,11 @@
       }
     ],
     "link": "https://github.com/Team-Emus/FEC",
-    "image": "./images/woocommerce-placeholder.png"
+    "deployment": null,
+    "image": "./images/FECSDC.JPG"
   },
   {
-    "id": 2,
+    "id": 3,
     "heading": "Atlier",
     "description": "Atlier is the back-end development for the Catwalk Project. This back-end is responsible for managing server calls between the client and the database, with millions of data entries to mimic real-user traffic.  Additional tools include API testing, ETL procedures, and Docker deployment.",
     "tools": [
@@ -47,10 +82,11 @@
       }
     ],
     "link": "https://github.com/Team-Opportunity/products",
+    "deployment": null,
     "image": "./images/woocommerce-placeholder.png"
   },
   {
-    "id": 3,
+    "id": 4,
     "heading": "MVP Photo Editor",
     "description": "In a 2-day sprint, I've created a photo editor. The user is able to login or signup, and be able to edit photos that have either been imported or stored in the user's Google Firebase.",
     "tools": [
@@ -64,6 +100,7 @@
       }
     ],
     "link": "https://github.com/acerslee/photo-editor",
+    "deployment": null,
     "image": "./images/woocommerce-placeholder.png"
   }
 ]

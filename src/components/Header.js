@@ -19,10 +19,23 @@ const links = listlinks.map(link => {
         {link.text}
       </li>
     </Link>
+
   )
 })
 
 const Header = () => {
+
+  // const data = useStaticQuery(graphql`
+  //   {
+  //     file(name: {eq: "Alex_Lee_SWE_Resume"}) {
+  //       extension
+  //       publicURL
+  //     }
+  //   }
+  // `)
+  // // , {data:{allFile:{edges}}
+  // const {file} = data;
+  // console.log(file.publicURL)
 
   const showNav = () => {
     const nav = document.querySelector('.nav-list');
@@ -46,6 +59,7 @@ const Header = () => {
       </Link>
       <ul className = "nav-list" onClick = {showNav}>
         {links}
+        <li className="nav-link pdf">
           <a
             href = {PDF}
             target = '_blank'
@@ -53,11 +67,13 @@ const Header = () => {
             // download= 'Alex_Lee_SWE_Resume.pdf'
             className = 'nav-link'
             style = {{
-              marginTop: '0.35vh'
+              textDecoration: 'none',
+              color: '#FBEEC1'
             }}
           >
             Resume
           </a>
+          </li>
       </ul>
 
       {/* only show once screen size reaches a certain width */}
