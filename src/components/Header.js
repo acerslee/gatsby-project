@@ -41,7 +41,7 @@ const Header = () => {
     const nav = document.querySelector('.nav-list');
 
     nav.classList.toggle('nav-active');
-    document.body.classList.toggle('scroll-lock');
+    if (window.innerWidth < 1000) document.body.classList.toggle('scroll-lock');
   };
 
   return(
@@ -59,7 +59,6 @@ const Header = () => {
       </Link>
       <ul className = "nav-list" onClick = {showNav}>
         {links}
-        <li className="nav-link pdf">
           <a
             href = {PDF}
             target = '_blank'
@@ -73,7 +72,6 @@ const Header = () => {
           >
             Resume
           </a>
-          </li>
       </ul>
 
       {/* only show once screen size reaches a certain width */}
