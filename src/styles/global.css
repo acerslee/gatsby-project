@@ -19,6 +19,10 @@ p, h1, h2, h3, li, .socials{
   font-family:'Courier New', Courier, monospace;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #00416A;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #c4c4c4, #00416A); /* Chrome 10-25, Safari 5.1-6 */

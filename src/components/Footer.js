@@ -29,6 +29,15 @@ const useStyles = makeStyles({
     '@media(max-width: 700px)' : {
       fontSize: '1.5vh'
     }
+  },
+  returnLink: {
+    fontSize: '1.3vh',
+    textAlign: 'center',
+    color: 'black',
+    textDecoration: 'none !important',
+    '@media(max-width: 700px)' : {
+      fontSize: '1.5vh'
+    }
   }
 });
 
@@ -59,6 +68,9 @@ const Footer = () => {
       <h6 className= {classes.copyright}>
         ©{date} Designed and Built by Alex Lee
       </h6>
+      <a className = {classes.returnLink} href = '#navbar'>
+        Back to top
+      </a>
     </div>
   );
 }
