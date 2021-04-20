@@ -15,6 +15,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-sass",
     "gatsby-plugin-styled-components",
     {
       resolve: `gatsby-plugin-google-analytics`,

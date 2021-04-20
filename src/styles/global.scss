@@ -54,16 +54,6 @@ body {
   margin-bottom: 3.3vh !important;
 }
 
-.header-links{
-  color: #FBEEC1;
-  text-decoration: none;
-  font-family:'Courier New', Courier, monospace;
-}
-
-.header-links :hover{
-  color:#DAAD86;
-}
-
 .button-display{
   display:none;
 }
@@ -109,8 +99,7 @@ body {
 .socials{
   height: 4vh;
   width: 4vh;
-}
-
-.socials :hover{
-  color:#755e4a;
+  & :hover{
+    color:#755e4a;
+  }
 }
