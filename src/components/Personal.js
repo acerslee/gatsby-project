@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     height: '100%',
     width: '80%',
     paddingTop: '2rem',
-    margin: '0 auto 0 auto',
+    margin: '0 auto 10vh auto',
   },
   biography: {
     display: 'flex',
@@ -22,6 +22,7 @@ const useStyles = makeStyles({
   about: {
     width: '50%',
     marginLeft: '1vw',
+    marginTop: '5vh',
     fontSize: '1.7rem',
     '@media(max-width: 1400px)' : {
       textAlign: 'center',
@@ -82,7 +83,7 @@ const PersonalSection = () => {
           loading = 'eager'
         />
         <div className = {classes.about}>
-          <p className = {classes.paragraph}>I previously came from an Operations & Project Management background. Technology has always been an interest and I wanted to find a way to be creative and build new things! See my growth as a software engineer below.</p>
+          <p className = {classes.paragraph}>I'm a Software Engineer based out of NYC with a passion in photography and coffee. Check out more of my contents below!</p>
           <h2 className = {classes.headerCaption}>Experienced, or learning the following:</h2>
           <ul className = {classes.languageList}>
             {list}

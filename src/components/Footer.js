@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   header: {
     fontSize: '5vh',
     '@media(max-width: 700px)' : {
-      fontSize: '3.5vh'
+      fontSize: '2.8vh'
     }
   },
   links: {
