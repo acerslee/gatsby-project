@@ -3,7 +3,7 @@ import listlinks from '../data/list.js';
 // import { Link } from 'gatsby'
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
 import {FaAlignRight} from 'react-icons/fa';
-import PDF from '../static/Alexander_Lee_Resume.pdf';
+import PDF from '../static/AlexLee_SWE_Resume.pdf';
 
 const links = listlinks.map(link => {
   // const routeLink = `/${link.href}`;
@@ -20,7 +20,7 @@ const links = listlinks.map(link => {
         href = {link.href}
         style = {{
           textDecoration: 'none',
-          color: '#FBEEC1'
+          color: '#595959'
         }}
       >
           {link.text}
@@ -66,7 +66,7 @@ const Header = () => {
             className = 'nav-link'
             style = {{
               textDecoration: 'none',
-              color: '#FBEEC1'
+              color: '#595959'
             }}
           >
             Resume
@@ -78,7 +78,7 @@ const Header = () => {
       <FaAlignRight
         className = 'button-display'
         style = {{
-          color: '#FBEEC1'
+          color: '#595959'
         }}
         onClick = {showNav}
       />
