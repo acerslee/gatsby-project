@@ -83,7 +83,7 @@ const PersonalSection = () => {
           loading = 'eager'
         />
         <div className = {classes.about}>
-          <p className = {classes.paragraph}>I'm a Software Engineer based out of NYC with a passion in photography and coffee. Check out more of my contents below!</p>
+          <p className = {classes.paragraph}>I'm a Software Engineer based out of NYC with a passion for photography and coffee. Check out more of my contents below!</p>
           <h2 className = {classes.headerCaption}>Experienced, or learning the following:</h2>
           <ul className = {classes.languageList}>
             {list}
