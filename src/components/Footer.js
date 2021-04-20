@@ -1,7 +1,6 @@
 import React from 'react';
 import data from '../data/socialLinks.js';
 import styled from 'styled-components';
-import { makeStyles } from '@material-ui/core/styles';
 
 const date = new Date().getFullYear();
 
