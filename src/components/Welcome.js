@@ -1,62 +1,55 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import styled from 'styled-components';
 
-const useStyles = makeStyles({
-  welcomeContainer: {
-    color: '#FBEEC1',
-    display:'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 'auto',
-    margin: '10vh 0 10vh 0',
-    '@media(max-width: 1000px)' : {
-      display:'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }
-  },
-  box: {
-    borderStyle: 'solid',
-    borderWidth: '10px',
-    fontSize: '8vw',
-    textAlign:'center',
-    marginBottom: '1.5vh'
-  },
-  boxText: {
-    letterSpacing: '10px',
-    padding: '0 3.5vw 0 3.5vw',
-    '@media(max-width: 1000px)' : {
-      fontSize: '10vw'
-    }
-  },
-  welcomeCaption: {
-    letterSpacing: '5px',
-    fontSize: '3vw',
-    '@media(max-width: 1000px)' : {
-      fontSize: '2.2vw'
-    }
+const WelcomeContainer = styled.div`
+  color: #FBEEC1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 10vh 0 10vh 0;
+`;
+
+const Box = styled.div`
+  border-style: solid;
+  border-width: 10px;
+  font-size: 8vw;
+  text-align: center;
+  margin-bottom: 1.5vh;
+`;
+
+const BoxText = styled.p`
+  letter-spacing: 10px;
+  padding: 0 3.5vw 0 3.5vw;
+  @media(max-width: 1000px){
+    font-size: 10vw;
   }
-});
+`;
+
+const WelcomeText = styled.p`
+  letter-spacing: 5px;
+  font-size: 3vw;
+  @media(max-width: 1000px){
+    font-size: 2.2vw;
+  }
+`;
 
 const Welcome = () => {
 
-  const classes = useStyles();
-
   return(
-    <div id= "welcome-section" className = {classes.welcomeContainer}>
-      <div className = {classes.box}>
-        <p className = {classes.boxText}>
+    <WelcomeContainer id= "welcome-section">
+      <Box>
+        <BoxText>
           ALEX
           <br />
           LEE
-        </p>
-      </div>
-      <p className = {classes.welcomeCaption}>
+        </BoxText>
+      </Box>
+      <WelcomeText>
         SOFTWARE ENGINEER / PHOTOGRAPHER
-      </p>
-    </div>
+      </WelcomeText>
+    </WelcomeContainer>
   )
 };
 

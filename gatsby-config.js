@@ -9,13 +9,13 @@ module.exports = {
     siteUrl: "https://alexanderhjlee.com"
   },
   plugins: [
-    "gatsby-plugin-sass",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-styled-components",
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

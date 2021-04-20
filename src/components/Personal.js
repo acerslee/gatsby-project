@@ -1,65 +1,59 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import languageList from '../data/codingList.js';
-import { makeStyles } from '@material-ui/core/styles';
+import styled from 'styled-components';
 
-const useStyles = makeStyles({
-  personalContainer: {
-    height: '100%',
-    width: '80%',
-    paddingTop: '2rem',
-    margin: '0 auto 10vh auto',
-  },
-  biography: {
-    display: 'flex',
-    flexDirection: 'row',
-    '@media(max-width: 1400px)' : {
-      justifyContent: 'center',
-      flexDirection: 'column',
-      alignItems: 'center'
-    }
-  },
-  about: {
-    width: '50%',
-    marginLeft: '1vw',
-    marginTop: '5vh',
-    fontSize: '1.7rem',
-    '@media(max-width: 1400px)' : {
-      textAlign: 'center',
-      width: '82%',
-      margin: '0 auto 0 auto'
-    }
-  },
-  portrait: {
-    height: '30vw',
-    width: '30vw',
-    margin: 'auto',
-    borderRadius: '50%',
-    '@media(max-width: 700px)' : {
-      height: '50vw',
-      width: '50vw',
-    }
-  },
-  languageList: {
-    '@media(max-width: 1400px)' : {
-      paddingLeft: 0,
-      listStyle: 'none'
-    },
-    '@media(max-width: 700px)' : {
-      fontSize: '5vw'
-    }
-  },
-  headerCaption: {
-    '@media(max-width: 700px)' : {
-      fontSize: '5.5vw'
-    }
-  },
-  paragraph: {
-    '@media(max-width: 700px)' : {
-      fontSize: '5vw'
-    }
+const PersonalContainer = styled.div`
+  height: 100%;
+  width: 80%;
+  padding-top: 2rem;
+  margin: 0 auto 10vh auto;
+`;
+
+const Biography = styled.div`
+  display: flex;
+  flex-direction: row;
+  @media(max-width: 1400px){
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-});
+`;
+
+const AboutMe = styled.div`
+  width: 50%;
+  margin-left: 1vw;
+  margin-top: 5vh;
+  font-size: 1.7rem;
+  @media(max-width: 1400px){
+    text-align: center;
+    width: 82%;
+    margin: 0 auto 0 auto
+  }
+`;
+
+const AboutParagraph = styled.p`
+  @media(max-width: 700px){
+    font-size: 5vw;
+  }
+`;
+
+const AboutCaption = styled.h2`
+  @media(max-width: 700px){
+    font-size: 5.5vw;
+  }
+`;
+
+const LanguageList = styled.ul`
+  @media (max-width: 1400px){
+    padding-left: 0;
+    list-style: none;
+  }
+
+  @media (max-width: 700px){
+    font-size: 5vw;
+  }
+`;
 
 const list = languageList.map(language => {
   return(
@@ -71,26 +65,37 @@ const list = languageList.map(language => {
 
 const PersonalSection = () => {
 
-  const classes = useStyles();
-
   return(
-    <div id = "personal-section" className = {classes.personalContainer}>
-      <div className = {classes.biography}>
+    <PersonalContainer id = "personal-section">
+      <Biography>
         <StaticImage
           src = '../data/images/portfolio_bw.png'
           alt = 'self portrait'
-          className = {classes.portrait}
           loading = 'eager'
+          style = {{
+            height: '30vw',
+            width: '30vw',
+            margin: 'auto',
+            borderRadius: '50%',
+            '@media(maxWidth: 700px)' : {
+              height: '50vw',
+              width: '50vw',
+            }
+          }}
         />
-        <div className = {classes.about}>
-          <p className = {classes.paragraph}>I'm a Software Engineer based out of NYC with a passion for photography and coffee. Check out more of my contents below!</p>
-          <h2 className = {classes.headerCaption}>Experienced, or learning the following:</h2>
-          <ul className = {classes.languageList}>
+        <AboutMe>
+          <AboutParagraph>
+              I'm a Software Engineer based out of NYC with a passion for photography and coffee. Check out more of my contents below!
+          </AboutParagraph>
+          <AboutCaption>
+            Experienced, or learning the following:
+          </AboutCaption>
+          <LanguageList>
             {list}
-          </ul>
-        </div>
-      </div>
-    </div>
+          </LanguageList>
+        </AboutMe>
+      </Biography>
+    </PersonalContainer>
   );
 };
 
