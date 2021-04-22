@@ -125,3 +125,19 @@ body {
     color: rgb(86, 121, 218);
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .showBtn{
+    height: 3vh;
+    width: 3vh;
+    bottom: 10.5vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .showBtn{
+    height: 2.5vh;
+    width: 2.5vh;
+    bottom: 15vh;
+  }
+}

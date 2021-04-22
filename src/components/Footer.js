@@ -18,12 +18,22 @@ const MiniContainer = styled.div`
   flex-direction: row;
   align-items:center;
   justify-content: space-between;
+  @media(max-width: 700px){
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 `
 
 const FooterLinks = styled.div`
   width: 25%;
   display: flex;
   justify-content: space-evenly;
+  @media(max-width: 1200px){
+    width: 40%;
+  };
+  @media(max-width: 700px){
+    width: 80%;
+  };
 `;
 
 const Copyright = styled.h6`
@@ -75,20 +85,20 @@ const Footer = () => {
   };
 
   return(
-      <FooterContainer id = 'closer'>
-        <MiniContainer>
-          <Copyright>
-              ©{date} Designed by Alex Lee
-            </Copyright>
-            <FooterLinks>
-              {renderData}
-            </FooterLinks>
-        </MiniContainer>
-        <FaChevronCircleUp
-          className = 'showBtn'
-          onClick = {scrollToTop}
-        />
-      </FooterContainer>
+    <FooterContainer id = 'closer'>
+      <MiniContainer>
+        <Copyright>
+          ©{date} Designed by Alex Lee
+        </Copyright>
+        <FooterLinks>
+          {renderData}
+        </FooterLinks>
+      </MiniContainer>
+      <FaChevronCircleUp
+        className = 'showBtn'
+        onClick = {scrollToTop}
+      />
+    </FooterContainer>
   );
 }
 
