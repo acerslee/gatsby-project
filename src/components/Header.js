@@ -62,7 +62,6 @@ const Header = () => {
             href = {PDF}
             target = '_blank'
             rel="noreferrer"
-            // download= 'Alex_Lee_SWE_Resume.pdf'
             className = 'nav-link'
             style = {{
               textDecoration: 'none',

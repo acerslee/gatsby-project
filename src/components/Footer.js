@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import data from '../data/socialLinks.js';
 import { FaChevronCircleUp } from 'react-icons/fa';
 import { document } from 'browser-monads';
@@ -67,7 +67,6 @@ const Footer = () => {
     observer.observe(target);
   }, [])
 
-
   const scrollToTop = () => {
     rootElement.scrollTo({
       top: 0,
@@ -87,13 +86,6 @@ const Footer = () => {
         </MiniContainer>
         <FaChevronCircleUp
           className = 'showBtn'
-          style = {{
-            color: 'white',
-            position: 'static',
-            opacity: '0.5',
-            height: '2.5vh',
-            width: '2.5vh'
-          }}
           onClick = {scrollToTop}
         />
       </FooterContainer>

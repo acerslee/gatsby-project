@@ -109,3 +109,19 @@ body {
 .project-icon{
   font-size: 2.5rem !important;
 }
+
+.showBtn{
+  color: grey;
+  position: fixed;
+  bottom: 13vh;
+  right: 5vh;
+  opacity: 0.5;
+  transform: translateY(100px);
+  transition: all .5s ease;
+  height: 4vh;
+  width: 4vh;
+  & :hover{
+    cursor: pointer;
+    color: rgb(86, 121, 218);
+  }
+}
