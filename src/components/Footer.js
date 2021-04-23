@@ -1,32 +1,38 @@
 import React from 'react';
 import data from '../data/socialLinks.js';
+import { FaChevronCircleUp } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const date = new Date().getFullYear();
 
 const FooterContainer = styled.div`
-  padding-top: 2rem;
   margin: 0 auto 0 auto;
-  text-align: center;
+  background-color: #0d1957;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
-const Header = styled.h1`
-  font-size: 5vh;
-  @media(max-width: 700px){
-    font-size: 2.8vh;
-  }
-`;
+// const Header = styled.h1`
+//   color: #edede8;
+//   font-size: 5vh;
+//   @media(max-width: 700px){
+//     font-size: 2.8vh;
+//   }
+// `;
 
 const FooterLinks = styled.div`
   width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 2rem auto 2rem auto;
 `;
 
 const Copyright = styled.h6`
   font-size: 1.6vh;
-  text-align: center;
+  text-align: left;
+  color: #edede8;
   @media(max-width: 700px){
     font-size: 1.5vh;
   }
@@ -56,22 +62,20 @@ const renderData = data.map(datalink => {
 });
 
 const Footer = () => {
-
   return(
-    <FooterContainer id = 'closer'>
-      <Header>
-        Check out my socials below!
-      </Header>
-      <FooterLinks>
-        {renderData}
-      </FooterLinks>
-      <Copyright>
-        ©{date} Designed and Built by Alex Lee
-      </Copyright>
+    <>
       <ReturnLink href = '#navbar'>
         Back to top
       </ReturnLink>
-    </FooterContainer>
+      <FooterContainer id = 'closer'>
+      <Copyright>
+          ©{date} Alex Lee
+        </Copyright>
+        <FooterLinks>
+          {renderData}
+        </FooterLinks>
+      </FooterContainer>
+    </>
   );
 }
 

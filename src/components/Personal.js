@@ -5,12 +5,13 @@ import styled from 'styled-components';
 
 const PersonalContainer = styled.div`
   height: 100%;
-  width: 80%;
   padding-top: 2rem;
   margin: 0 auto 10vh auto;
+  background-color: #0d1957;
 `;
 
 const Biography = styled.div`
+  color: #edede8;
   display: flex;
   flex-direction: row;
   @media(max-width: 1400px){
@@ -73,10 +74,10 @@ const PersonalSection = () => {
           alt = 'self portrait'
           loading = 'eager'
           style = {{
-            height: '30vw',
+            height: 'auto',
             width: '30vw',
             margin: 'auto',
-            borderRadius: '50%',
+            // borderRadius: '50%',
             '@media(maxWidth: 700px)' : {
               height: '50vw',
               width: '50vw',
@@ -85,7 +86,7 @@ const PersonalSection = () => {
         />
         <AboutMe>
           <AboutParagraph>
-              I'm a Software Engineer based out of NYC with a passion for photography and coffee. Check out more of my contents below!
+              Originally from a Operations & Project Management background, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects that consist of front-end, back-end or both. Check out more of my contents below!
           </AboutParagraph>
           <AboutCaption>
             Experienced, or learning the following:
