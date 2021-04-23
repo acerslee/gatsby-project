@@ -6,31 +6,27 @@ import styled from 'styled-components';
 
 const date = new Date().getFullYear();
 
-const FooterContainer = styled.div`
-  margin: 0 auto 0 auto;
+const FooterContainer = styled.footer`
   background-color: #0d1957;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
-// const Header = styled.h1`
-//   color: #edede8;
-//   font-size: 5vh;
-//   @media(max-width: 700px){
-//     font-size: 2.8vh;
-//   }
-// `;
+const MiniContainer = styled.div`
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
+`
 
-const FooterLinks = styled.footer`
-  width: 30%;
+const FooterLinks = styled.div`
+  width: 25%;
   display: flex;
   justify-content: space-evenly;
-  margin: 2rem auto 2rem auto;
 `;
 
 const Copyright = styled.h6`
-  width: 30%;
   font-size: 1.6vh;
   text-align: left;
   color: #edede8;
@@ -81,15 +77,23 @@ const Footer = () => {
 
   return(
       <FooterContainer id = 'closer'>
-      <Copyright>
-          ©{date} Alex Lee
-        </Copyright>
-        <FooterLinks>
-          {renderData}
-        </FooterLinks>
+        <MiniContainer>
+          <Copyright>
+              ©{date} Designed by Alex Lee
+            </Copyright>
+            <FooterLinks>
+              {renderData}
+            </FooterLinks>
+        </MiniContainer>
         <FaChevronCircleUp
           className = 'showBtn'
-          style = {{color: 'white'}}
+          style = {{
+            color: 'white',
+            position: 'static',
+            opacity: '0.5',
+            height: '2.5vh',
+            width: '2.5vh'
+          }}
           onClick = {scrollToTop}
         />
       </FooterContainer>
