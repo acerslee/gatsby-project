@@ -88,11 +88,11 @@
   {
     "id": 4,
     "heading": "MVP Photo Editor",
-    "description": "In a 2-day sprint, I've created a photo editor. The user is able to login or signup, and be able to edit photos that have either been imported or stored in the user's Google Firebase.",
+    "description": "In a 2-day sprint, I've created a photo editor. The user will be able to edit photos that have either been imported or stored in the user's Firebase storage.",
     "tools": [
       {
         "id": 1,
-        "tool":"Gatsby.js"
+        "tool":"React"
       },
       {
         "id": 2,
@@ -100,7 +100,7 @@
       }
     ],
     "link": "https://github.com/acerslee/photo-editor",
-    "deployment": null,
-    "image": "./images/woocommerce-placeholder.png"
+    "deployment": "https://photo-editor-3c9a6.web.app/",
+    "image": "./images/photo-editor.PNG"
   }
 ]
