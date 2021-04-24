@@ -6,6 +6,7 @@ import PersonalSection from '../components/Personal.js';
 import ProjectsList from '../components/ProjectsList';
 import Footer from '../components/Footer.js';
 import Seo from '../components/SEO.js';
+import ScrollUpButton from '../components/ScrollUpButton.js';
 
 export default function IndexPage ({ data }) {
   const {allProjectsDataJson:{nodes}} = data;
@@ -18,10 +19,10 @@ export default function IndexPage ({ data }) {
       <PersonalSection />
       <ProjectsList title = 'featured projects' nodes = {nodes} />
       <Footer />
+      <ScrollUpButton />
     </div>
   )
 }
-
 
 export const query = graphql`
   {

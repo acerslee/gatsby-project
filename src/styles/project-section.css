@@ -4,17 +4,20 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto 0 auto;
-  width: 60%;
+  width: 70%;
 }
 
 .project {
   margin-bottom: 4vw;
-  height: 34vh;
+  height: 36vh;
   position: relative;
+  background-color: #cccccc;
+  z-index: -1;
+  width: 100%;
 }
 
 .project-img {
-  height: 21rem;
+  height: 100%;
   width: 50%;
   z-index: -1;
   position:absolute !important;
@@ -39,6 +42,8 @@
   background: #f0f0f0;
   padding: 1rem 2rem;
   width: 55%;
+  top: 50%;
+  bottom: 50%;
   float:right;
   -webkit-box-shadow: 0 10px 6px -6px #777;
   -moz-box-shadow: 0 10px 6px -6px #777;
@@ -110,6 +115,7 @@
     justify-content: center;
     align-items: center;
     height: auto;
+    background-color: white;
   }
 
   .project-img{

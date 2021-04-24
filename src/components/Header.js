@@ -1,9 +1,9 @@
 import React from 'react';
 import listlinks from '../data/list.js';
-// import { Link } from 'gatsby'
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
 import {FaAlignRight} from 'react-icons/fa';
 import PDF from '../static/AlexLee_SWE_Resume.pdf';
+// import { Link } from 'gatsby'
 
 const links = listlinks.map(link => {
   // const routeLink = `/${link.href}`;

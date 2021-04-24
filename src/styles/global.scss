@@ -109,35 +109,3 @@ body {
 .project-icon{
   font-size: 2.5rem !important;
 }
-
-.showBtn{
-  color: grey;
-  position: fixed;
-  bottom: 13vh;
-  right: 5vh;
-  opacity: 0.5;
-  transform: translateY(100px);
-  transition: all .5s ease;
-  height: 4vh;
-  width: 4vh;
-  & :hover{
-    cursor: pointer;
-    color: rgb(86, 121, 218);
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .showBtn{
-    height: 3vh;
-    width: 3vh;
-    bottom: 10.5vh;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .showBtn{
-    height: 2.5vh;
-    width: 2.5vh;
-    bottom: 15vh;
-  }
-}

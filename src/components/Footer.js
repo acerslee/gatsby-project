@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import data from '../data/socialLinks.js';
-import { FaChevronCircleUp } from 'react-icons/fa';
-import { document } from 'browser-monads';
 import styled from 'styled-components';
 
 const date = new Date().getFullYear();
@@ -20,10 +18,9 @@ const MiniContainer = styled.div`
   justify-content: space-between;
   @media(max-width: 700px){
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 `
-
 const FooterLinks = styled.div`
   width: 25%;
   display: flex;
@@ -58,31 +55,7 @@ const renderData = data.map(datalink => {
   )
 });
 
-
 const Footer = () => {
-
-  var target = document.querySelector('footer');
-  var scrollToTopBtn = document.querySelector('.showBtn');
-  var rootElement = document.documentElement;
-
-  const callback = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) scrollToTopBtn.classList.add('showBtn')
-      else scrollToTopBtn.classList.remove('showBtn')
-    })
-  };
-
-  useEffect(() => {
-    let observer = new IntersectionObserver(callback);
-    observer.observe(target);
-  }, [])
-
-  const scrollToTop = () => {
-    rootElement.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  };
 
   return(
     <FooterContainer id = 'closer'>
@@ -94,10 +67,6 @@ const Footer = () => {
           {renderData}
         </FooterLinks>
       </MiniContainer>
-      <FaChevronCircleUp
-        className = 'showBtn'
-        onClick = {scrollToTop}
-      />
     </FooterContainer>
   );
 }

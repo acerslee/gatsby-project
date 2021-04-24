@@ -22,9 +22,8 @@ const Biography = styled.div`
 `;
 
 const AboutMe = styled.div`
-  width: 50%;
-  margin-left: 1vw;
-  margin-top: 5vh;
+  width: 45%;
+  margin: 1vw 1vw 0 1vw;
   font-size: 1.7rem;
   @media(max-width: 1400px){
     text-align: center;
@@ -74,10 +73,9 @@ const PersonalSection = () => {
           alt = 'self portrait'
           loading = 'eager'
           style = {{
-            height: 'auto',
+            height: '100%',
             width: '30vw',
-            margin: 'auto',
-            // borderRadius: '50%',
+            margin: '0 auto 0 auto',
             '@media(maxWidth: 700px)' : {
               height: '50vw',
               width: '50vw',
@@ -86,7 +84,7 @@ const PersonalSection = () => {
         />
         <AboutMe>
           <AboutParagraph>
-              Originally from a Operations & Project Management background, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects that consist of front-end, back-end or both. Check out more of my contents below!
+              Originally from a Operations & Project Management background, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects that consist of either front-end, back-end or full-stack. Check out more of my contents below!
           </AboutParagraph>
           <AboutCaption>
             Experienced, or learning the following:
