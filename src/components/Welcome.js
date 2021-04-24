@@ -1,5 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import { FaChevronCircleUp } from 'react-icons/fa';
+import { document } from 'browser-monads';
+
+const UpArrow = styled(FaChevronCircleUp)`
+  color: grey;
+    position: fixed;
+    bottom: 13vh;
+    right: 5vh;
+    visibility: hidden;
+    transform: translateY(100px);
+    transition: all .5s ease;
+    height: 4vh;
+    width: 4vh;
+    & :hover{
+      cursor: pointer;
+      color: rgb(86, 121, 218);
+    };
+  @media(max-width: 1200px){
+      height: 3vh;
+      width: 3vh;
+      bottom: 14.5vh;
+    };
+  }
+  @media(max-width: 600px){
+      height: 2.5vh;
+      width: 2.5vh;
+      bottom: 15vh;
+  }
+`;
 
 const WelcomeContainer = styled.section`
   color: #C2C2C2;
@@ -37,19 +66,51 @@ const WelcomeText = styled.p`
   }
 `;
 
-const Welcome = () => (
-  <WelcomeContainer id= "welcome-section">
-    <Box>
-      <BoxText>
-        ALEX
-        <br />
-        LEE
-      </BoxText>
-    </Box>
-    <WelcomeText>
-      SOFTWARE ENGINEER / PHOTOGRAPHER
-    </WelcomeText>
-  </WelcomeContainer>
-);
+const Welcome = () => {
+
+  var target = document.querySelector('section');
+  var scrollToTopBtn = document.querySelector('.scrollToTopButton');
+  var rootElement = document.documentElement;
+
+  const callback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        scrollToTopBtn.classList.remove('showBtn')
+      } else scrollToTopBtn.classList.add('showBtn')
+    })
+  };
+
+  useEffect(() => {
+    let observer = new IntersectionObserver(callback);
+    observer.observe(target);
+  }, [])
+
+  const scrollToTop = () => {
+    rootElement.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  };
+
+  return(
+    <WelcomeContainer id= "welcome-section">
+      <Box>
+        <BoxText>
+          ALEX
+          <br />
+          LEE
+        </BoxText>
+      </Box>
+      <WelcomeText>
+        SOFTWARE ENGINEER / PHOTOGRAPHER
+      </WelcomeText>
+      <UpArrow
+        className = 'scrollToTopButton'
+        onClick = {scrollToTop}
+      >
+        </UpArrow>
+    </WelcomeContainer>
+  );
+};
 
 export default Welcome;

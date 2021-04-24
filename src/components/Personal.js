@@ -7,7 +7,7 @@ const PersonalContainer = styled.section`
   height: 100vh;
   margin: 0 auto 10vh auto;
   background-color: #0d1957;
-  @media(max-width: 700px){
+  @media(max-width: 1400px){
     height: 100%;
   }
 `;
@@ -73,6 +73,9 @@ const list = languageList.map(language => {
 
 const PersonalSection = () => {
 
+
+
+
   return(
     <PersonalContainer id = "personal-section">
       <Biography>
@@ -94,6 +97,7 @@ const PersonalSection = () => {
           </LanguageList>
         </AboutMe>
       </Biography>
+
     </PersonalContainer>
   );
 };

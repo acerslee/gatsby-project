@@ -56,7 +56,12 @@ body {
 }
 
 .button-display{
-  display:none;
+  display: none;
+}
+
+.showBtn{
+  visibility: visible !important;
+  transform: translateY(0);
 }
 
 @media screen and (max-width:1000px){

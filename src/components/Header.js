@@ -3,18 +3,10 @@ import listlinks from '../data/list.js';
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
 import {FaAlignRight} from 'react-icons/fa';
 import PDF from '../static/AlexLee_SWE_Resume.pdf';
-// import { Link } from 'gatsby'
+
 
 const links = listlinks.map(link => {
-  // const routeLink = `/${link.href}`;
-
   return (
-    // <Link
-    //   to = {routeLink}
-    //   key = {link.id}
-    //   style = {{textDecoration: 'none'}}
-    //   href = {link.href}
-    // >
     <li key = {link.id} className = 'nav-link'>
       <a
         href = {link.href}
@@ -26,8 +18,6 @@ const links = listlinks.map(link => {
           {link.text}
       </a>
     </li>
-    // </Link>
-
   )
 })
 
@@ -42,7 +32,6 @@ const Header = () => {
 
   return(
     <nav id="navbar">
-      {/* <Link to = '/'> */}
       <a href = '/'>
         <img
           className = 'logo'
@@ -54,7 +43,6 @@ const Header = () => {
           }}
         />
       </a>
-      {/* </Link> */}
       <ul className = "nav-list" onClick = {showNav}>
         {links}
         <li className = 'nav-link'>
