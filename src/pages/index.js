@@ -12,15 +12,20 @@ export default function IndexPage ({ data }) {
   const {allProjectsDataJson:{nodes}} = data;
 
   return (
-    <div id = 'app-list'>
+    <>
       <Seo title = 'Home'/>
       <Header />
       <Welcome />
       <PersonalSection />
+      <hr
+        style = {{
+          width: '70%'
+        }}
+      />
       <ProjectsList title = 'featured projects' nodes = {nodes} />
       <Footer />
       <ScrollUpButton />
-    </div>
+    </>
   )
 }
 

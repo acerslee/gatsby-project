@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import languageList from '../data/codingList.js';
 import styled from 'styled-components';
 
-const PersonalContainer = styled.div`
+const PersonalContainer = styled.section`
   height: 100vh;
   margin: 0 auto 10vh auto;
   background-color: #0d1957;
@@ -87,7 +87,7 @@ const PersonalSection = () => {
               Originally from a Operations & Project Management background, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects that consist of either front-end, back-end or full-stack. Check out more of my contents below!
           </AboutParagraph>
           <AboutCaption>
-            Experienced, or learning the following:
+            Experienced with the following:
           </AboutCaption>
           <LanguageList>
             {list}

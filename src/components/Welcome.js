@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const WelcomeContainer = styled.div`
+const WelcomeContainer = styled.section`
   color: #C2C2C2;
   display: flex;
   flex-direction: column;
@@ -37,22 +37,19 @@ const WelcomeText = styled.p`
   }
 `;
 
-const Welcome = () => {
-
-  return(
-    <WelcomeContainer id= "welcome-section">
-      <Box>
-        <BoxText>
-          ALEX
-          <br />
-          LEE
-        </BoxText>
-      </Box>
-      <WelcomeText>
-        SOFTWARE ENGINEER / PHOTOGRAPHER
-      </WelcomeText>
-    </WelcomeContainer>
-  )
-};
+const Welcome = () => (
+  <WelcomeContainer id= "welcome-section">
+    <Box>
+      <BoxText>
+        ALEX
+        <br />
+        LEE
+      </BoxText>
+    </Box>
+    <WelcomeText>
+      SOFTWARE ENGINEER / PHOTOGRAPHER
+    </WelcomeText>
+  </WelcomeContainer>
+);
 
 export default Welcome;

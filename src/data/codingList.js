@@ -5,7 +5,7 @@ const languageList = [
   },
   {
     id: 2,
-    text: 'JavaScript (Vanilla, ES6)'
+    text: 'Javascript (Vanilla, ES6)'
   },
   {
     id: 3,

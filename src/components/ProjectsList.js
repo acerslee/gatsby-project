@@ -13,6 +13,7 @@ const ProjectsList = ({ title, nodes }) => {
           className = 'project-headline'
           style = {{
             fontSize: '2.5rem',
+            color: '#c2c2c2'
           }}
         >
           Featured Projects
