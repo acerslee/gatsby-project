@@ -4,10 +4,12 @@ import languageList from '../data/codingList.js';
 import styled from 'styled-components';
 
 const PersonalContainer = styled.div`
-  height: 100%;
-  padding-top: 2rem;
+  height: 100vh;
   margin: 0 auto 10vh auto;
   background-color: #0d1957;
+  @media(max-width: 700px){
+    height: 100%;
+  }
 `;
 
 const Biography = styled.div`
@@ -23,9 +25,15 @@ const Biography = styled.div`
 
 const AboutMe = styled.div`
   width: 45%;
-  margin: 1vw 1vw 0 1vw;
+  position: relative;
+  top: 15vh;
+  bottom: 15vh;
+  margin: 1vw 1vw 0 2vw;
   font-size: 1.7rem;
   @media(max-width: 1400px){
+    position: auto;
+    top: 0vh;
+    bottom: 0vh;
     text-align: center;
     width: 82%;
     margin: 0 auto 0 auto
@@ -72,15 +80,7 @@ const PersonalSection = () => {
           src = '../data/images/portfolio_bw.png'
           alt = 'self portrait'
           loading = 'eager'
-          style = {{
-            height: '100%',
-            width: '30vw',
-            margin: '0 auto 0 auto',
-            '@media(maxWidth: 700px)' : {
-              height: '50vw',
-              width: '50vw',
-            }
-          }}
+          className = 'portrait-image'
         />
         <AboutMe>
           <AboutParagraph>

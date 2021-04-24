@@ -95,6 +95,28 @@ body {
   }
 }
 
+/* personal section */
+.portrait-image{
+  height: 100vh;
+  width: 50vw;
+}
+
+@media screen and (max-width: 1400px) {
+  .portrait-image{
+    margin-top: 5vh;
+    height: 40rem;
+    width: 40rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .portrait-image{
+    margin-top: 5vh;
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
 /**** footer ****/
 
 .socials{
