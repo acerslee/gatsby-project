@@ -1,75 +1,90 @@
-import React from 'react';
+import React, { useState } from 'react';
 import listlinks from '../data/list.js';
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
-import {FaAlignRight} from 'react-icons/fa';
+import { FaTimes, FaBars } from 'react-icons/fa';
 import PDF from '../static/AlexLee_SWE_Resume.pdf';
+import styled from 'styled-components';
 
+const NavLink = styled.a`
+  text-decoration: none;
+  color: #595959;
+  @media(max-width: 1000px){
+    color: #FFFFFF;
+    font-size: 2.5rem;
+  }
+`;
 
 const links = listlinks.map(link => {
   return (
     <li key = {link.id} className = 'nav-link'>
-      <a
-        href = {link.href}
-        style = {{
-          textDecoration: 'none',
-          color: '#595959'
-        }}
-      >
-          {link.text}
-      </a>
+      <NavLink href = {link.href}>
+        {link.text}
+      </NavLink>
     </li>
   )
-})
+});
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
 
   const showNav = () => {
-    const nav = document.querySelector('.nav-list');
+    setOpen(!open);
+    const nav = document.querySelector('nav');
+    const navList = document.querySelector('.nav-list');
 
     nav.classList.toggle('nav-active');
+    navList.classList.toggle('navItem-reveal')
     if (window.innerWidth < 1000) document.body.classList.toggle('scroll-lock');
   };
 
   return(
-    <nav id="navbar">
+    <section id="navbar">
       <a href = '/'>
         <img
           className = 'logo'
           src = {logo}
           alt = 'brand logo'
           style = {{
-            height: '100px',
-            width: '100px'
+            height: '80px',
+            width: '80px'
           }}
         />
       </a>
-      <ul className = "nav-list" onClick = {showNav}>
-        {links}
-        <li className = 'nav-link'>
-          <a
-            href = {PDF}
-            target = '_blank'
-            rel="noreferrer"
-            className = 'nav-link'
-            style = {{
-              textDecoration: 'none',
-              color: '#595959'
-            }}
-          >
-            Resume
-          </a>
-        </li>
-      </ul>
+      <nav>
+        <ul className = "nav-list" onClick = {showNav}>
+          {links}
+          <li className = 'nav-link'>
+            <NavLink
+              href = {PDF}
+              target = '_blank'
+              rel="noreferrer"
+            >
+              Resume
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
 
       {/* only show once screen size reaches a certain width */}
-      <FaAlignRight
-        className = 'button-display'
-        style = {{
-          color: '#595959'
-        }}
-        onClick = {showNav}
-      />
-    </nav>
+      {!open &&
+        <FaBars
+          className = 'button-display'
+          style = {{
+            color: '#595959'
+          }}
+          onClick = {showNav}
+        />
+      }
+      {open &&
+        <FaTimes
+          className = 'button-display'
+          style = {{
+            color: 'white'
+          }}
+          onClick = {showNav}
+        />
+      }
+    </section>
   )
 };
 

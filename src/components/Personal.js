@@ -73,9 +73,6 @@ const list = languageList.map(language => {
 
 const PersonalSection = () => {
 
-
-
-
   return(
     <PersonalContainer id = "personal-section">
       <Biography>
