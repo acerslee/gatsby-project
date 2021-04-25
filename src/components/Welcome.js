@@ -36,7 +36,7 @@ const WelcomeContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 100vh;
   margin: 10vh 0 10vh 0;
 `;
 
@@ -60,6 +60,7 @@ const BoxText = styled.p`
 
 const WelcomeText = styled.p`
   letter-spacing: 5px;
+  color: #595959;
   font-size: 3vw;
   @media(max-width: 1000px){
     font-size: 2.2vw;
