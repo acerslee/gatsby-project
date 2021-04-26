@@ -30,6 +30,7 @@ const FooterLinks = styled.div`
   };
   @media(max-width: 700px){
     width: 80%;
+    padding-bottom: 1rem;
   };
 `;
 

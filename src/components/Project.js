@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGithubSquare, FaExternalLinkSquareAlt } from 'react-icons/fa';
 import Img from 'gatsby-image'
-import '../styles/project-section.css';
+import '../styles/project-section.scss';
 
 const Project = ({ heading, description, tools, link, image, deployment }) => {
 
@@ -20,8 +20,12 @@ const Project = ({ heading, description, tools, link, image, deployment }) => {
             })}
           </div>
           <div className=  'project-links'>
-            <a href = {link}>
-              <FaGithubSquare className = 'project-icon' />
+            <a
+              href = {link}
+              target = '_blank'
+              rel = 'noreferrer'
+            >
+              <FaGithubSquare className = 'project-icon'/>
             </a>
             {deployment &&
               <a
@@ -29,7 +33,7 @@ const Project = ({ heading, description, tools, link, image, deployment }) => {
                 target = '_blank'
                 rel = 'noreferrer'
               >
-                <FaExternalLinkSquareAlt className = 'project-icon' />
+                <FaExternalLinkSquareAlt className = 'project-icon'/>
               </a>
             }
           </div>

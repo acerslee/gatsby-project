@@ -5,6 +5,7 @@
   align-items: center;
   margin: 0 auto 0 auto;
   width: 70%;
+  z-index: 0;
 }
 
 .project {
@@ -12,14 +13,14 @@
   height: 36vh;
   position: relative;
   background-color: #cccccc;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
 }
 
 .project-img {
   height: 100%;
   width: 50%;
-  z-index: -1;
+  z-index: 0;
   position:absolute !important;
 }
 /* project-img::after {
@@ -42,14 +43,14 @@
   background: #f0f0f0;
   padding: 1rem 2rem;
   width: 55%;
-  top: 50%;
+  top: 15%;
   bottom: 50%;
   float:right;
   -webkit-box-shadow: 0 10px 6px -6px #777;
   -moz-box-shadow: 0 10px 6px -6px #777;
        box-shadow: 0 10px 6px -6px #777;
-  z-index: 1;
-  margin-top: 3.5vh;
+  position: relative;
+  z-index: 3;
 }
 
 .project-info h3 {
@@ -63,7 +64,6 @@
 .project-desc {
   word-spacing: 5px;
   text-align: left;
-  color: var(--clr-grey-3);
 }
 
 .project-stack {
@@ -72,25 +72,22 @@
 
 .project-stack span{
   display: inline-block;
-  background: var(--clr-grey-9);
+  background: #e7e7e7;
   color: var(--clr-grey-5);
   margin-right: 0.5rem;
   padding: 0.25rem 0.5rem;
-  border-radius: var(--radius);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
 }
 
 .project-icon {
-  color: var(--clr-primary-5);
-  font-size: 1.25rem;
+  color: #0d1957;
   margin-right: 0.5rem;
-  transition: var(--transition);
-}
-
-.project-icon:hover {
-  color: var(--clr-primary-1);
+  & :hover{
+    color: rgb(250, 193, 87);
+    cursor: pointer;
+  }
 }
 
 @media only screen and (max-width:1400px) {

@@ -20,7 +20,7 @@ const UpArrow = styled(FaChevronCircleUp)`
   @media(max-width: 1200px){
       height: 3vh;
       width: 3vh;
-      bottom: 14.5vh;
+      bottom: 16vh;
     };
   }
   @media(max-width: 600px){
@@ -38,6 +38,9 @@ const WelcomeContainer = styled.section`
   align-items: center;
   height: 100vh;
   margin: 10vh 0 10vh 0;
+  @media(max-width: 800px){
+    height: 70vh;
+  }
 `;
 
 const Box = styled.div`
