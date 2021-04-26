@@ -6,6 +6,7 @@ import { document } from 'browser-monads';
 const UpArrow = styled(FaChevronCircleUp)`
   color: grey;
     position: fixed;
+    z-index: 5;
     bottom: 13vh;
     right: 5vh;
     visibility: hidden;
@@ -18,15 +19,14 @@ const UpArrow = styled(FaChevronCircleUp)`
       color: rgb(86, 121, 218);
     };
   @media(max-width: 1200px){
-      height: 3vh;
-      width: 3vh;
-      bottom: 16vh;
+      height: 4vh;
+      width: 4vh;
+      bottom: 18vh;
     };
   }
   @media(max-width: 600px){
-      height: 2.5vh;
-      width: 2.5vh;
-      bottom: 15vh;
+      height: 3vh;
+      width: 3vh;
   }
 `;
 
