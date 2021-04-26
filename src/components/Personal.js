@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import languageList from '../data/codingList.js';
 import styled from 'styled-components';
 
-const PersonalContainer = styled.section`
+const AboutContainer = styled.section`
   height: 100vh;
   margin: 0 auto 10vh auto;
   background-color: #0d1957;
@@ -74,7 +74,7 @@ const list = languageList.map(language => {
 const PersonalSection = () => {
 
   return(
-    <PersonalContainer id = "personal-section">
+    <AboutContainer id = "about">
       <Biography>
         <StaticImage
           src = '../data/images/portfolio_bw.png'
@@ -95,7 +95,7 @@ const PersonalSection = () => {
         </AboutMe>
       </Biography>
 
-    </PersonalContainer>
+    </AboutContainer>
   );
 };
 

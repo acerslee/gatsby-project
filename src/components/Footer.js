@@ -59,7 +59,7 @@ const renderData = data.map(datalink => {
 const Footer = () => {
 
   return(
-    <FooterContainer id = 'closer'>
+    <FooterContainer id = 'contact'>
       <MiniContainer>
         <Copyright>
           ©{date} Designed by Alex Lee

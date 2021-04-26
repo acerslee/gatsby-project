@@ -39,7 +39,7 @@ const WelcomeContainer = styled.section`
   height: 100vh;
   margin: 10vh 0 10vh 0;
   @media(max-width: 800px){
-    height: 70vh;
+    height: 65vh;
   }
 `;
 

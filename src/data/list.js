@@ -2,25 +2,18 @@ const listlinks = [
   {
     id: 1,
     text: 'About Me',
-    href: '#personal-section',
+    href: '#about',
   },
   {
     id: 2,
     text: 'Projects',
-    href: '#projects-section',
+    href: '#projects',
   },
   {
     id: 3,
     text: 'Contact',
-    href: '#closer',
-  },
-  // {
-  //   id: 4,
-  //   text: 'Resume',
-  //   href: '../static/Alex_Lee_SWE_Resume.pdf',
-  //   target: '_blank',
-  //   rel: 'noreferrer'
-  // }
+    href: '#contact',
+  }
 ];
 
 module.exports = listlinks;

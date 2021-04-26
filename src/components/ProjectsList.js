@@ -1,13 +1,11 @@
 import React from 'react';
 import Project from './Project.js';
-// import { Link } from 'gatsby';
-// import Button from '@material-ui/core/Button'
 import '../styles/project-section.scss';
 
 const ProjectsList = ({ title, nodes }) => {
 
   return(
-    <section id = 'projects-section'>
+    <section id = 'projects'>
       <h2
         className = 'project-headline'
         style = {{
