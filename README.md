@@ -29,6 +29,7 @@
 
     ```shell
     cd personal-portfolio-v3/
+    npm install
     npm run develop
     ```
 
