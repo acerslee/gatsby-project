@@ -1,6 +1,7 @@
 ### Personal Portfolio - v3
-1. Migration to Gatsby. Additional style changes. Currently migrated via Netlify.
-2. Please see below for standard Gatsby installation
+1. Third iteration of my personal portfolio.
+2. Changes from the previous version include migration to Gatsby, graphQL, and SCSS. Currently deployed via Netlify.
+3. Please see below for standard Gatsby installation
 
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
@@ -27,7 +28,8 @@
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-gatsby-site/
+    cd personal-portfolio-v3/
+    npm install
     npm run develop
     ```
 
