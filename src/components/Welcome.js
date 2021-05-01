@@ -94,6 +94,7 @@ const Welcome = () => {
       top: 0,
       behavior: 'smooth'
     })
+    window.history.pushState({}, null, '/')
   };
 
   return(
