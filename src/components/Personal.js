@@ -63,12 +63,8 @@ const LanguageList = styled.ul`
   }
 `;
 
-const list = languageList.map(language => {
-  return(
-    <li key = {language.id}>
-      {language.text}
-    </li>
-  )
+const list = languageList.map((language, index) => {
+  return <li key = {index}>{language}</li>
 });
 
 const PersonalSection = () => {
@@ -84,7 +80,7 @@ const PersonalSection = () => {
         />
         <AboutMe>
           <AboutParagraph>
-              Originally from a Operations & Project Management background, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects that consist of either front-end, back-end or full-stack. Check out more of my contents below!
+              Originally from an Operations & Project Management background, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects that consist of either front-end, back-end or full-stack. Check out more of my contents below!
           </AboutParagraph>
           <AboutCaption>
             Experienced with the following:

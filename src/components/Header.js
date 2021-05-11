@@ -14,15 +14,7 @@ const NavLink = styled.a`
   }
 `;
 
-const links = listlinks.map(link => {
-  return (
-    <li key = {link.id} className = 'nav-link'>
-      <NavLink href = {link.href}>
-        {link.text}
-      </NavLink>
-    </li>
-  )
-});
+
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -36,6 +28,19 @@ const Header = () => {
     navList.classList.toggle('navItem-reveal')
     if (window.innerWidth < 1000) document.body.classList.toggle('scroll-lock');
   };
+
+  const links = listlinks.map(link => {
+    return (
+      <li key = {link.id} className = 'nav-link'>
+        <NavLink
+          href = {link.href}
+          onClick = {showNav}
+          onKeyDown = {showNav}>
+          {link.text}
+        </NavLink>
+      </li>
+    )
+  });
 
   return(
     <section id="navbar">
@@ -51,13 +56,15 @@ const Header = () => {
         />
       </a>
       <nav>
-        <ul className = "nav-list" onClick = {showNav}>
+        <ul className = "nav-list">
           {links}
           <li className = 'nav-link'>
             <NavLink
               href = {PDF}
               target = '_blank'
               rel="noreferrer"
+              onClick = {showNav}
+              onKeyDown = {showNav}
             >
               Resume
             </NavLink>
@@ -73,6 +80,7 @@ const Header = () => {
             color: '#595959'
           }}
           onClick = {showNav}
+          onKeyDown = {showNav}
         />
       }
       {open &&
@@ -82,6 +90,7 @@ const Header = () => {
             color: 'white'
           }}
           onClick = {showNav}
+          onKeyDown = {showNav}
         />
       }
     </section>
