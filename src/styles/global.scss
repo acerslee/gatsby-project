@@ -159,10 +159,6 @@ body {
   }
 }
 
-.project-icon{
-  font-size: 2.5rem !important;
-}
-
 /*** Projects Section ***/
 
 .projects-center{
@@ -239,6 +235,7 @@ body {
 
 .project-icon {
   color: #0d1957;
+  font-size: 2.5rem !important;
   margin-right: 0.5rem;
   & :hover{
     color: rgb(250, 193, 87);
