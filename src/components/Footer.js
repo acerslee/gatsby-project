@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../data/socialLinks.js';
+import { data } from '../data/data.js';
 import styled from 'styled-components';
 
 const date = new Date().getFullYear();
@@ -43,10 +43,10 @@ const Copyright = styled.h6`
   }
 `;
 
-const renderData = data.map(datalink => {
+const renderData = data.map((datalink, index) => {
   return(
     <a
-      key = {datalink.id}
+      key = {index}
       href = {datalink.href}
       rel = 'noreferrer'
       target = '_blank'

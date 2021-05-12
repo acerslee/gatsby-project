@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import listlinks from '../data/list.js';
+import { listlinks } from '../data/data.js';
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import PDF from '../static/AlexLee_SWE_Resume.pdf';

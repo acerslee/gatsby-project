@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import languageList from '../data/codingList.js';
+import { languageList } from '../data/data.js';
 import styled from 'styled-components';
 
 const AboutContainer = styled.section`

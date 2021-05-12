@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaGithubSquare, FaExternalLinkSquareAlt } from 'react-icons/fa';
-import Img from 'gatsby-image'
-import '../styles/project-section.scss';
+import Img from 'gatsby-image';
 
 const Project = ({ heading, description, tools, link, image, deployment }) => {
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import Project from './Project.js';
-import '../styles/project-section.scss';
 
 const ProjectsList = ({ title, nodes }) => {
 
