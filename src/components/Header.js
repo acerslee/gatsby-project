@@ -14,8 +14,6 @@ const NavLink = styled.a`
   }
 `;
 
-
-
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -29,9 +27,9 @@ const Header = () => {
     if (window.innerWidth < 1000) document.body.classList.toggle('scroll-lock');
   };
 
-  const links = listlinks.map(link => {
+  const links = listlinks.map((link, index) => {
     return (
-      <li key = {link.id} className = 'nav-link'>
+      <li key = {index} className = 'nav-link'>
         <NavLink
           href = {link.href}
           onClick = {showNav}
