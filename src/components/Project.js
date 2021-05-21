@@ -9,6 +9,8 @@ const Project = ({ heading, description, tools, link, image, deployment }) => {
       <Img
         fluid = {image.childImageSharp.fluid}
         className = "project-img"
+        loading = "lazy"
+        alt = "project images"
       />
       <div className = 'project-info'>
         <h3 className = 'project-heading'>{heading}</h3>

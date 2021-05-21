@@ -4,18 +4,14 @@
   --clr-primary-5: #2caeba;
   /* darkest grey - used for headings */
   --clr-grey-3: hsl(209, 34%, 30%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-
 }
 
 /* Global Font & Color*/
 p, h1, h2, h3, li, .socials{
-  font-family:'Lato';
-  // color: #595959;
+  font-family: Arial;
 }
 
-h6 {
+h4 {
   font-family:'Courier New', Courier, monospace;
   color: #595959;
 }
@@ -214,7 +210,7 @@ body {
 }
 
 .project-desc {
-  word-spacing: 5px;
+  word-spacing: 0.1em;
   text-align: left;
 }
 
@@ -225,7 +221,7 @@ body {
 .project-stack span{
   display: inline-block;
   background: #e7e7e7;
-  color: var(--clr-grey-5);
+  color: hsl(210deg 84% 29%);
   margin-right: 0.5rem;
   padding: 0.25rem 0.5rem;
   text-transform: uppercase;

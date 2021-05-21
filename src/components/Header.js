@@ -41,7 +41,7 @@ const Header = () => {
   });
 
   return(
-    <section id="navbar">
+    <header id="navbar">
       <a href = '/'>
         <img
           className = 'logo'
@@ -91,7 +91,7 @@ const Header = () => {
           onKeyDown = {showNav}
         />
       }
-    </section>
+    </header>
   )
 };
 

@@ -6,8 +6,12 @@ const date = new Date().getFullYear();
 
 const FooterContainer = styled.footer`
   background-color: #0d1957;
+  padding-top: 1rem;
   display: flex;
   justify-content: center;
+  @media(max-width: 1000px){
+    padding: 0;
+  }
 `;
 
 const MiniContainer = styled.div`
@@ -34,7 +38,7 @@ const FooterLinks = styled.div`
   };
 `;
 
-const Copyright = styled.h6`
+const Copyright = styled.h4`
   font-size: 1.6vh;
   text-align: left;
   color: #edede8;
@@ -56,20 +60,17 @@ const renderData = data.map((datalink, index) => {
   )
 });
 
-const Footer = () => {
-
-  return(
-    <FooterContainer id = 'contact'>
-      <MiniContainer>
-        <Copyright>
-          ©{date} Designed by Alex Lee
-        </Copyright>
-        <FooterLinks>
-          {renderData}
-        </FooterLinks>
-      </MiniContainer>
-    </FooterContainer>
-  );
-}
+const Footer = () => (
+  <FooterContainer id = 'contact'>
+    <MiniContainer>
+      <Copyright>
+        ©{date} Designed by Alex Lee
+      </Copyright>
+      <FooterLinks>
+        {renderData}
+      </FooterLinks>
+    </MiniContainer>
+  </FooterContainer>
+);
 
 export default Footer;

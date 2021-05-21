@@ -4,7 +4,7 @@ module.exports = {
   },
   siteMetadata: {
     title: "Alex Lee Personal Portfolio",
-    description: "I'm a Software Engineer based out of NYC with a passion in photography and coffee. Check out more of my contents below!",
+    description: "I'm a Software Engineer based out of NYC with a passion in photography and coffee. Check out more of my contents in here.",
     author: "Alex Lee",
     siteUrl: "https://alexanderhjlee.com"
   },

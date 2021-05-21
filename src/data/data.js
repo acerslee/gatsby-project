@@ -1,10 +1,11 @@
 import React from 'react';
 import {FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa';
 
-let languageList = [
+const languageList = [
   'HTML & CSS3',
   'Javascript (Vanilla, ES6)',
   'Typescript',
+  'Styling (Material UI, Styled Components)',
   'Node.js & Express',
   'SQL (MySQL, PostgreSQL)',
   'MongoDB (Mongoose)',
@@ -12,7 +13,7 @@ let languageList = [
   'Gatsby.js'
 ];
 
-let listlinks = [
+const listlinks = [
   {
     text: 'About Me',
     href: '#about',
@@ -27,21 +28,20 @@ let listlinks = [
   }
 ];
 
-let data = [
+const data = [
   {
     href: 'https://www.linkedin.com/in/alexanderhjlee',
-    icon: <FaLinkedin className = 'socials'/>
+    icon: <FaLinkedin className = 'socials' aria-label = 'Linked In'/>
   },
   {
     href: 'https://github.com/acerslee',
-    icon: <FaGithub className = 'socials'/>
+    icon: <FaGithub className = 'socials' aria-label = 'Github'/>
   },
   {
     href: 'mailto:ahjlee712@gmail.com',
-    icon: <FaEnvelope className = 'socials'/>
+    icon: <FaEnvelope className = 'socials' aria-label = 'Email'/>
   }
 ];
-
 
 //these projects will be within the projects page
 // const otherProjects = [
@@ -52,8 +52,6 @@ let data = [
 //     link: 'https://github.com/acerslee/github-repo'
 //   }
 // ];
-
-
 
 export {
   languageList,

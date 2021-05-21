@@ -4,7 +4,10 @@ import Project from './Project.js';
 const ProjectsList = ({ title, nodes }) => {
 
   return(
-    <section id = 'projects'>
+    <section
+      id = 'projects'
+      aria-label = 'list of my showcase projects'
+    >
       <h2
         className = 'project-headline'
         style = {{

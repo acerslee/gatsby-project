@@ -31,6 +31,7 @@
     "gatsby-plugin-sharp": "^3.1.2",
     "gatsby-plugin-sitemap": "^3.2.0",
     "gatsby-plugin-styled-components": "^4.3.0",
+    "gatsby-plugin-typography": "^3.5.0",
     "gatsby-source-filesystem": "^3.2.0",
     "gatsby-transformer-json": "^3.2.0",
     "gatsby-transformer-sharp": "^3.1.0",
@@ -39,8 +40,9 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
-    "react-transition-group": "^4.4.1",
+    "react-typography": "^0.16.20",
     "sass": "^1.32.8",
-    "styled-components": "^5.2.3"
+    "styled-components": "^5.2.3",
+    "typography": "^0.16.21"
   }
 }

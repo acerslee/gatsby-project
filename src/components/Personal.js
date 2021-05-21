@@ -70,17 +70,20 @@ const list = languageList.map((language, index) => {
 const PersonalSection = () => {
 
   return(
-    <AboutContainer id = "about">
+    <AboutContainer
+      id = "about"
+      aria-label = 'introduction and tools I know'
+    >
       <Biography>
         <StaticImage
           src = '../data/images/portfolio_bw.png'
           alt = 'self portrait'
-          loading = 'eager'
+          loading = 'lazy'
           className = 'portrait-image'
         />
         <AboutMe>
           <AboutParagraph>
-              Originally from an Operations & Project Management background, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects that consist of either front-end, back-end or full-stack. Check out more of my contents below!
+              Originally from an Operations & Project Management background, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects ranging in all both ends of application development. Check out more of my contents below!
           </AboutParagraph>
           <AboutCaption>
             Experienced with the following:
@@ -90,7 +93,6 @@ const PersonalSection = () => {
           </LanguageList>
         </AboutMe>
       </Biography>
-
     </AboutContainer>
   );
 };

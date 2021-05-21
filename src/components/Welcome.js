@@ -62,7 +62,7 @@ const BoxText = styled.p`
 `;
 
 const WelcomeText = styled.p`
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   color: #595959;
   font-size: 3vw;
   @media(max-width: 1000px){
@@ -98,7 +98,10 @@ const Welcome = () => {
   };
 
   return(
-    <WelcomeContainer id= "welcome-section">
+    <WelcomeContainer
+      id= 'welcome-section'
+      aria-label = 'intro to give webpage a pop'
+    >
       <Box>
         <BoxText>
           ALEX
