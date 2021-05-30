@@ -1,6 +1,7 @@
 module.exports = {
   flags:{
-    DEV_SSR: true
+    DEV_SSR: true,
+    PRESERVE_WEBPACK_CACHE: true
   },
   siteMetadata: {
     title: "Alex Lee Personal Portfolio",
@@ -15,6 +16,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-json",
     "gatsby-plugin-sass",
     "gatsby-plugin-styled-components",
     {
@@ -30,8 +32,5 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       }
     },
-    'gatsby-transformer-json',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp'
   ],
 };

@@ -2,15 +2,14 @@ import React from 'react';
 import { FaGithubSquare, FaExternalLinkSquareAlt } from 'react-icons/fa';
 import Img from 'gatsby-image';
 
-const Project = ({ heading, description, tools, link, image, deployment }) => {
-
+const Project = ({ heading, description, tools, link, imageAlt, image, deployment }) => {
   return(
     <div className = "project">
       <Img
         fluid = {image.childImageSharp.fluid}
         className = "project-img"
         loading = "lazy"
-        alt = "project images"
+        alt = {imageAlt}
       />
       <div className = 'project-info'>
         <h3 className = 'project-heading'>{heading}</h3>

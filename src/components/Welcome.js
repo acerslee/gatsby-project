@@ -72,19 +72,21 @@ const WelcomeText = styled.p`
 
 const Welcome = () => {
 
-  var target = document.querySelector('section');
-  var scrollToTopBtn = document.querySelector('.scrollToTopButton');
   var rootElement = document.documentElement;
 
-  const callback = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        scrollToTopBtn.classList.remove('showBtn')
-      } else scrollToTopBtn.classList.add('showBtn')
-    })
-  };
-
   useEffect(() => {
+    var target = document.querySelector('section');
+    var scrollToTopBtn = document.querySelector('.scrollToTopButton');
+
+
+    const callback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          scrollToTopBtn.classList.remove('showBtn')
+        } else scrollToTopBtn.classList.add('showBtn')
+      })
+    };
+
     let observer = new IntersectionObserver(callback);
     observer.observe(target);
   }, [])

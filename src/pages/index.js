@@ -40,6 +40,7 @@ export const query = graphql`
           id
           tool
         }
+        imageAlt
         image {
           childImageSharp {
             fluid {

@@ -7,6 +7,7 @@ import styled from 'styled-components';
 
 const NavLink = styled.a`
   text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
   color: #595959;
   @media(max-width: 1000px){
     color: #FFFFFF;

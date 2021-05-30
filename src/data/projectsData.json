@@ -31,7 +31,8 @@
     ],
     "link": "https://github.com/TeamStrawberry/strawberry",
     "deployment": "http://18.210.13.63:3000/#/",
-    "image": "./images/Blueocean.JPG"
+    "image": "./images/Blueocean.JPG",
+    "imageAlt": "Blueocean"
   },
   {
     "id": 2,
@@ -44,25 +45,26 @@
       },
       {
         "id": 2,
-        "tool":"Bootstrap"
+        "tool": "Material UI"
       },
       {
         "id": 3,
-        "tool": "Material UI"
+        "tool": "Styled Components"
       },
       {
         "id": 4,
         "tool": "Jest & Enzyme"
       }
     ],
-    "link": "https://github.com/Team-Emus/FEC",
+    "link": "https://github.com/acerslee/FEC",
     "deployment": null,
-    "image": "./images/FECSDC.JPG"
+    "image": "./images/FECSDC.JPG",
+    "imageAlt": "Catwalk"
   },
   {
     "id": 3,
-    "heading": "Atlier",
-    "description": "Atlier is the back-end development for the Catwalk Project. This back-end is responsible for managing server calls between the client and the database, with millions of data entries to mimic real-user traffic.  Additional tools include API testing, ETL procedures, and Docker deployment.",
+    "heading": "Atelier",
+    "description": "Atelier is the back-end development for the Catwalk Project. This back-end is responsible for managing server calls between the client and the database, with millions of data entries to mimic real-user traffic.  Additional tools include API testing, ETL procedures, and Docker deployment.",
     "tools": [
       {
         "id": 1,
@@ -83,10 +85,42 @@
     ],
     "link": "https://github.com/Team-Opportunity/products",
     "deployment": null,
-    "image": "./images/woocommerce-placeholder.png"
+    "image": "./images/woocommerce-placeholder.png",
+    "imageAlt": "Atelier placeholder"
   },
   {
     "id": 4,
+    "heading": "Spotify Clone",
+    "description": "Replication of the Spotify application, using the Spotify Web API node to pull data from Spotify's database. Created with React and TypeScript.",
+    "tools": [
+      {
+        "id": 1,
+        "tool":"React"
+      },
+      {
+        "id": 2,
+        "tool":"TypeScript"
+      },
+      {
+        "id": 3,
+        "tool":"Node.js"
+      },
+      {
+        "id": 4,
+        "tool":"Styled Components"
+      },
+      {
+        "id": 5,
+        "tool":"Spotify Web API"
+      }
+    ],
+    "link": "https://github.com/acerslee/spotify-typescript",
+    "deployment": null,
+    "image": "./images/spotify-app.JPG",
+    "imageAlt": "Spotify App"
+  },
+  {
+    "id": 5,
     "heading": "MVP Photo Editor",
     "description": "In a 2-day sprint, I've created a photo editor. The user will be able to edit photos that have either been imported or stored in the user's Firebase storage.",
     "tools": [
@@ -101,6 +135,7 @@
     ],
     "link": "https://github.com/acerslee/photo-editor",
     "deployment": "https://photo-editor-3c9a6.web.app/",
-    "image": "./images/photo-editor.PNG"
+    "image": "./images/photo-editor.PNG",
+    "imageAlt": "Photo Editor"
   }
 ]
