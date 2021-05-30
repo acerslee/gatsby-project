@@ -15,7 +15,7 @@ const languageList = [
 
 const listlinks = [
   {
-    text: 'About Me',
+    text: 'About',
     href: '#about',
   },
   {

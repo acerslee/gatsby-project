@@ -1,9 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { listlinks } from '../data/data.js';
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
-import { FaTimes, FaBars } from 'react-icons/fa';
+import { FaTimes, FaBars, FaChevronCircleUp } from 'react-icons/fa';
 import PDF from '../static/AlexLee_SWE_Resume.pdf';
 import styled from 'styled-components';
+import { document } from 'browser-monads';
+
+const UpArrow = styled(FaChevronCircleUp)`
+  color: grey;
+    position: fixed;
+    z-index: 5;
+    bottom: 13vh;
+    right: 5vh;
+    visibility: hidden;
+    transform: translateY(100px);
+    transition: all .5s ease;
+    height: 4vh;
+    width: 4vh;
+    & :hover{
+      cursor: pointer;
+      color: rgb(86, 121, 218);
+    };
+  @media(max-width: 1200px){
+      height: 4vh;
+      width: 4vh;
+      bottom: 18vh;
+    };
+  }
+  @media(max-width: 600px){
+      height: 3vh;
+      width: 3vh;
+  }
+`;
 
 const NavLink = styled.a`
   text-decoration: none;
@@ -40,6 +68,32 @@ const Header = () => {
       </li>
     )
   });
+
+  let rootElement = document.documentElement;
+
+  useEffect(() => {
+    let target = document.querySelector('header');
+    let scrollToTopBtn = document.querySelector('.scrollToTopButton');
+
+    const callback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          scrollToTopBtn.classList.remove('showBtn')
+        } else scrollToTopBtn.classList.add('showBtn')
+      })
+    };
+
+    let observer = new IntersectionObserver(callback);
+    observer.observe(target);
+  }, [])
+
+  const scrollToTop = () => {
+    rootElement.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+    window.history.pushState({}, null, '/')
+  };
 
   return(
     <header id="navbar">
@@ -92,6 +146,11 @@ const Header = () => {
           onKeyDown = {showNav}
         />
       }
+      <UpArrow
+        className = 'scrollToTopButton'
+        onClick = {scrollToTop}
+      >
+      </UpArrow>
     </header>
   )
 };

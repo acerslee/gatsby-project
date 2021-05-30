@@ -1,34 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { FaChevronCircleUp } from 'react-icons/fa';
-import { document } from 'browser-monads';
-
-const UpArrow = styled(FaChevronCircleUp)`
-  color: grey;
-    position: fixed;
-    z-index: 5;
-    bottom: 13vh;
-    right: 5vh;
-    visibility: hidden;
-    transform: translateY(100px);
-    transition: all .5s ease;
-    height: 4vh;
-    width: 4vh;
-    & :hover{
-      cursor: pointer;
-      color: rgb(86, 121, 218);
-    };
-  @media(max-width: 1200px){
-      height: 4vh;
-      width: 4vh;
-      bottom: 18vh;
-    };
-  }
-  @media(max-width: 600px){
-      height: 3vh;
-      width: 3vh;
-  }
-`;
 
 const WelcomeContainer = styled.section`
   color: #C2C2C2;
@@ -72,33 +43,6 @@ const WelcomeText = styled.p`
 
 const Welcome = () => {
 
-  var rootElement = document.documentElement;
-
-  useEffect(() => {
-    var target = document.querySelector('section');
-    var scrollToTopBtn = document.querySelector('.scrollToTopButton');
-
-
-    const callback = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          scrollToTopBtn.classList.remove('showBtn')
-        } else scrollToTopBtn.classList.add('showBtn')
-      })
-    };
-
-    let observer = new IntersectionObserver(callback);
-    observer.observe(target);
-  }, [])
-
-  const scrollToTop = () => {
-    rootElement.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-    window.history.pushState({}, null, '/')
-  };
-
   return(
     <WelcomeContainer
       id= 'welcome-section'
@@ -114,11 +58,6 @@ const Welcome = () => {
       <WelcomeText>
         SOFTWARE ENGINEER / PHOTOGRAPHER
       </WelcomeText>
-      <UpArrow
-        className = 'scrollToTopButton'
-        onClick = {scrollToTop}
-      >
-        </UpArrow>
     </WelcomeContainer>
   );
 };
