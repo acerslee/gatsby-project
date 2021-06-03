@@ -19,9 +19,9 @@ const ProjectsList = ({ title, nodes }) => {
           Featured Projects
       </h2>
       <div className = 'projects-center'>
-        {nodes.map(project => (
+        {nodes.map((project, index) => (
           <Project
-            key = {project.id}
+            key = {index}
             {...project}
           />
         ))}

@@ -15,9 +15,9 @@ const Project = ({ heading, description, tools, link, imageAlt, image, deploymen
         <h3 className = 'project-heading'>{heading}</h3>
         <p className = 'project-desc'>{description}</p>
           <div className = 'project-stack'>
-            {tools.map(tool => {
-              return <span key = {tool.id}>{tool.tool}</span>
-            })}
+            {tools.map((tool, index) => (
+              <span key = {index}>{tool}</span>
+            ))}
           </div>
           <div className=  'project-links'>
             <a

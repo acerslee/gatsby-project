@@ -33,13 +33,9 @@ export const query = graphql`
       nodes {
         description
         heading
-        id
         link
         deployment
-        tools {
-          id
-          tool
-        }
+        tools
         imageAlt
         image {
           childImageSharp {

@@ -1,33 +1,14 @@
 [
   {
-    "id": 1,
     "heading": "InterMingle",
     "description": "InterMingle is a social-media platform where users can either take quizzes made by the community, or create their own quizzes to share. Challenge yourself, your friends, or anyone else to see who prevails in the battle of smarts! Created with a team of 8 engineers",
     "tools": [
-      {
-        "id": 1,
-        "tool":"React"
-      },
-      {
-        "id": 2,
-        "tool":"Material UI"
-      },
-      {
-        "id": 3,
-        "tool": "Node.js"
-      },
-      {
-        "id": 4,
-        "tool": "Express"
-      },
-      {
-        "id": 5,
-        "tool": "PostgreSQL"
-      },
-      {
-        "id": 6,
-        "tool": "OpenTDB API"
-      }
+      "React",
+      "Material UI",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "OpenTDB API"
     ],
     "link": "https://github.com/TeamStrawberry/strawberry",
     "deployment": "http://18.210.13.63:3000/#/",
@@ -35,53 +16,28 @@
     "imageAlt": "Blueocean"
   },
   {
-    "id": 2,
     "heading": "Catwalk",
     "description": "In a team of 4, we've created a product-landing page with components that consist of Product Overview, Related Products & User Outfit, Questions & Answers, and Ratings & Review.",
     "tools": [
-      {
-        "id": 1,
-        "tool":"React"
-      },
-      {
-        "id": 2,
-        "tool": "Material UI"
-      },
-      {
-        "id": 3,
-        "tool": "Styled Components"
-      },
-      {
-        "id": 4,
-        "tool": "Jest & Enzyme"
-      }
+      "React",
+      "Material UI",
+      "Styled Components",
+      "Heroku",
+      "RESTful API"
     ],
     "link": "https://github.com/acerslee/FEC",
-    "deployment": null,
+    "deployment": "https://catwalk-fec.herokuapp.com/",
     "image": "./images/FECSDC.JPG",
     "imageAlt": "Catwalk"
   },
   {
-    "id": 3,
     "heading": "Atelier",
     "description": "Atelier is the back-end development for the Catwalk Project. This back-end is responsible for managing server calls between the client and the database, with millions of data entries to mimic real-user traffic.  Additional tools include API testing, ETL procedures, and Docker deployment.",
     "tools": [
-      {
-        "id": 1,
-        "tool":"Node.js"
-      },
-      {
-        "id": 2,
-        "tool":"Express"
-      },
-      {
-        "id": 3,
-        "tool": "MongoDB (Mongoose)"
-      },
-      {
-        "id": 4,
-        "tool": "Frisby"
-      }
+      "Node.js",
+      "Express",
+      "MongoDB (Mongoose)",
+      "Frisby"
     ],
     "link": "https://github.com/Team-Opportunity/products",
     "deployment": null,
@@ -89,30 +45,14 @@
     "imageAlt": "Atelier placeholder"
   },
   {
-    "id": 4,
     "heading": "Spotify Clone",
     "description": "Replication of the Spotify application, using the Spotify Web API node to pull data from Spotify's database. Created with React and TypeScript.",
     "tools": [
-      {
-        "id": 1,
-        "tool":"React"
-      },
-      {
-        "id": 2,
-        "tool":"TypeScript"
-      },
-      {
-        "id": 3,
-        "tool":"Node.js"
-      },
-      {
-        "id": 4,
-        "tool":"Styled Components"
-      },
-      {
-        "id": 5,
-        "tool":"Spotify Web API"
-      }
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Styled Components",
+      "Spotify Web API"
     ],
     "link": "https://github.com/acerslee/spotify-typescript",
     "deployment": null,
@@ -120,18 +60,11 @@
     "imageAlt": "Spotify App"
   },
   {
-    "id": 5,
     "heading": "MVP Photo Editor",
     "description": "In a 2-day sprint, I've created a photo editor. The user will be able to edit photos that have either been imported or stored in the user's Firebase storage.",
     "tools": [
-      {
-        "id": 1,
-        "tool":"React"
-      },
-      {
-        "id": 2,
-        "tool":"Firebase"
-      }
+      "React",
+      "Firebase"
     ],
     "link": "https://github.com/acerslee/photo-editor",
     "deployment": "https://photo-editor-3c9a6.web.app/",
