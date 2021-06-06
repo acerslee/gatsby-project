@@ -24,6 +24,7 @@ const Project = ({ heading, description, tools, link, imageAlt, image, deploymen
               href = {link}
               target = '_blank'
               rel = 'noreferrer'
+              aria-label = 'Github'
             >
               <FaGithubSquare className = 'project-icon'/>
             </a>
@@ -32,6 +33,7 @@ const Project = ({ heading, description, tools, link, imageAlt, image, deploymen
                 href = {deployment}
                 target = '_blank'
                 rel = 'noreferrer'
+                aria-label = 'External Link'
               >
                 <FaExternalLinkSquareAlt className = 'project-icon'/>
               </a>
