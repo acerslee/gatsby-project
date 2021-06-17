@@ -8,7 +8,7 @@
 
 /* Global Font & Color*/
 p, h1, h2, li, .socials{
-  font-family: Arial;
+  font-family: 'Lato', sans-serif;
 }
 
 h3 {
@@ -30,13 +30,6 @@ body {
   position: fixed;
 }
 
-#navbar {
-  display:flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  min-height: 3vh;
-}
-
 @media screen and (min-width: 1001px){
   .nav-list{
     display: flex;
@@ -48,24 +41,12 @@ body {
   }
 }
 
-.nav-link :hover{
-  color: rgb(250, 193, 87);
-}
-
 .button-display{
   display: none;
 }
 
 .showBtn{
   visibility: visible !important;
-}
-
-@media screen and (max-width:1000px){
-  nav{
-    display:flex;
-    flex-direction: row;
-    justify-content:space-evenly;
-  }
 }
 
 @media screen and (max-width:1000px){

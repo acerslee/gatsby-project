@@ -6,6 +6,13 @@ import PDF from '../static/AlexLee_SWE_Resume.pdf';
 import styled from 'styled-components';
 import { document } from 'browser-monads';
 
+const HeaderContainer = styled.header`
+  display:flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  min-height: 3vh;
+`;
+
 const UpArrow = styled(FaChevronCircleUp)`
   color: grey;
     position: fixed;
@@ -37,6 +44,9 @@ const NavLink = styled.a`
   text-decoration: none;
   font-family: 'Courier New', Courier, monospace;
   color: #595959;
+  &: hover{
+    color: rgb(250, 193, 87);
+  }
   @media(max-width: 1000px){
     color: #FFFFFF;
     font-size: 2.5rem;
@@ -96,7 +106,7 @@ const Header = () => {
   };
 
   return(
-    <header id="navbar">
+    <HeaderContainer id="navbar">
       <a href = '/'>
         <img
           className = 'logo'
@@ -151,7 +161,7 @@ const Header = () => {
         onClick = {scrollToTop}
       >
       </UpArrow>
-    </header>
+    </HeaderContainer>
   )
 };
 

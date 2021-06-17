@@ -28,6 +28,7 @@ const Seo = ({ title, description }) => {
       <meta name = 'theme-color' content = '#317EFB' />
       <meta name="robots" content="noindex, nofollow" />
       <meta property = 'og:url' content = {siteUrl} />
+      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
     </Helmet>
   )
 };
