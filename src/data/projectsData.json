@@ -58,17 +58,5 @@
     "deployment": null,
     "image": "./images/spotify-app.JPG",
     "imageAlt": "Spotify App"
-  },
-  {
-    "heading": "MVP Photo Editor",
-    "description": "In a 2-day sprint, I've created a photo editor. The user will be able to edit photos that have either been imported or stored in the user's Firebase storage.",
-    "tools": [
-      "React",
-      "Firebase"
-    ],
-    "link": "https://github.com/acerslee/photo-editor",
-    "deployment": "https://photo-editor-3c9a6.web.app/",
-    "image": "./images/photo-editor.PNG",
-    "imageAlt": "Photo Editor"
   }
 ]

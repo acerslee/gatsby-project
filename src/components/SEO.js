@@ -26,6 +26,7 @@ const Seo = ({ title, description }) => {
       <meta name = 'description' content = {description || siteDesc} />
       <meta name="HandheldFriendly" content="true"></meta>
       <meta name = 'theme-color' content = '#317EFB' />
+      <meta name="robots" content="noindex, nofollow" />
       <meta property = 'og:url' content = {siteUrl} />
     </Helmet>
   )

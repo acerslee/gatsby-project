@@ -38,7 +38,7 @@ const FooterLinks = styled.div`
   };
 `;
 
-const Copyright = styled.h4`
+const Copyright = styled.h3`
   font-size: 1.6vh;
   text-align: left;
   color: #edede8;

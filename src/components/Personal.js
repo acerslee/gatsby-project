@@ -46,7 +46,7 @@ const AboutParagraph = styled.p`
   }
 `;
 
-const AboutCaption = styled.h2`
+const AboutCaption = styled.h1`
   @media(max-width: 700px){
     font-size: 5.5vw;
   }

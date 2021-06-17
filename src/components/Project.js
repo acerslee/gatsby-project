@@ -12,7 +12,7 @@ const Project = ({ heading, description, tools, link, imageAlt, image, deploymen
         alt = {imageAlt}
       />
       <div className = 'project-info'>
-        <h3 className = 'project-heading'>{heading}</h3>
+        <h2 className = 'project-heading'>{heading}</h2>
         <p className = 'project-desc'>{description}</p>
           <div className = 'project-stack'>
             {tools.map((tool, index) => (

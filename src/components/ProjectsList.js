@@ -8,7 +8,7 @@ const ProjectsList = ({ title, nodes }) => {
       id = 'projects'
       aria-label = 'list of my showcase projects'
     >
-      <h2
+      <h1
         className = 'project-headline'
         style = {{
           fontSize: '2.5rem',
@@ -17,7 +17,7 @@ const ProjectsList = ({ title, nodes }) => {
         }}
         >
           Featured Projects
-      </h2>
+      </h1>
       <div className = 'projects-center'>
         {nodes.map((project, index) => (
           <Project
