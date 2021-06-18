@@ -58,5 +58,19 @@
     "deployment": null,
     "image": "./images/spotify-app.JPG",
     "imageAlt": "Spotify App"
+  },
+  {
+    "heading": "Github Dashboard",
+    "description": "Simplied visualization of a Github user where the user searches for a name and have results returned.",
+    "tools": [
+      "Next.js",
+      "TypeScript",
+      "Styled Components",
+      "Github API"
+    ],
+    "link": "https://github.com/acerslee/github-profile",
+    "deployment": "https://github-profile-six.vercel.app/",
+    "image": "./images/github-dash.JPG",
+    "imageAlt": "Github dash"
   }
 ]
