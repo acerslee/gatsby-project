@@ -25,10 +25,9 @@ const Seo = ({ title, description }) => {
       <meta name = 'viewpoint' content = 'width=device-width-scale=1,maximum-scale=1, user-scalable=no' />
       <meta name = 'description' content = {description || siteDesc} />
       <meta name="HandheldFriendly" content="true"></meta>
-      <meta name = 'theme-color' content = '#317EFB' />
-      <meta name="robots" content="noindex, nofollow" />
       <meta property = 'og:url' content = {siteUrl} />
       <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+      <link rel="apple-touch-icon" href="../data/images/favicon/apple-touch-icon.png"></link>
     </Helmet>
   )
 };
