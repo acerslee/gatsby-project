@@ -9,7 +9,7 @@ const languageList = [
   'Node.js & Express',
   'SQL (MySQL, PostgreSQL)',
   'MongoDB (Mongoose)',
-  'Frontend Frameworks (React, Gatsby, Next)',
+  'Javascript Frameworks (React, Gatsby, Next)',
 ];
 
 const listlinks = [
