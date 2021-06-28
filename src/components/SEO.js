@@ -26,8 +26,8 @@ const Seo = ({ title, description }) => {
       <meta name = 'description' content = {description || siteDesc} />
       <meta name="HandheldFriendly" content="true"></meta>
       <meta property = 'og:url' content = {siteUrl} />
-      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
-      <link rel="apple-touch-icon" href="../data/images/favicon/apple-touch-icon.png"></link>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap" />
+      <link rel="apple-touch-icon" href="../data/images/favicon/apple-touch-icon.png" />
     </Helmet>
   )
 };
