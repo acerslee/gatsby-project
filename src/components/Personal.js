@@ -83,7 +83,7 @@ const PersonalSection = () => {
         />
         <AboutMe>
           <AboutParagraph>
-            Previously coming from an Operations & Project Management background, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects ranging in both ends of application development. Check out more of my contents below!
+            Previously coming from an Operations & Project Management background, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects with Full Stack Javascript, and I love teaching myself something new about engineering everyday!. Check out more of my contents below!
           </AboutParagraph>
           <AboutCaption>
             Experienced with the following:

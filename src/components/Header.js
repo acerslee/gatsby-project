@@ -43,6 +43,7 @@ const UpArrow = styled(FaChevronCircleUp)`
 const NavLink = styled.a`
   text-decoration: none;
   font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
   color: #595959;
   &: hover{
     color: rgb(250, 193, 87);

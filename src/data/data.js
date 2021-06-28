@@ -3,7 +3,7 @@ import {FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa';
 
 const languageList = [
   'HTML & CSS3',
-  'Javascript (Vanilla, ES6)',
+  'Javascript (Vanilla, ES6+)',
   'Typescript',
   'Styling (Material UI, Styled Components)',
   'Node.js & Express',
