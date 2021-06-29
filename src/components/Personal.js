@@ -42,13 +42,14 @@ const AboutMe = styled.div`
 
 const AboutParagraph = styled.p`
   @media(max-width: 700px){
-    font-size: 5vw;
+    font-size: 4vw;
   }
 `;
 
-const AboutCaption = styled.h1`
+const AboutCaption = styled.p`
   @media(max-width: 700px){
-    font-size: 5.5vw;
+    font-size: 5vw;
+    font-weight: bold;
   }
 `;
 
@@ -59,7 +60,7 @@ const LanguageList = styled.ul`
   }
 
   @media (max-width: 700px){
-    font-size: 5vw;
+    font-size: 4vw;
   }
 `;
 
@@ -83,7 +84,7 @@ const PersonalSection = () => {
         />
         <AboutMe>
           <AboutParagraph>
-            Previously coming from an Operations & Project Management background, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects with Full Stack Javascript, and I love teaching myself something new about engineering everyday!. Check out more of my contents below!
+            Previously coming from  Operations & Project Management backgrounds, I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects with Full Stack Javascript, and I have a desire to continously learn new tools to improve my abilities as an engineer! Check out more of my contents below!
           </AboutParagraph>
           <AboutCaption>
             Experienced with the following:

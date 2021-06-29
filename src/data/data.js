@@ -5,7 +5,7 @@ const languageList = [
   'HTML & CSS3',
   'Javascript (Vanilla, ES6+)',
   'Typescript',
-  'Styling (Material UI, Styled Components)',
+  'Styling (TailwindCSS, Styled Components)',
   'Node.js & Express',
   'SQL (MySQL, PostgreSQL)',
   'MongoDB (Mongoose)',

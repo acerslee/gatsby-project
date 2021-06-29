@@ -114,8 +114,8 @@ const Header = () => {
           src = {logo}
           alt = 'brand logo'
           style = {{
-            height: '80px',
-            width: '80px'
+            height: '90px',
+            width: '90px'
           }}
         />
       </a>
@@ -140,9 +140,7 @@ const Header = () => {
       {!open &&
         <FaBars
           className = 'button-display'
-          style = {{
-            color: '#595959'
-          }}
+          style = {{ color: '#595959' }}
           onClick = {showNav}
           onKeyDown = {showNav}
         />
@@ -150,9 +148,7 @@ const Header = () => {
       {open &&
         <FaTimes
           className = 'button-display'
-          style = {{
-            color: 'white'
-          }}
+          style = {{ color: 'white' }}
           onClick = {showNav}
           onKeyDown = {showNav}
         />

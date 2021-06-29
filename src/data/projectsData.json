@@ -1,10 +1,9 @@
 [
   {
     "heading": "InterMingle",
-    "description": "InterMingle is a social-media platform where users can either take quizzes made by the community, or create their own quizzes to share. Challenge yourself, your friends, or anyone else to see who prevails in the battle of smarts! Created with a team of 8 engineers",
+    "description": "InterMingle is a social-media platform where users can either take quizzes made by the community, or create their own quizzes to share. Challenge yourself, your friends, or anyone else to see who prevails in the battle of smarts!",
     "tools": [
       "React",
-      "Material UI",
       "Node.js",
       "Express",
       "PostgreSQL",
@@ -17,10 +16,9 @@
   },
   {
     "heading": "Catwalk",
-    "description": "In a team of 4, we've created a product-landing page with components that consist of Product Overview, Related Products & User Outfit, Questions & Answers, and Ratings & Review.",
+    "description": "Catwalk is an e-commerce platform with components that consist of Product Overview, Related Products & User Outfit, Questions & Answers, and Ratings & Review.",
     "tools": [
       "React",
-      "Material UI",
       "Styled Components",
       "Heroku",
       "RESTful API"
