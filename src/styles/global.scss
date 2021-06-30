@@ -7,7 +7,7 @@
 }
 
 /* Global Font & Color*/
-p, h1, h2, li, .socials{
+p, h1, h2, li, .socials, .link-button{
   font-family: 'Lato', sans-serif;
 }
 
@@ -139,47 +139,37 @@ body {
 /*** Projects Section ***/
 
 .projects-center{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 0 auto;
-  width: 70%;
-  z-index: 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: auto;
 }
 
 .project {
-  margin-bottom: 4vw;
-  height: 36vh;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  background-color: #cccccc;
+  margin: 1rem;
   z-index: 0;
-  width: 100%;
+  max-width: 90%;
+  max-height: 70vh;
 }
 
 .project-img {
-  height: 100%;
-  width: 50%;
-  z-index: 0;
-  position:absolute !important;
-}
-
-.project:hover .project-img::after {
-  opacity: 0;
+  height: 65%;
+  width: 100%;
 }
 
 .project-info {
   background: #f0f0f0;
-  padding: 1rem 2rem;
-  width: 55%;
-  top: 15%;
-  bottom: 50%;
-  float:right;
+  height: auto;
   -webkit-box-shadow: 0 10px 6px -6px #777;
   -moz-box-shadow: 0 10px 6px -6px #777;
        box-shadow: 0 10px 6px -6px #777;
-  position: relative;
-  z-index: 3;
+}
+
+.project-info > * {
+  margin-left: 1rem;
+  text-align: left;
 }
 
 .project-info h3 {
@@ -187,49 +177,45 @@ body {
   font-weight: 500;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
-  text-align: left;
 }
 
 .project-desc {
   word-spacing: 0.1em;
-  text-align: left;
-}
-
-.project-stack {
-  margin-bottom: 1rem;
-}
-
-.project-stack span{
-  display: inline-block;
-  background: #e7e7e7;
-  color: hsl(210deg 84% 29%);
-  margin-top: 0.3em;
-  margin-right: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.85rem;
 }
 
 .project-icon {
-  color: #0d1957;
-  font-size: 2.5rem !important;
-  margin-right: 0.5rem;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.project-links{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
+}
+
+.link-button{
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  text-decoration: none;
+  background-color:#0d1957;
+  padding: 0.4em;
+  color: white;
   & :hover{
-    color: rgb(250, 193, 87);
+    background-color: rgb(250, 193, 87);
     cursor: pointer;
   }
 }
 
-@media only screen and (max-width:1400px) {
-  .projects{
-    width: 70%;
-    height: 100%;
-    margin: 0 auto 0 auto;
-  }
+.link-text{
+  margin-left: 0.5em;
+}
 
-  .project-heading, .project-desc, .project-stack, .project-icon{
-    margin: 0.5rem 2rem 0.5rem 2rem;
+@media only screen and (max-width:1400px) {
+  .projects-center{
+    grid-template-columns: auto auto;
   }
 
   .project-headline{
@@ -238,73 +224,30 @@ body {
   }
 
   .project{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: auto;
-    background-color: white;
   }
 
-  .project-img{
-    width: 80%;
-    position: relative !important;
-  }
-
-  .project-info{
-    width: 80%;
-    margin: 0;
-    padding: 0;
+  .project-links{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items:center;
   }
 }
 
 @media only screen and (max-width:700px) {
   .projects-center{
-    width: 100%;
-  }
-
-  .project-heading{
-    margin-bottom: 0.5rem !important;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .project-heading, .project-desc{
-    font-size: 3.5vw;
+    font-size: 1.2em;
   }
 
- .project-stack span{
-    font-size: 0.65rem;
-  }
-
-  .project-headline{
-    text-align:center;
-    font-size:2.5rem;
-  }
-
-  .project{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-  }
-
-  .project-img{
+  .project-img, .project-info{
     width: 95%;
-    position: relative !important;
-  }
-
-  .project-info{
-    width: 95%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .project-list-button{
-    width: 50vw;
-    height: 15vw;
-  }
-
-  .project-list-button-text{
-    font-size: 1em;
   }
 }

@@ -1,14 +1,7 @@
 [
   {
     "heading": "InterMingle",
-    "description": "InterMingle is a social-media platform where users can either take quizzes made by the community, or create their own quizzes to share. Challenge yourself, your friends, or anyone else to see who prevails in the battle of smarts!",
-    "tools": [
-      "React",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "OpenTDB API"
-    ],
+    "description": "A social-media platform where users can either take quizzes made by the community, or create their own quizzes to share. Challenge yourself, your friends, or anyone else to see who prevails in the battle of smarts!",
     "link": "https://github.com/TeamStrawberry/strawberry",
     "deployment": "http://18.210.13.63:3000/#/",
     "image": "./images/Blueocean.JPG",
@@ -16,13 +9,7 @@
   },
   {
     "heading": "Catwalk",
-    "description": "Catwalk is an e-commerce platform with components that consist of Product Overview, Related Products & User Outfit, Questions & Answers, and Ratings & Review.",
-    "tools": [
-      "React",
-      "Styled Components",
-      "Heroku",
-      "RESTful API"
-    ],
+    "description": "An e-commerce platform with components that consist of Product Overview, Related Products & User Outfit, Questions & Answers, and Ratings & Review.",
     "link": "https://github.com/acerslee/FEC",
     "deployment": "https://catwalk-fec.herokuapp.com/",
     "image": "./images/FECSDC.JPG",
@@ -30,13 +17,7 @@
   },
   {
     "heading": "Atelier",
-    "description": "Atelier is the back-end development for the Catwalk Project. This back-end is responsible for managing server calls between the client and the database, with millions of data entries to mimic real-user traffic.  Additional tools include API testing, ETL procedures, and Docker deployment.",
-    "tools": [
-      "Node.js",
-      "Express",
-      "MongoDB (Mongoose)",
-      "Frisby"
-    ],
+    "description": "The back-end development for the Catwalk Project. Responsible for managing server calls between the client and the database, with millions of data entries pulled via ETL procedures, to mimic real-user traffic.",
     "link": "https://github.com/Team-Opportunity/products",
     "deployment": null,
     "image": "./images/woocommerce-placeholder.png",
@@ -44,14 +25,7 @@
   },
   {
     "heading": "Spotify Clone",
-    "description": "Replication of the Spotify application, using the Spotify Web API node to pull data from Spotify's database. Created with React and TypeScript.",
-    "tools": [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Styled Components",
-      "Spotify Web API"
-    ],
+    "description": "Replication of the Spotify application, using the Spotify Web API node to pull data from Spotify's database.",
     "link": "https://github.com/acerslee/spotify-typescript",
     "deployment": null,
     "image": "./images/spotify-app.JPG",
@@ -60,12 +34,6 @@
   {
     "heading": "Github Dashboard",
     "description": "Simplied visualization of a Github user where the user searches for a name and have results returned.",
-    "tools": [
-      "Next.js",
-      "TypeScript",
-      "Styled Components",
-      "Github API"
-    ],
     "link": "https://github.com/acerslee/github-profile",
     "deployment": "https://github-profile-six.vercel.app/",
     "image": "./images/github-dash.JPG",

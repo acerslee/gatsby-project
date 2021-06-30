@@ -35,7 +35,6 @@ export const query = graphql`
         heading
         link
         deployment
-        tools
         imageAlt
         image {
           childImageSharp {

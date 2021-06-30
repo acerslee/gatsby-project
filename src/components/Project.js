@@ -1,8 +1,9 @@
 import React from 'react';
-import { FaGithubSquare, FaExternalLinkSquareAlt } from 'react-icons/fa';
+import { FaGithubSquare, FaExternalLinkAlt } from 'react-icons/fa';
 import Img from 'gatsby-image';
 
-const Project = ({ heading, description, tools, link, imageAlt, image, deployment }) => {
+const Project = ({ heading, description, link, imageAlt, image, deployment }) => {
+
   return(
     <div className = "project">
       <Img
@@ -14,31 +15,30 @@ const Project = ({ heading, description, tools, link, imageAlt, image, deploymen
       <div className = 'project-info'>
         <h2 className = 'project-heading'>{heading}</h2>
         <p className = 'project-desc'>{description}</p>
-          <div className = 'project-stack'>
-            {tools.map((tool, index) => (
-              <span key = {index}>{tool}</span>
-            ))}
-          </div>
-          <div className=  'project-links'>
+        <div className=  'project-links'>
+          <a
+            href = {link}
+            target = '_blank'
+            rel = 'noreferrer'
+            aria-label = 'Github'
+            className = "link-button"
+          >
+            <FaGithubSquare className = 'project-icon'/>
+            <span className = 'link-text'>Github</span>
+          </a>
+          {deployment &&
             <a
-              href = {link}
+              href = {deployment}
               target = '_blank'
               rel = 'noreferrer'
-              aria-label = 'Github'
+              aria-label = 'External Link'
+              className = "link-button"
             >
-              <FaGithubSquare className = 'project-icon'/>
+              <FaExternalLinkAlt className = 'project-icon'/>
+              <span className = 'link-text'>Deployment</span>
             </a>
-            {deployment &&
-              <a
-                href = {deployment}
-                target = '_blank'
-                rel = 'noreferrer'
-                aria-label = 'External Link'
-              >
-                <FaExternalLinkSquareAlt className = 'project-icon'/>
-              </a>
-            }
-          </div>
+          }
+        </div>
       </div>
     </div>
 

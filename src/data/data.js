@@ -10,6 +10,7 @@ const languageList = [
   'SQL (MySQL, PostgreSQL)',
   'MongoDB (Mongoose)',
   'Javascript Frameworks (React, Gatsby, Next)',
+  'Deployment Tools (Firebase, Heroku)'
 ];
 
 const listlinks = [
