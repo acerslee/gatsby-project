@@ -35,7 +35,7 @@ body {
     display: flex;
     justify-content: space-around;
     width:120%;
-    font-size:20px;
+    font-size:2em;
     list-style:none;
     margin-bottom: 3.3vh !important;
   }
@@ -181,6 +181,7 @@ body {
 
 .project-desc {
   word-spacing: 0.1em;
+  height: 8vh;
 }
 
 .project-icon {
@@ -201,6 +202,7 @@ body {
   align-items:center;
   text-decoration: none;
   background-color:#0d1957;
+  border-radius: 8px;
   padding: 0.4em;
   color: white;
   & :hover{
@@ -234,6 +236,12 @@ body {
     flex-direction: row;
     align-items:center;
   }
+}
+
+@media only screen and (max-width:1000px) {
+ .project-desc{
+   height: auto;
+ }
 }
 
 @media only screen and (max-width:700px) {
