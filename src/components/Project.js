@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithubSquare, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import Img from 'gatsby-image';
 
 const Project = ({ heading, description, link, imageAlt, image, deployment }) => {
@@ -23,7 +23,7 @@ const Project = ({ heading, description, link, imageAlt, image, deployment }) =>
             aria-label = 'Github'
             className = "link-button"
           >
-            <FaGithubSquare className = 'project-icon'/>
+            <FaGithub className = 'project-icon'/>
             <span className = 'link-text'>Github</span>
           </a>
           {deployment &&
