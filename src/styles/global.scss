@@ -193,7 +193,11 @@ body {
   display: flex;
   flex-direction:row;
   justify-content: space-evenly;
-  margin-bottom: 1em;
+  margin: 0 0 1em 0;
+  & :hover{
+    background-color: rgb(250, 193, 87);
+    cursor: pointer;
+  }
 }
 
 .link-button{
@@ -205,14 +209,11 @@ body {
   border-radius: 8px;
   padding: 0.4em;
   color: white;
-  & :hover{
-    background-color: rgb(250, 193, 87);
-    cursor: pointer;
-  }
 }
 
 .link-text{
-  margin-left: 0.5em;
+  margin-left: 0.3em;
+  font-size: 1.3rem;
 }
 
 @media only screen and (max-width:1400px) {
@@ -257,5 +258,9 @@ body {
 
   .project-img, .project-info{
     width: 95%;
+  }
+
+  .link-text, .project-links{
+    font-size: 1rem;
   }
 }
