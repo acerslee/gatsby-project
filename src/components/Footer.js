@@ -6,11 +6,11 @@ const date = new Date().getFullYear();
 
 const FooterContainer = styled.footer`
   background-color: #0d1957;
-  padding-top: 1rem;
+  padding: 1rem 0;
   display: flex;
   justify-content: center;
-  @media(max-width: 1000px){
-    padding: 0;
+  @media(max-width: 700px){
+    padding: 0
   }
 `;
 

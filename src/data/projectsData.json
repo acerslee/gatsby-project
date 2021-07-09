@@ -24,12 +24,12 @@
     "imageAlt": "Atelier placeholder"
   },
   {
-    "heading": "Spotify Clone",
-    "description": "Replication of the Spotify application, using the Spotify Web API node to pull data from Spotify's database.",
-    "link": "https://github.com/acerslee/spotify-typescript",
-    "deployment": null,
-    "image": "./images/spotify-app.JPG",
-    "imageAlt": "Spotify App"
+    "heading": "Hype Kicks",
+    "description": "For the fellow sneakerheads and/or hypebeasts, Hype Kicks is a visual sneaker database that allows a user to search a provided brand, as well as the year created. The user can also see upcoming releases for their favorite shoes.",
+    "link": "https://github.com/acerslee/hype-kicks",
+    "deployment": "https://hype-kicks.vercel.app/",
+    "image": "./images/hypekicks.JPG",
+    "imageAlt": "Hypekicks"
   },
   {
     "heading": "Github Dashboard",
@@ -38,5 +38,13 @@
     "deployment": "https://github-profile-six.vercel.app/",
     "image": "./images/github-dash.JPG",
     "imageAlt": "Github dash"
+  },
+  {
+    "heading": "Spotify Clone",
+    "description": "Replication of the Spotify application, using the Spotify Web API node to pull data from Spotify's database.",
+    "link": "https://github.com/acerslee/spotify-typescript",
+    "deployment": null,
+    "image": "./images/spotify-app.JPG",
+    "imageAlt": "Spotify App"
   }
 ]
