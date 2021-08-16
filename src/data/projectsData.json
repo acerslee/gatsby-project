@@ -27,7 +27,7 @@
     "heading": "Hype Kicks",
     "description": "For the fellow sneakerheads and/or hypebeasts, Hype Kicks is a visual sneaker database that allows a user to search a provided brand, as well as the year created. The user can also see upcoming releases for their favorite shoes.",
     "link": "https://github.com/acerslee/hype-kicks",
-    "deployment": "https://hype-kicks.vercel.app/",
+    "deployment": "https://hypekicks.netlify.app/",
     "image": "./images/hypekicks.JPG",
     "imageAlt": "Hypekicks"
   },
