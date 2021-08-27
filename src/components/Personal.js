@@ -25,18 +25,15 @@ const Biography = styled.div`
 
 const AboutMe = styled.div`
   width: 45%;
-  position: relative;
-  top: 15vh;
-  bottom: 15vh;
-  margin: 1vw 1vw 0 2vw;
+  margin: 0vw 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 1.7rem;
   @media(max-width: 1400px){
-    position: auto;
-    top: 0vh;
-    bottom: 0vh;
     text-align: center;
     width: 82%;
-    margin: 0 auto 0 auto
+    margin: 0 auto;
   }
 `;
 
@@ -47,9 +44,9 @@ const AboutParagraph = styled.p`
 `;
 
 const AboutCaption = styled.p`
+  font-weight: bold;
   @media(max-width: 700px){
     font-size: 5vw;
-    font-weight: bold;
   }
 `;
 
