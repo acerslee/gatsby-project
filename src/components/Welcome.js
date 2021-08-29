@@ -56,7 +56,7 @@ const Welcome = () => {
         </BoxText>
       </Box>
       <WelcomeText>
-        SOFTWARE ENGINEER / PHOTOGRAPHER
+        SOFTWARE ENGINEER
       </WelcomeText>
     </WelcomeContainer>
   );
