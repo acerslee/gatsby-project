@@ -19,7 +19,7 @@ const UpArrow = styled(FaChevronCircleUp)`
   color: grey;
     position: fixed;
     z-index: 5;
-    bottom: 13vh;
+    bottom: 15vh;
     right: 5vh;
     visibility: hidden;
     transform: translateY(100px);
