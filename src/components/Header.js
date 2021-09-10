@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { listlinks } from '../data/data.js';
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
-import { FaTimes, FaBars, FaChevronCircleUp } from 'react-icons/fa';
+import { FaTimes } from '@react-icons/all-files/fa/FaTimes';
+import { FaBars } from '@react-icons/all-files/fa/FaBars';
+import { FaChevronCircleUp } from '@react-icons/all-files/fa/FaChevronCircleUp';
 import PDF from '../static/AlexLee_SWE_Resume.pdf';
 import styled from 'styled-components';
 import { document } from 'browser-monads';

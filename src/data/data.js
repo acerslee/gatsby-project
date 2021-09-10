@@ -1,5 +1,7 @@
 import React from 'react';
-import {FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa';
+import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
+import { FaEnvelope } from '@react-icons/all-files/fa/FaEnvelope';
 
 const languageList = [
   'HTML & CSS3',
