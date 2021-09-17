@@ -8,9 +8,8 @@ const PersonalSection = loadable(() => import('../components/Personal.js'))
 const ProjectsList = loadable(() => import('../components/ProjectsList.js'))
 const Footer = loadable(() => import('../components/Footer.js'))
 
-
 export default function IndexPage ({ data }) {
-  const {allProjectsDataJson:{nodes}} = data;
+  const {allContentfulProject:{edges}} = data;
 
   return (
     <>
@@ -23,7 +22,7 @@ export default function IndexPage ({ data }) {
           width: '70%'
         }}
       />
-      <ProjectsList title = 'featured projects' nodes = {nodes} />
+      <ProjectsList edges = {edges} />
       <Footer />
     </>
   )
@@ -31,19 +30,18 @@ export default function IndexPage ({ data }) {
 
 export const query = graphql`
   {
-    allProjectsDataJson {
-      nodes {
-        description
-        heading
-        link
-        deployment
-        imageAlt
-        image {
-          childImageSharp {
+    allContentfulProject {
+      edges {
+        node {
+          title
+          description
+          projectImage {
             fluid {
-              ...GatsbyImageSharpFluid
+              ...GatsbyContentfulFluid
             }
           }
+          githubLink
+          deploymentLink
         }
       }
     }

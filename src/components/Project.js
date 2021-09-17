@@ -3,22 +3,21 @@ import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import { FaExternalLinkAlt } from '@react-icons/all-files/fa/FaExternalLinkAlt'
 import Img from 'gatsby-image';
 
-const Project = ({ heading, description, link, imageAlt, image, deployment }) => {
-
+const Project = ({ title, description, githubLink, projectImage, deploymentLink }) => {
   return(
     <div className = "project">
       <Img
-        fluid = {image.childImageSharp.fluid}
+        fluid = {projectImage[0].fluid}
         className = "project-img"
         loading = "lazy"
-        alt = {imageAlt}
+        alt = {title}
       />
       <div className = 'project-info'>
-        <h2 className = 'project-heading'>{heading}</h2>
+        <h2 className = 'project-heading'>{title}</h2>
         <p className = 'project-desc'>{description}</p>
         <div className=  'project-links'>
           <a
-            href = {link}
+            href = {githubLink}
             target = '_blank'
             rel = 'noreferrer'
             aria-label = 'Github'
@@ -27,9 +26,9 @@ const Project = ({ heading, description, link, imageAlt, image, deployment }) =>
             <FaGithub className = 'project-icon'/>
             <span className = 'link-text'>Github</span>
           </a>
-          {deployment &&
+          {deploymentLink &&
             <a
-              href = {deployment}
+              href = {deploymentLink}
               target = '_blank'
               rel = 'noreferrer'
               aria-label = 'External Link'

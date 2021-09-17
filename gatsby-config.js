@@ -1,10 +1,15 @@
+const dotenv = require('dotenv');
+if (process.env.NODE_ENV !== 'production') dotenv.config()
+
 module.exports = {
   flags:{
     DEV_SSR: true,
+    FAST_DEV: true,
+    PARALLEL_SOURCING: true,
     PRESERVE_WEBPACK_CACHE: true
   },
   siteMetadata: {
-    title: "Alex Lee Personal Portfolio",
+    title: "Alex Lee Portfolio",
     description: "I'm a Software Engineer based out of NYC with a passion in photography and coffee. Check out more of my contents in here.",
     author: "Alex Lee",
     siteUrl: "https://alexanderhjlee.com"
@@ -16,7 +21,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
-    "gatsby-transformer-json",
     "gatsby-plugin-sass",
     "gatsby-plugin-styled-components",
     {
@@ -31,6 +35,13 @@ module.exports = {
         name: `data`,
         path: `${__dirname}/src/data/`,
       }
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_DELIVERY_API,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
