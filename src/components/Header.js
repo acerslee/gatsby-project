@@ -88,7 +88,7 @@ const Header = () => {
     let target = document.querySelector('header');
     let scrollToTopBtn = document.querySelector('.scrollToTopButton');
 
-    const callback = (entries, observer) => {
+    const callback = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           scrollToTopBtn.classList.remove('showBtn')
