@@ -3,7 +3,7 @@ import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import { FaEnvelope } from '@react-icons/all-files/fa/FaEnvelope';
 
-const languageList = [
+export const languageList = [
   'HTML5 & CSS3',
   'Javascript (Vanilla, ES6+)',
   'Typescript',
@@ -15,7 +15,7 @@ const languageList = [
   'Deployment Tools (Firebase, Netlify, Heroku)'
 ];
 
-const listlinks = [
+export const listlinks = [
   {
     text: 'About',
     href: '#about',
@@ -30,7 +30,7 @@ const listlinks = [
   }
 ];
 
-const data = [
+export const data = [
   {
     href: 'https://www.linkedin.com/in/alexanderhjlee',
     icon: <FaLinkedin className = 'socials' aria-label = 'Linked In'/>
@@ -44,20 +44,3 @@ const data = [
     icon: <FaEnvelope className = 'socials' aria-label = 'Email'/>
   }
 ];
-
-//these projects will be within the projects page
-// const otherProjects = [
-//   {
-//     id: 1,
-//     heading: 'Github Repo Dashboard',
-//     tools: ['React-  ', 'Node.js-  ', 'Express-  ','Github Repo API'],
-//     link: 'https://github.com/acerslee/github-repo'
-//   }
-// ];
-
-export {
-  languageList,
-  listlinks,
-  data
-  // otherProjects,
-};

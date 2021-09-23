@@ -3,7 +3,7 @@ import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import { FaExternalLinkAlt } from '@react-icons/all-files/fa/FaExternalLinkAlt'
 import Img from 'gatsby-image';
 
-const Project = ({ title, description, githubLink, projectImage, deploymentLink }) => {
+const Project = ({ title, description, githubLink, projectImage, stack, deploymentLink }) => {
   return(
     <div className = "project">
       <Img
@@ -15,7 +15,12 @@ const Project = ({ title, description, githubLink, projectImage, deploymentLink 
       <div className = 'project-info'>
         <h2 className = 'project-heading'>{title}</h2>
         <p className = 'project-desc'>{description}</p>
-        <div className=  'project-links'>
+        {/* <div className = 'project-stack'>
+          {stack.map((item, index) => (
+            <p key = {index}>{item}</p>
+          ))}
+        </div> */}
+        <div className =  'project-links'>
           <a
             href = {githubLink}
             target = '_blank'

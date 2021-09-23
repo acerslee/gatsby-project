@@ -40,6 +40,7 @@ export const query = graphql`
               ...GatsbyContentfulFluid
             }
           }
+          stack
           githubLink
           deploymentLink
         }
