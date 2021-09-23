@@ -81,7 +81,9 @@ const PersonalSection = () => {
         />
         <AboutMe>
           <AboutParagraph>
-            I'm a Software Engineer based out of NYC with a passion for photography and coffee. I have built projects with Full Stack Javascript, and I have a desire to continously learn new tools to improve my abilities as an engineer! Check out more of my contents below!
+            I've worked with multiple early-stage startups, and helped initialized applications. 
+            I have built projects with Full Stack Javascript, and I have a desire to continously 
+            learn new tools to improve my abilities as an engineer! Check out more of my contents below!
           </AboutParagraph>
           <AboutCaption>
             Experienced with the following:

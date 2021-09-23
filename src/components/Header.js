@@ -3,43 +3,16 @@ import { listlinks } from '../data/data.js';
 import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
 import { FaTimes } from '@react-icons/all-files/fa/FaTimes';
 import { FaBars } from '@react-icons/all-files/fa/FaBars';
-import { FaChevronCircleUp } from '@react-icons/all-files/fa/FaChevronCircleUp';
 import PDF from '../static/AlexLee_SWE_Resume.pdf';
 import styled from 'styled-components';
 import { document } from 'browser-monads';
+import { UpArrow } from '../sc-elements/elemnets';
 
 const HeaderContainer = styled.header`
   display:flex;
   justify-content: space-around;
   align-items: flex-end;
   min-height: 3vh;
-`;
-
-const UpArrow = styled(FaChevronCircleUp)`
-  color: grey;
-    position: fixed;
-    z-index: 5;
-    bottom: 15vh;
-    right: 5vh;
-    visibility: hidden;
-    transform: translateY(100px);
-    transition: all .5s ease;
-    height: 4vh;
-    width: 4vh;
-    & :hover{
-      cursor: pointer;
-      color: rgb(86, 121, 218);
-    };
-  @media(max-width: 1200px){
-      height: 4vh;
-      width: 4vh;
-      bottom: 18vh;
-    };
-  }
-  @media(max-width: 600px){
-      height: 3vh;
-      width: 3vh;
-  }
 `;
 
 const NavLink = styled.a`
@@ -82,11 +55,11 @@ const Header = () => {
     )
   });
 
-  let rootElement = document.documentElement;
+  const rootElement = document.documentElement;
 
   useEffect(() => {
-    let target = document.querySelector('header');
-    let scrollToTopBtn = document.querySelector('.scrollToTopButton');
+    const target = document.querySelector('header');
+    const scrollToTopBtn = document.querySelector('.scrollToTopButton');
 
     const callback = (entries) => {
       entries.forEach(entry => {
@@ -96,7 +69,7 @@ const Header = () => {
       })
     };
 
-    let observer = new IntersectionObserver(callback);
+    const observer = new IntersectionObserver(callback);
     observer.observe(target);
   }, [])
 

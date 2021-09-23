@@ -4,7 +4,7 @@ import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import { FaEnvelope } from '@react-icons/all-files/fa/FaEnvelope';
 
 const languageList = [
-  'HTML & CSS3',
+  'HTML5 & CSS3',
   'Javascript (Vanilla, ES6+)',
   'Typescript',
   'Styling (TailwindCSS, Styled Components)',
@@ -12,7 +12,7 @@ const languageList = [
   'SQL (MySQL, PostgreSQL)',
   'MongoDB (Mongoose)',
   'Front-end Tools (React, Redux, Next)',
-  'Deployment Tools (Firebase, Heroku)'
+  'Deployment Tools (Firebase, Netlify, Heroku)'
 ];
 
 const listlinks = [
