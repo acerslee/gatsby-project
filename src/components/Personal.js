@@ -29,7 +29,7 @@ const AboutMe = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 1.7rem;
+  font-size: 2em;
   @media(max-width: 1400px){
     text-align: center;
     width: 82%;
@@ -81,8 +81,8 @@ const PersonalSection = () => {
         />
         <AboutMe>
           <AboutParagraph>
-            I've worked with multiple early-stage startups, and helped initialized applications. 
-            I have built projects with Full Stack Javascript, and I have a desire to continously 
+            I've worked with multiple early-stage startups, and helped initialized applications.
+            I have built projects with Full Stack Javascript, and I have a desire to continously
             learn new tools to improve my abilities as an engineer! Check out more of my contents below!
           </AboutParagraph>
           <AboutCaption>

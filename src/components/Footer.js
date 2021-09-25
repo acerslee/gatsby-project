@@ -21,8 +21,7 @@ const MiniContainer = styled.div`
   align-items:center;
   justify-content: space-between;
   @media(max-width: 700px){
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
   }
 `
 const FooterLinks = styled.div`
@@ -34,7 +33,7 @@ const FooterLinks = styled.div`
   };
   @media(max-width: 700px){
     width: 80%;
-    padding-bottom: 1rem;
+    padding-top: 1em;
   };
 `;
 
@@ -43,7 +42,7 @@ const Copyright = styled.h3`
   text-align: left;
   color: #edede8;
   @media(max-width: 700px){
-    font-size: 1.5vh;
+    font-size: 1.1vh;
   }
 `;
 
