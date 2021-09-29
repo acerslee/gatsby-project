@@ -40,15 +40,16 @@ const SubText = styled.p`
 `;
 
 const Button = styled.button`
-  border: 1px solid;
-  background-color: transparent;
-  border-color: #0d1957;
+
+  background-color: hsl(230deg 50% 50% / 14%);
+  border-color: transparent;
+  padding: 0.2em 0;
   border-radius: 5px;
   font-size: 2em;
   width: 30%;
   &: hover {
     cursor: pointer;
-    background-color: hsl(230deg 50% 50% / 30%);
+    background-color: hsl(230deg 78% 36% / 14%);
   }
   @media (max-width: 1000px) {
     width: 100%;
@@ -57,7 +58,7 @@ const Button = styled.button`
 
 const ContactLink = styled.a`
   text-decoration: none;
-  color: #0d1957;
+  color: hsl(209, 34%, 14%);
 `;
 
 const Welcome = () => {
@@ -68,7 +69,7 @@ const Welcome = () => {
       aria-label = 'intro to give webpage a pop'
     >
       <ContentContainer>
-        <IntroText>Hello World! My name is 
+        <IntroText>Hello World! My name is
           <br />
           <NameSpan>Alex Lee</NameSpan>
         </IntroText>
@@ -80,7 +81,7 @@ const Welcome = () => {
             Contact Me
           </ContactLink>
         </Button>
-      </ContentContainer> 
+      </ContentContainer>
     </WelcomeContainer>
   );
 };

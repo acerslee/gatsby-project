@@ -29,7 +29,7 @@ const AboutMe = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 2em;
+  font-size: 2.3em;
   @media(max-width: 1400px){
     text-align: center;
     width: 82%;
