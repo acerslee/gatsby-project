@@ -12,7 +12,8 @@ module.exports = {
     title: "Alex Lee Portfolio",
     description: "I'm a Software Engineer based out of NYC with a passion in photography and coffee. Check out more of my contents in here.",
     author: "Alex Lee",
-    siteUrl: "https://alexanderhjlee.com"
+    siteUrl: "https://alexanderhjlee.com",
+    twitterUsername: "@acerslee"
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",

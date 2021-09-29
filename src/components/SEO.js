@@ -6,6 +6,7 @@ const siteQuery = graphql`
   {
     site {
       siteMetadata {
+        twitterUsername
         author
         siteDesc: description
         siteUrl
@@ -27,6 +28,12 @@ const Seo = ({ title, description }) => {
       <meta property = 'og:url' content = {siteUrl} />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap" />
       <link rel="apple-touch-icon" href="../data/images/favicon/apple-touch-icon.png" />
+
+
+      <meta name="twitter:card" content="summary_large_image" />
+      {/* <meta name="twitter:creator" content={twitterUsername} /> */}
+      <meta name="twitter:title" content={siteTitle} />
+      <meta name="twitter:description" content={siteDesc} />
     </Helmet>
   )
 };
