@@ -13,7 +13,7 @@ export default function IndexPage ({ data }) {
 
   return (
     <>
-      <Seo title = 'Home'/>
+      {/* <Seo title = 'Home'/>
       <Header />
       <Welcome />
       <PersonalSection />
@@ -21,7 +21,7 @@ export default function IndexPage ({ data }) {
         style = {{
           width: '70%'
         }}
-      />
+      /> */}
       <ProjectsList edges = {edges} />
       <Footer />
     </>

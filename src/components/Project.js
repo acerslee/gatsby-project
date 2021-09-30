@@ -2,23 +2,106 @@ import React from 'react';
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import { FaExternalLinkAlt } from '@react-icons/all-files/fa/FaExternalLinkAlt'
 import Img from 'gatsby-image';
+import styled from 'styled-components';
+
+const ProjectElement = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 1rem;
+  z-index: 0;
+  max-width: 85%;
+  max-height: 70vh;
+  @media (max-width: 1400px) {
+    align-items: center;
+    height: auto;
+  }
+`;
+
+const ProjectInfo = styled.div`
+  background: #f0f0f0;
+  height: auto;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+      box-shadow: 0 10px 6px -6px #777;
+  & > * {
+    margin-left: 1rem;
+    text-align: left;
+  }
+  @media (max-width: 700px) {
+    width: 95%;
+  }
+`;
+
+const ProjectHeading = styled.h2`
+  @media (max-width: 700px) {
+    font-size: 1.2em;
+  }
+`;
+
+const ProjectDescription = styled.p`
+  word-spacing: 0.1em;
+  height: 12vh;
+  @media (max-width: 1000px) {
+    height: auto;
+  }
+  @media (max-width: 700px) {
+    font-size: 1.2em;
+  }
+`;
+
+const ProjectLinks = styled.div`
+  display: flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  margin: 0 0 1em 0;
+  & :hover{
+    background-color: rgb(250, 193, 87);
+    cursor: pointer;
+  }
+  @media (max-width: 1400px) {
+    align-items:center;
+  }
+  @media (max-width: 700px) {
+    font-size: 1rem;
+  }
+`;
+
+const LinkButton = styled.a`
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  text-decoration: none;
+  background-color:#0d1957;
+  border-radius: 8px;
+  padding: 0.4em;
+  color: white;
+`;
+
+const LinkText = styled.span`
+  margin-left: 0.3em;
+  font-size: 1.3rem;
+  @media (max-width: 700px) {
+    font-size: 1rem;
+  }
+`;
 
 const Project = ({ title, description, githubLink, projectImage, stack, deploymentLink }) => {
 
   return(
-      <div className = "project">
-          <Img
+      <ProjectElement>
+        <Img
           fluid = {projectImage[0].fluid}
           className = "project-img"
           loading = "lazy"
           alt = {title}
         />
-        <div className = 'project-info'>
-          <h2 className = 'project-heading'>{title}</h2>
-          <p className = 'project-desc'>{description}</p>
+        <ProjectInfo>
+          <ProjectHeading>{title}</ProjectHeading>
+          <ProjectDescription>{description}</ProjectDescription>
 
-          <div className =  'project-links'>
-            <a
+          <ProjectLinks>
+            <LinkButton
               href = {githubLink}
               target = '_blank'
               rel = 'noreferrer'
@@ -26,10 +109,10 @@ const Project = ({ title, description, githubLink, projectImage, stack, deployme
               className = "link-button"
             >
               <FaGithub className = 'project-icon'/>
-              <span className = 'link-text'>Github</span>
-            </a>
+              <LinkText>Github</LinkText>
+            </LinkButton>
             {deploymentLink &&
-              <a
+              <LinkButton
                 href = {deploymentLink}
                 target = '_blank'
                 rel = 'noreferrer'
@@ -37,12 +120,12 @@ const Project = ({ title, description, githubLink, projectImage, stack, deployme
                 className = "link-button"
               >
                 <FaExternalLinkAlt className = 'project-icon'/>
-                <span className = 'link-text'>Deployment</span>
-              </a>
+                <LinkText>Deployment</LinkText>
+              </LinkButton>
             }
-          </div>
-        </div>
-    </div>
+          </ProjectLinks>
+        </ProjectInfo>
+    </ProjectElement>
   );
 };
 

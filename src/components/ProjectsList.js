@@ -1,5 +1,30 @@
 import React from 'react';
 import Project from './Project.js';
+import styled from 'styled-components';
+
+const ProjectHeadline = styled.h1`
+  font-size: 2.5rem;
+  color: #595959;
+  text-align: center;
+  @media (max-width: 700px) {
+    font-size: 1.2em;
+  }
+`;
+
+const ProjectsCenter = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  @media (max-width: 1400px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 700px) {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`;
 
 const ProjectsList = ({ edges }) => {
 
@@ -8,10 +33,10 @@ const ProjectsList = ({ edges }) => {
       id = 'projects'
       aria-label = 'list of my showcase projects'
     >
-      <h1 className = 'project-headline'>
+      <ProjectHeadline>
           Featured Projects
-      </h1>
-      <div className = 'projects-center'>
+      </ProjectHeadline>
+      <ProjectsCenter>
         {edges.map(project => {
           const { node } = project
           return(
@@ -21,7 +46,7 @@ const ProjectsList = ({ edges }) => {
             />
           )
           })}
-      </div>
+      </ProjectsCenter>
     </section>
   );
 }

@@ -1,11 +1,3 @@
-:root {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(184, 91%, 17%);
-  --clr-primary-5: #2caeba;
-  /* darkest grey - used for headings */
-  --clr-grey-3: hsl(209, 34%, 30%);
-}
-
 /* Global Font & Color*/
 p, h1, h2, li, .socials, .link-button{
   font-family: 'Lato', sans-serif;
@@ -137,57 +129,9 @@ body {
 }
 
 /*** Projects Section ***/
-
-.project-headline{
-  font-size: 2.5rem;
-  color: #595959;
-  text-align: center;
-}
-
-.projects-center{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin: 1rem;
-  z-index: 0;
-  max-width: 85%;
-  max-height: 70vh;
-}
-
 .project-img {
   height: 65%;
   width: 100%;
-}
-
-.project-info {
-  background: #f0f0f0;
-  height: auto;
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
-       box-shadow: 0 10px 6px -6px #777;
-}
-
-.project-info > * {
-  margin-left: 1rem;
-  text-align: left;
-}
-
-.project-info h3 {
-  color: black !important;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-}
-
-.project-desc {
-  word-spacing: 0.1em;
-  height: 12vh;
 }
 
 .project-icon {
@@ -195,78 +139,9 @@ body {
   font-size: 1.8rem;
 }
 
-.project-links{
-  display: flex;
-  flex-direction:row;
-  justify-content: space-evenly;
-  margin: 0 0 1em 0;
-  & :hover{
-    background-color: rgb(250, 193, 87);
-    cursor: pointer;
-  }
-}
-
-.link-button{
-  display: flex;
-  flex-direction:row;
-  align-items:center;
-  text-decoration: none;
-  background-color:#0d1957;
-  border-radius: 8px;
-  padding: 0.4em;
-  color: white;
-}
-
-.link-text{
-  margin-left: 0.3em;
-  font-size: 1.3rem;
-}
-
-@media only screen and (max-width:1400px) {
-  .projects-center{
-    grid-template-columns: auto auto;
-  }
-
-  .project-headline{
-    text-align: center;
-    font-size: 2.5em;
-  }
-
-  .project{
-    align-items: center;
-    height: auto;
-  }
-
-  .project-links{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items:center;
-  }
-}
-
-@media only screen and (max-width:1000px) {
- .project-desc{
-   height: auto;
- }
-}
 
 @media only screen and (max-width:700px) {
-  .projects-center{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .project-heading, .project-desc{
-    font-size: 1.2em;
-  }
-
   .project-img, .project-info{
     width: 95%;
-  }
-
-  .link-text, .project-links{
-    font-size: 1rem;
   }
 }
