@@ -18,7 +18,7 @@ const siteQuery = graphql`
 const Seo = ({ title, description }) => {
 
   const {site} = useStaticQuery(siteQuery)
-  const {siteDesc, siteTitle, siteUrl} = site.siteMetadata;
+  const {siteDesc, siteTitle, siteUrl, twitterUsername} = site.siteMetadata;
 
   return (
     <Helmet htmlAttributes = {{lang: 'en'}} title = {`${title} | ${siteTitle}`}>
@@ -31,7 +31,7 @@ const Seo = ({ title, description }) => {
 
 
       <meta name="twitter:card" content="summary_large_image" />
-      {/* <meta name="twitter:creator" content={twitterUsername} /> */}
+      <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={siteDesc} />
     </Helmet>

@@ -146,8 +146,8 @@ body {
 
 .projects-center{
   display: grid;
-  grid-template-columns: auto auto auto;
-  height: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
 }
 
 .project {
@@ -156,7 +156,7 @@ body {
   position: relative;
   margin: 1rem;
   z-index: 0;
-  max-width: 90%;
+  max-width: 85%;
   max-height: 70vh;
 }
 
