@@ -55,10 +55,6 @@ const ProjectLinks = styled.div`
   flex-direction:row;
   justify-content: space-evenly;
   margin: 0 0 1em 0;
-  & :hover{
-    background-color: rgb(250, 193, 87);
-    cursor: pointer;
-  }
   @media (max-width: 1400px) {
     align-items:center;
   }
@@ -76,6 +72,11 @@ const LinkButton = styled.a`
   border-radius: 8px;
   padding: 0.4em;
   color: white;
+  & :hover{
+    background-color: rgb(250, 193, 87);
+    color: #000000;
+    cursor: pointer;
+  }
 `;
 
 const LinkText = styled.span`

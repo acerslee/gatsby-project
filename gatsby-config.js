@@ -25,12 +25,6 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-styled-components",
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "712",
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
