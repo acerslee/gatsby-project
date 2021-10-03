@@ -11,6 +11,10 @@ const ProjectsList = loadable(() => import('../components/ProjectsList.js'))
 const Footer = loadable(() => import('../components/Footer.js'))
 
 const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
   p, h1, h2, li, .socials, .link-button{
     font-family: 'Lato', sans-serif;
   }
@@ -33,13 +37,23 @@ const GlobalStyle = createGlobalStyle`
   .scroll-lock{
     position: fixed;
   }
+
+  header, section, footer {
+    scroll-snap-align: start;
+  }
+
+  .gatsby-container {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+  }
 `;
 
 export default function IndexPage ({ data }) {
   const {allContentfulProject:{edges}} = data;
 
   return (
-    <>
+    <div className = "gatsby-container">
       <GlobalStyle />
         <Seo title = 'Home'/>
         <Header />
@@ -48,7 +62,7 @@ export default function IndexPage ({ data }) {
         <hr style = {{ width: '70%' }}/>
         <ProjectsList edges = {edges} />
         <Footer />
-    </>
+    </div>
   )
 }
 

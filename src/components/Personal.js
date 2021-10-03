@@ -4,12 +4,8 @@ import { languageList } from '../data/data.js';
 import styled from 'styled-components';
 
 const AboutContainer = styled.section`
-  height: 100vh;
   margin: 0 auto 10vh auto;
   background-color: #0d1957;
-  @media(max-width: 1400px){
-    height: 100%;
-  }
 `;
 
 const Biography = styled.div`
@@ -82,7 +78,7 @@ const PersonalSection = () => {
         <AboutMe>
           <AboutParagraph>
             I've worked with multiple early-stage startups, and helped initialized applications.
-            I have built projects with Full Stack Javascript, and I have a desire to continously
+            I currently specialize in Fullstack Javascript, and I have a desire to continously
             learn new tools to improve my abilities as an engineer! Check out more of my contents below!
           </AboutParagraph>
           <AboutCaption>
