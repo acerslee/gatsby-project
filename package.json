@@ -15,7 +15,6 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@loadable/component": "^5.15.0",
     "@react-icons/all-files": "^4.1.0",
     "babel-plugin-styled-components": "^1.12.0",
     "browser-monads": "^1.0.0",
