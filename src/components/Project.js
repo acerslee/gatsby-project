@@ -3,6 +3,7 @@ import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import { FaExternalLinkAlt } from '@react-icons/all-files/fa/FaExternalLinkAlt'
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ProjectElement = styled.div`
   display: flex;
@@ -87,7 +88,16 @@ const LinkText = styled.span`
   }
 `;
 
-const Project = ({ title, description, githubLink, projectImage, stack, deploymentLink }) => {
+const Project = props => {
+
+  const {
+          title,
+          description,
+          githubLink,
+          projectImage,
+          deploymentLink
+        } = props
+
 
   return(
       <ProjectElement>
@@ -129,5 +139,13 @@ const Project = ({ title, description, githubLink, projectImage, stack, deployme
     </ProjectElement>
   );
 };
+
+Project.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  githubLink: PropTypes.string,
+  projectImage: PropTypes.string,
+  deploymentLink: PropTypes.string
+}
 
 export default Project;

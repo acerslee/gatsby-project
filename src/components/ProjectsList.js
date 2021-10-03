@@ -1,6 +1,7 @@
 import React from 'react';
 import Project from './Project.js';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ProjectHeadline = styled.h1`
   font-size: 2.5rem;
@@ -49,6 +50,10 @@ const ProjectsList = ({ edges }) => {
       </ProjectsCenter>
     </section>
   );
+}
+
+ProjectsList.propTypes = {
+  edges: PropTypes.array
 }
 
 export default ProjectsList;
