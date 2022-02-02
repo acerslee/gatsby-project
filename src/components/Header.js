@@ -10,21 +10,32 @@ import { UpArrow } from '../sc-elements/elemnets'
 
 const HeaderContainer = styled.header`
   background-color: #000000;
+  padding: 0.5rem 0;
   display:flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-around;
-  align-items: flex-end;
-  min-height: 3vh;
+  @media (max-width: 1024px){
+    padding: 0;
+  }
 `;
 
 const NavLink = styled.a`
-  text-decoration: none;
-  font-size: 1.5rem;
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  transition: text-decoration-color 500ms;
+  font-size: 1.7rem;
   color: #ffffff;
   &: hover{
-    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 1);
   }
   @media(max-width: 1024px){
-    font-size: 2.5rem;
+    font-size: 4rem;
+  }
+  @media(max-width: 711px){
+    font-size: 2rem;
+  }
+  @media(min-width: 1025px){
+    margin: 0 1.5rem;
   }
 `;
 
@@ -111,21 +122,19 @@ const Header = () => {
       </nav>
 
       {/* only show once screen size reaches a certain width */}
-      {!open &&
-        <FaBars
-          className = 'button-display'
-          style = {{ color: '#595959' }}
-          onClick = {showNav}
-          onKeyDown = {showNav}
-        />
-      }
-      {open &&
-        <FaTimes
-          className = 'button-display'
-          style = {{ color: 'white' }}
-          onClick = {showNav}
-          onKeyDown = {showNav}
-        />
+      {!open
+        ? <FaBars
+            className = 'button-display'
+            style = {{ color: '#ffffff' }}
+            onClick = {showNav}
+            onKeyDown = {showNav}
+          />
+        : <FaTimes
+            className = 'button-display'
+            style = {{ color: '#ffffff' }}
+            onClick = {showNav}
+            onKeyDown = {showNav}
+          />
       }
       <UpArrow
         className = 'scrollToTopButton'
