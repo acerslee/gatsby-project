@@ -12,6 +12,12 @@
   Gatsby minimal starter
 </h1>
 
+## Media Queries
+1. Mobile: <= 711px
+2. Tablet: 712 - 1024px
+3. Laptop: 1025 - 1440px
+4. Desktop: >= 1441px
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**

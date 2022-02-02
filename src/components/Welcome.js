@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const WelcomeContainer = styled.section`
-  color: hsl(0deg 0% 49%);
+  background-color: #000000;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +19,7 @@ const ContentContainer = styled.div`
 `;
 
 const IntroText = styled.p`
-  color: #0d1957;
+  font-family: 'Roboto Condensed';
   font-size: 2.5em;
   @media (max-width: 750px) {
     font-size: 1.3em;
@@ -26,6 +27,7 @@ const IntroText = styled.p`
 `;
 
 const NameSpan = styled.span`
+  font-weight: 700;
   font-size: 4em;
   @media (max-width: 1000px) {
     font-size: 2.5em;
@@ -33,6 +35,7 @@ const NameSpan = styled.span`
 `;
 
 const SubText = styled.p`
+  font-family: 'Roboto Condensed';
   font-size: 1.5em;
   @media (max-width: 750px) {
     font-size: 1.1em;
@@ -40,7 +43,7 @@ const SubText = styled.p`
 `;
 
 const Button = styled.button`
-
+  font-family: 'Roboto Condensed';
   background-color: hsl(230deg 50% 50% / 14%);
   border-color: transparent;
   padding: 0.2em 0;

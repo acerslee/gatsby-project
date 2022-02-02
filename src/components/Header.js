@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { listlinks } from '../data/data.js';
-import logo from '../data/images/alex-lee-logo-white-blackoutline.png';
-import { FaTimes } from '@react-icons/all-files/fa/FaTimes';
-import { FaBars } from '@react-icons/all-files/fa/FaBars';
-import PDF from '../static/AlexLee_SWE_Resume.pdf';
-import styled from 'styled-components';
-import { document } from 'browser-monads';
-import { UpArrow } from '../sc-elements/elemnets';
+import React, { useState, useEffect } from 'react'
+import { listlinks } from '../data/data.js'
+import logo from '../data/images/alex-lee-logo-white-blackoutline.png'
+import { FaTimes } from '@react-icons/all-files/fa/FaTimes'
+import { FaBars } from '@react-icons/all-files/fa/FaBars'
+import PDF from '../static/AlexLee_SWE_Resume.pdf'
+import styled from 'styled-components'
+import { document } from 'browser-monads'
+import { UpArrow } from '../sc-elements/elemnets'
 
 const HeaderContainer = styled.header`
+  background-color: #000000;
   display:flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -17,14 +18,12 @@ const HeaderContainer = styled.header`
 
 const NavLink = styled.a`
   text-decoration: none;
-  font-family: 'Courier New', Courier, monospace;
   font-size: 1.5rem;
-  color: #595959;
+  color: #ffffff;
   &: hover{
-    color: rgb(250, 193, 87);
+    text-decoration: underline;
   }
-  @media(max-width: 1000px){
-    color: #FFFFFF;
+  @media(max-width: 1024px){
     font-size: 2.5rem;
   }
 `;
@@ -39,7 +38,7 @@ const Header = () => {
 
     nav.classList.toggle('nav-active');
     navList.classList.toggle('navItem-reveal')
-    if (window.innerWidth < 1000) document.body.classList.toggle('scroll-lock');
+    if (window.innerWidth <= 1024) document.body.classList.toggle('scroll-lock');
   };
 
   const links = listlinks.map((link, index) => {

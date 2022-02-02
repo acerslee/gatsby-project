@@ -3,7 +3,6 @@ if (process.env.NODE_ENV !== 'production') dotenv.config()
 
 module.exports = {
   flags:{
-    DEV_SSR: true,
     FAST_DEV: true,
     PARALLEL_SOURCING: true,
     PRESERVE_WEBPACK_CACHE: true
@@ -24,6 +23,37 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-sass",
     "gatsby-plugin-styled-components",
+    {
+      resolve: "gatsby-plugin-prettier-eslint",
+      options: {
+        prettier: {
+          patterns: [
+            "**/*.{css,scss,less}",
+            "**/*.{json,json5}",
+            "**/*.{graphql}",
+            "**/*.{md,mdx}",
+            "**/*.{html}",
+            "**/*.{yaml,yml}",
+          ]
+        }
+      },
+      eslint: {
+        patterns: "**/*.{js,jsx,ts,tsx}",
+          customOptions: {
+            fix: true,
+            cache: true,
+          },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `roboto condensed\:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

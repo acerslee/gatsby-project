@@ -19,10 +19,11 @@
     "babel-plugin-styled-components": "^1.12.0",
     "browser-monads": "^1.0.0",
     "dotenv": "^8.6.0",
-    "gatsby": "^3.2.1",
+    "gatsby": "^4.6.0",
     "gatsby-image": "^3.2.0",
-    "gatsby-plugin-gatsby-cloud": "^2.1.0",
+    "gatsby-plugin-gatsby-cloud": "^4.7.0-next.2",
     "gatsby-plugin-google-analytics": "^3.1.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^1.1.2",
     "gatsby-plugin-jss": "^3.14.0",
     "gatsby-plugin-layout": "^2.3.0",
@@ -42,5 +43,12 @@
     "react-helmet": "^6.1.0",
     "sass": "^1.32.8",
     "styled-components": "^5.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.28.0",
+    "gatsby-plugin-prettier-eslint": "^1.0.6",
+    "prettier": "^2.5.1"
   }
 }

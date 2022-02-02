@@ -15,11 +15,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p, h1, h2, li, .socials, .link-button{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Condensed';
+    font-weight: 400;
   }
 
   h3 {
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Roboto Condensed';
+    font-weight: 700;
     color: #595959;
   }
 
@@ -46,11 +48,11 @@ export default function IndexPage ({ data }) {
       <GlobalStyle />
         <Seo title = 'Home'/>
         <Header />
-        <Welcome />
+        {/* <Welcome />
         <PersonalSection />
         <hr style = {{ width: '70%' }}/>
         <ProjectsList edges = {edges} />
-        <Footer />
+        <Footer /> */}
     </>
   )
 }

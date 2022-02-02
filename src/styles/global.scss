@@ -1,4 +1,4 @@
-@media screen and (min-width: 1001px){
+@media screen and (min-width: 1025px){
   .nav-list{
     display: flex;
     justify-content: space-around;
@@ -17,7 +17,7 @@
   visibility: visible !important;
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1024px){
   nav{
     position:absolute;
     z-index:2;
@@ -25,7 +25,7 @@
     right: 0;
     bottom: 0;
     top:0;
-    background-color:#0d1957;
+    background-color:#000000;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -78,7 +78,7 @@
   width: 50vw;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .portrait-image{
     margin-top: 5vh;
     height: 40rem;
@@ -86,7 +86,7 @@
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 711px) {
   .portrait-image{
     height: 20rem;
     width: 20rem;
@@ -116,7 +116,7 @@
 }
 
 
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:711px) {
   .project-img, .project-info{
     width: 95%;
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
+import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import { FaEnvelope } from '@react-icons/all-files/fa/FaEnvelope';
 
@@ -12,6 +12,7 @@ export const languageList = [
   'SQL (MySQL, PostgreSQL)',
   'MongoDB (Mongoose)',
   'Front-end Tools (React, Redux, Next)',
+  'React Native',
   'Deployment Tools (Firebase, Netlify, Heroku)'
 ];
 
@@ -33,7 +34,7 @@ export const listlinks = [
 export const data = [
   {
     href: 'https://www.linkedin.com/in/alexanderhjlee',
-    icon: <FaLinkedin className = 'socials' aria-label = 'Linked In'/>
+    icon: <FaLinkedin className = 'socials' aria-label = 'LinkedIn'/>
   },
   {
     href: 'https://github.com/acerslee',
