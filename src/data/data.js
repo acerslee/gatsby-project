@@ -7,7 +7,7 @@ export const languageList = [
   'HTML5 & CSS3',
   'Javascript (Vanilla, ES6+)',
   'Typescript',
-  'Styling (TailwindCSS, Styled Components)',
+  'Styling (Bootstrap, Tailwind, Styled Components)',
   'Node.js & Express',
   'SQL (MySQL, PostgreSQL)',
   'MongoDB (Mongoose)',

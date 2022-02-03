@@ -1,25 +1,29 @@
-import React from 'react';
-import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
+import React, { useState } from 'react'
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { FaExternalLinkAlt } from '@react-icons/all-files/fa/FaExternalLinkAlt'
-import Img from 'gatsby-image';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+
+import ProjectBackSide from './ProjectBackSide'
 
 const ProjectElement = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   margin: 1rem;
-  z-index: 0;
-  max-width: 85%;
   max-height: 70vh;
-  @media (max-width: 1400px) {
+  @media (max-width: 1440px) {
     align-items: center;
     height: auto;
+  }
+  @media (max-width: 711px) {
+    width: 100%;
   }
 `;
 
 const ProjectInfo = styled.div`
+  width: 100%;
   background: #f0f0f0;
   height: auto;
   -webkit-box-shadow: 0 10px 6px -6px #777;
@@ -29,13 +33,14 @@ const ProjectInfo = styled.div`
     margin-left: 1rem;
     text-align: left;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 711px) {
     width: 95%;
   }
 `;
 
 const ProjectHeading = styled.h2`
-  @media (max-width: 700px) {
+  text-align: center;
+  @media (max-width: 711px) {
     font-size: 1.2em;
   }
 `;
@@ -43,10 +48,10 @@ const ProjectHeading = styled.h2`
 const ProjectDescription = styled.p`
   word-spacing: 0.1em;
   height: 12vh;
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     height: auto;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 711px) {
     font-size: 1.2em;
   }
 `;
@@ -56,10 +61,10 @@ const ProjectLinks = styled.div`
   flex-direction:row;
   justify-content: space-evenly;
   margin: 0 0 1em 0;
-  @media (max-width: 1400px) {
+  @media (max-width: 1440px) {
     align-items:center;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 711px) {
     font-size: 1rem;
   }
 `;
@@ -83,7 +88,7 @@ const LinkButton = styled.a`
 const LinkText = styled.span`
   margin-left: 0.3em;
   font-size: 1.3rem;
-  @media (max-width: 700px) {
+  @media (max-width: 711px) {
     font-size: 1rem;
   }
 `;
@@ -98,20 +103,35 @@ const Project = props => {
           deploymentLink
         } = props
 
+  const [ isFlipped, setIsFlipped ] = useState(false)
+
+  console.log(isFlipped)
 
   return(
-      <ProjectElement>
+      <ProjectElement
+        onClick={() => setIsFlipped(!isFlipped)}
+      >
         <Img
           fluid = {projectImage[0].fluid}
           className = "project-img"
           loading = "lazy"
           alt = {title}
         />
+        {isFlipped &&
+          <ProjectBackSide
+            title={title}
+            description={description}
+            githubLink={githubLink}
+            deploymentLink={deploymentLink}
+          />
+        }
         <ProjectInfo>
-          <ProjectHeading>{title}</ProjectHeading>
-          <ProjectDescription>{description}</ProjectDescription>
+          <ProjectHeading>
+            {title}
+          </ProjectHeading>
+          {/* <ProjectDescription>{description}</ProjectDescription> */}
 
-          <ProjectLinks>
+          {/* <ProjectLinks>
             <LinkButton
               href = {githubLink}
               target = '_blank'
@@ -134,7 +154,7 @@ const Project = props => {
                 <LinkText>Deployment</LinkText>
               </LinkButton>
             }
-          </ProjectLinks>
+          </ProjectLinks> */}
         </ProjectInfo>
     </ProjectElement>
   );
@@ -148,4 +168,4 @@ Project.propTypes = {
   deploymentLink: PropTypes.string
 }
 
-export default Project;
+export default Project

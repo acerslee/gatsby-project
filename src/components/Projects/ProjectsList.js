@@ -7,7 +7,7 @@ const ProjectHeadline = styled.h1`
   font-size: 2.5rem;
   color: #595959;
   text-align: center;
-  @media (max-width: 700px) {
+  @media (max-width: 711px) {
     font-size: 1.2em;
   }
 `;
@@ -16,10 +16,10 @@ const ProjectsCenter = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  @media (max-width: 1400px) {
+  @media (max-width: 1440px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 711px) {
     display:flex;
     flex-direction: column;
     justify-content: center;

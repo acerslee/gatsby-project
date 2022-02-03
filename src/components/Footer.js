@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const date = new Date().getFullYear();
 
 const FooterContainer = styled.footer`
-  background-color: #0d1957;
+  background-color: #000000;
   padding: 1rem 0;
   display: flex;
   justify-content: center;

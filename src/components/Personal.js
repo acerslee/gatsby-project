@@ -1,18 +1,18 @@
-import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import { languageList } from '../data/data.js';
-import styled from 'styled-components';
+import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
+import { languageList } from '../data/data.js'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const AboutContainer = styled.section`
-  margin: 0 auto 10vh auto;
-  background-color: #0d1957;
+  background-color: rgb(254 68 69);
 `;
 
 const Biography = styled.div`
   color: #edede8;
   display: flex;
   flex-direction: row;
-  @media(max-width: 1400px){
+  @media(max-width: 1440px){
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -26,7 +26,7 @@ const AboutMe = styled.div`
   flex-direction: column;
   justify-content: center;
   font-size: 2.3em;
-  @media(max-width: 1400px){
+  @media(max-width: 1440px){
     text-align: center;
     width: 82%;
     margin: 0 auto;
@@ -58,10 +58,10 @@ const LanguageList = styled.ul`
 `;
 
 const list = languageList.map((language, index) => {
-  return <li key = {index}>{language}</li>
-});
+  return <li key={index}>{language}</li>
+})
 
-const PersonalSection = () => {
+const PersonalSection = ({ node }) => {
 
   return(
     <AboutContainer
@@ -77,9 +77,7 @@ const PersonalSection = () => {
         />
         <AboutMe>
           <AboutParagraph>
-            I've worked with multiple early-stage startups, and helped initialized applications.
-            I currently specialize in Fullstack Javascript, and I have a desire to continously
-            learn new tools to improve my abilities as an engineer! Check out more of my contents below!
+            {node.node.about.about}
           </AboutParagraph>
           <AboutCaption>
             Experienced with the following:
@@ -93,4 +91,8 @@ const PersonalSection = () => {
   );
 };
 
-export default PersonalSection;
+PersonalSection.propTypes = {
+  node: PropTypes.object
+}
+
+export default PersonalSection

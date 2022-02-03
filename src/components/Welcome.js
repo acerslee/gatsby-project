@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const WelcomeContainer = styled.section`
   background-color: #000000;
@@ -8,7 +9,7 @@ const WelcomeContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   height: 80vh;
-  @media(max-width: 750px){
+  @media(max-width: 711px){
     height: 65vh;
   }
 `;
@@ -19,9 +20,8 @@ const ContentContainer = styled.div`
 `;
 
 const IntroText = styled.p`
-  font-family: 'Roboto Condensed';
   font-size: 2.5em;
-  @media (max-width: 750px) {
+  @media (max-width: 711px) {
     font-size: 1.3em;
   }
 `;
@@ -29,43 +29,40 @@ const IntroText = styled.p`
 const NameSpan = styled.span`
   font-weight: 700;
   font-size: 4em;
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     font-size: 2.5em;
   }
 `;
 
 const SubText = styled.p`
-  font-family: 'Roboto Condensed';
   font-size: 1.5em;
-  @media (max-width: 750px) {
+  @media (max-width: 711px) {
     font-size: 1.1em;
   }
 `;
 
 const Button = styled.button`
-  font-family: 'Roboto Condensed';
-  background-color: hsl(230deg 50% 50% / 14%);
+  background-color: rgb(254 68 69);
+  transition: background-color 500ms;
   border-color: transparent;
-  padding: 0.2em 0;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
-  font-size: 2em;
-  width: 30%;
+  font-size: 1.5rem;
   &: hover {
     cursor: pointer;
-    background-color: hsl(230deg 78% 36% / 14%);
+    background-color: rgb(174 67 67);
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     width: 100%;
   }
 `;
 
 const ContactLink = styled.a`
   text-decoration: none;
-  color: hsl(209, 34%, 14%);
+  color: #ffffff;
 `;
 
-const Welcome = () => {
-
+const Welcome = ({ node }) => {
   return(
     <WelcomeContainer
       id= 'welcome-section'
@@ -76,12 +73,12 @@ const Welcome = () => {
           <br />
           <NameSpan>Alex Lee</NameSpan>
         </IntroText>
-        <SubText>I'm a Software Engineer based out of New York City. I have an interest for Web Development, but I am always willing to explore
-          the limitless opportunities within engineering.
+        <SubText>
+          {node.node.subtext}
         </SubText>
         <Button>
           <ContactLink href = '#contact'>
-            Contact Me
+            CONTACT
           </ContactLink>
         </Button>
       </ContentContainer>
@@ -89,4 +86,8 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+Welcome.propTypes = {
+  node: PropTypes.object
+}
+
+export default Welcome

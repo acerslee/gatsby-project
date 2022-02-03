@@ -41,18 +41,22 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default function IndexPage ({ data }) {
-  const {allContentfulProject:{edges}} = data;
+  const {
+    allContentfulProject,
+    allContentfulPersonal,
+    allContentfulWelcomeSection,
+  }  = data;
 
   return (
     <>
       <GlobalStyle />
         <Seo title = 'Home'/>
         <Header />
-        {/* <Welcome />
-        <PersonalSection />
-        <hr style = {{ width: '70%' }}/>
-        <ProjectsList edges = {edges} />
-        <Footer /> */}
+        {/* <Welcome node={allContentfulWelcomeSection.edges[0]} /> */}
+        {/* <PersonalSection node={allContentfulPersonal.edges[0]} /> */}
+        {/* <hr style = {{ width: '70%' }}/> */}
+        <ProjectsList edges = {allContentfulProject.edges} />
+        {/* <Footer /> */}
     </>
   )
 }
@@ -72,6 +76,22 @@ export const query = graphql`
           stack
           githubLink
           deploymentLink
+        }
+      }
+    }
+    allContentfulPersonal {
+      edges {
+        node {
+          about {
+            about
+          }
+        }
+      }
+    }
+    allContentfulWelcomeSection {
+      edges {
+        node {
+          subtext
         }
       }
     }
