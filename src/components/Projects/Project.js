@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
-import { FaExternalLinkAlt } from '@react-icons/all-files/fa/FaExternalLinkAlt'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
@@ -20,7 +18,7 @@ const ProjectElement = styled.div`
   @media (max-width: 711px) {
     width: 100%;
   }
-`;
+`
 
 const ProjectInfo = styled.div`
   width: 100%;
@@ -36,65 +34,16 @@ const ProjectInfo = styled.div`
   @media (max-width: 711px) {
     width: 95%;
   }
-`;
+`
 
-const ProjectHeading = styled.h2`
+const ProjectHeading = styled.h3`
   text-align: center;
   @media (max-width: 711px) {
     font-size: 1.2em;
   }
-`;
-
-const ProjectDescription = styled.p`
-  word-spacing: 0.1em;
-  height: 12vh;
-  @media (max-width: 1024px) {
-    height: auto;
-  }
-  @media (max-width: 711px) {
-    font-size: 1.2em;
-  }
-`;
-
-const ProjectLinks = styled.div`
-  display: flex;
-  flex-direction:row;
-  justify-content: space-evenly;
-  margin: 0 0 1em 0;
-  @media (max-width: 1440px) {
-    align-items:center;
-  }
-  @media (max-width: 711px) {
-    font-size: 1rem;
-  }
-`;
-
-const LinkButton = styled.a`
-  display: flex;
-  flex-direction:row;
-  align-items:center;
-  text-decoration: none;
-  background-color:#0d1957;
-  border-radius: 8px;
-  padding: 0.4em;
-  color: white;
-  & :hover{
-    background-color: rgb(250, 193, 87);
-    color: #000000;
-    cursor: pointer;
-  }
-`;
-
-const LinkText = styled.span`
-  margin-left: 0.3em;
-  font-size: 1.3rem;
-  @media (max-width: 711px) {
-    font-size: 1rem;
-  }
-`;
+`
 
 const Project = props => {
-
   const {
           title,
           description,
@@ -104,8 +53,6 @@ const Project = props => {
         } = props
 
   const [ isFlipped, setIsFlipped ] = useState(false)
-
-  console.log(isFlipped)
 
   return(
       <ProjectElement
@@ -129,42 +76,16 @@ const Project = props => {
           <ProjectHeading>
             {title}
           </ProjectHeading>
-          {/* <ProjectDescription>{description}</ProjectDescription> */}
-
-          {/* <ProjectLinks>
-            <LinkButton
-              href = {githubLink}
-              target = '_blank'
-              rel = 'noreferrer'
-              aria-label = 'Github'
-              className = "link-button"
-            >
-              <FaGithub className = 'project-icon'/>
-              <LinkText>Github</LinkText>
-            </LinkButton>
-            {deploymentLink &&
-              <LinkButton
-                href = {deploymentLink}
-                target = '_blank'
-                rel = 'noreferrer'
-                aria-label = 'External Link'
-                className = "link-button"
-              >
-                <FaExternalLinkAlt className = 'project-icon'/>
-                <LinkText>Deployment</LinkText>
-              </LinkButton>
-            }
-          </ProjectLinks> */}
         </ProjectInfo>
     </ProjectElement>
-  );
-};
+  )
+}
 
 Project.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   githubLink: PropTypes.string,
-  projectImage: PropTypes.string,
+  projectImage: PropTypes.array,
   deploymentLink: PropTypes.string
 }
 

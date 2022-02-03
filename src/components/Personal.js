@@ -34,25 +34,25 @@ const AboutMe = styled.div`
 `;
 
 const AboutParagraph = styled.p`
-  @media(max-width: 700px){
+  @media(max-width: 711px){
     font-size: 4vw;
   }
 `;
 
 const AboutCaption = styled.p`
   font-weight: bold;
-  @media(max-width: 700px){
+  @media(max-width: 711px){
     font-size: 5vw;
   }
 `;
 
 const LanguageList = styled.ul`
-  @media (max-width: 1400px){
+  @media (max-width: 1440px){
     padding-left: 0;
     list-style: none;
   }
 
-  @media (max-width: 700px){
+  @media (max-width: 711px){
     font-size: 4vw;
   }
 `;

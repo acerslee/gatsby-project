@@ -9,7 +9,7 @@ const FooterContainer = styled.footer`
   padding: 1rem 0;
   display: flex;
   justify-content: center;
-  @media(max-width: 700px){
+  @media(max-width: 711px){
     padding: 0
   }
 `;
@@ -20,7 +20,7 @@ const MiniContainer = styled.div`
   flex-direction: row;
   align-items:center;
   justify-content: space-between;
-  @media(max-width: 700px){
+  @media(max-width: 711px){
     flex-direction: column-reverse;
   }
 `
@@ -28,21 +28,21 @@ const FooterLinks = styled.div`
   width: 25%;
   display: flex;
   justify-content: space-evenly;
-  @media(max-width: 1200px){
+  @media(max-width: 1024px){
     width: 40%;
   };
-  @media(max-width: 700px){
+  @media(max-width: 711px){
     width: 80%;
     padding-top: 1em;
   };
 `;
 
 const Copyright = styled.h3`
-  font-size: 1.6vh;
+  font-size: 1rem;
   text-align: left;
   color: #edede8;
-  @media(max-width: 700px){
-    font-size: 1.1vh;
+  @media(max-width: 711px){
+    font-size: 0.7rem;
   }
 `;
 

@@ -10,15 +10,15 @@ const ProjectInfo = styled.article`
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(240, 240, 240,0.75);
+  background: rgba(240, 240, 240,0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const ProjectDescription = styled.p`
-  margin: 0 1rem;
+  margin: 1rem;
   font-size: 2rem;
-  @media (max-width: 711px) {
-    font-size: 1.2em;
-  }
 `
 
 const ProjectLinks = styled.div`
@@ -39,13 +39,13 @@ const LinkButton = styled.a`
   flex-direction:row;
   align-items:center;
   text-decoration: none;
-  background-color:#0d1957;
+  background-color: rgb(254 68 69);
+  transition: background-color 500ms;
   border-radius: 8px;
   padding: 0.4em;
   color: white;
   & :hover{
-    background-color: rgb(250, 193, 87);
-    color: #000000;
+    background-color: rgb(174 67 67);
     cursor: pointer;
   }
 `

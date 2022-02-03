@@ -52,11 +52,10 @@ export default function IndexPage ({ data }) {
       <GlobalStyle />
         <Seo title = 'Home'/>
         <Header />
-        {/* <Welcome node={allContentfulWelcomeSection.edges[0]} /> */}
-        {/* <PersonalSection node={allContentfulPersonal.edges[0]} /> */}
-        {/* <hr style = {{ width: '70%' }}/> */}
+        <Welcome node={allContentfulWelcomeSection.edges[0]} />
+        <PersonalSection node={allContentfulPersonal.edges[0]} />
         <ProjectsList edges = {allContentfulProject.edges} />
-        {/* <Footer /> */}
+        <Footer />
     </>
   )
 }
