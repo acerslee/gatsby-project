@@ -19,7 +19,7 @@
     "babel-plugin-styled-components": "^1.12.0",
     "browser-monads": "^1.0.0",
     "dotenv": "^8.6.0",
-    "gatsby": "^4.6.0",
+    "gatsby": "^4.6.1",
     "gatsby-image": "^3.2.0",
     "gatsby-plugin-gatsby-cloud": "^4.7.0-next.2",
     "gatsby-plugin-google-analytics": "^3.1.0",
