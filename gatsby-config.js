@@ -5,7 +5,6 @@ module.exports = {
   flags:{
     FAST_DEV: true,
     PARALLEL_SOURCING: true,
-    PRESERVE_WEBPACK_CACHE: true
   },
   siteMetadata: {
     title: "Alex Lee Portfolio",
@@ -15,7 +14,6 @@ module.exports = {
     twitterUsername: "@acerslee"
   },
   plugins: [
-    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
@@ -26,6 +24,11 @@ module.exports = {
     {
       resolve: "gatsby-plugin-prettier-eslint",
       options: {
+        watch: true,
+        initialScan: true,
+        onChangeFullScanLint: true,
+        onChangeFullScanFormat: true,
+        prettierLast: false,
         prettier: {
           patterns: [
             "**/*.{css,scss,less}",
@@ -34,15 +37,23 @@ module.exports = {
             "**/*.{md,mdx}",
             "**/*.{html}",
             "**/*.{yaml,yml}",
-          ]
+          ],
+          customOptions: {
+            tabWidth: 2,
+            semi: false,
+            singleQuote: true,
+            bracketSpacing: true,
+          }
         }
       },
       eslint: {
         patterns: "**/*.{js,jsx,ts,tsx}",
-          customOptions: {
-            fix: true,
-            cache: true,
-          },
+        customOptions: {
+          emitWarning: true,
+          failOnWarning: true,
+          fix: true,
+          cache: true,
+        },
       },
     },
     {

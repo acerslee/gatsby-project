@@ -36,7 +36,7 @@ const ProjectInfo = styled.div`
   }
 `
 
-const ProjectHeading = styled.h3`
+const ProjectHeading = styled.h2`
   text-align: center;
   @media (max-width: 711px) {
     font-size: 1.2em;

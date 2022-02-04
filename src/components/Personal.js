@@ -26,6 +26,7 @@ const AboutMe = styled.div`
   flex-direction: column;
   justify-content: center;
   font-size: 2.3em;
+  color: #232322;
   @media(max-width: 1440px){
     text-align: center;
     width: 82%;
