@@ -22,41 +22,6 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-styled-components",
     {
-      resolve: "gatsby-plugin-prettier-eslint",
-      options: {
-        watch: true,
-        initialScan: true,
-        onChangeFullScanLint: true,
-        onChangeFullScanFormat: true,
-        prettierLast: false,
-        prettier: {
-          patterns: [
-            "**/*.{css,scss,less}",
-            "**/*.{json,json5}",
-            "**/*.{graphql}",
-            "**/*.{md,mdx}",
-            "**/*.{html}",
-            "**/*.{yaml,yml}",
-          ],
-          customOptions: {
-            tabWidth: 2,
-            semi: false,
-            singleQuote: true,
-            bracketSpacing: true,
-          }
-        }
-      },
-      eslint: {
-        patterns: "**/*.{js,jsx,ts,tsx}",
-        customOptions: {
-          emitWarning: true,
-          failOnWarning: true,
-          fix: true,
-          cache: true,
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
