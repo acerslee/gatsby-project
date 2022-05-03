@@ -1,13 +1,14 @@
-import * as React from "react";
-import { graphql } from 'gatsby';
-import { Seo,
-         Header,
-         Welcome,
-         PersonalSection,
-         ProjectsList,
-         Footer
-        } from '../components/index';
-import { createGlobalStyle } from 'styled-components';
+import * as React from "react"
+import { graphql } from "gatsby"
+import {
+  Seo,
+  Header,
+  Welcome,
+  PersonalSection,
+  ProjectsList,
+  Footer,
+} from "../components/index"
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -38,24 +39,25 @@ const GlobalStyle = createGlobalStyle`
   .scroll-lock{
     position: fixed;
   }
-`;
+`
 
-export default function IndexPage ({ data }) {
+export default function IndexPage({ data }) {
   const {
     allContentfulProject,
     allContentfulPersonal,
     allContentfulWelcomeSection,
-  }  = data;
+    allContentfulResume,
+  } = data
 
   return (
     <>
       <GlobalStyle />
-        <Seo title = 'Home'/>
-        <Header />
-        <Welcome node={allContentfulWelcomeSection.edges[0]} />
-        <PersonalSection node={allContentfulPersonal.edges[0]} />
-        <ProjectsList edges = {allContentfulProject.edges} />
-        <Footer />
+      <Seo title="Home" />
+      <Header node={allContentfulResume.edges[0]} />
+      <Welcome node={allContentfulWelcomeSection.edges[0]} />
+      <PersonalSection node={allContentfulPersonal.edges[0]} />
+      <ProjectsList edges={allContentfulProject.edges} />
+      <Footer />
     </>
   )
 }
@@ -91,6 +93,17 @@ export const query = graphql`
       edges {
         node {
           subtext
+        }
+      }
+    }
+    allContentfulResume {
+      edges {
+        node {
+          resume {
+            file {
+              url
+            }
+          }
         }
       }
     }
