@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
+import React from "react"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
 
 const siteQuery = graphql`
   {
@@ -17,18 +17,26 @@ const siteQuery = graphql`
   }
 `
 const Seo = ({ title, description }) => {
-
-  const {site} = useStaticQuery(siteQuery)
-  const {siteDesc, siteTitle, siteUrl, twitterUsername} = site.siteMetadata;
+  const { site } = useStaticQuery(siteQuery)
+  const { siteDesc, siteTitle, siteUrl, twitterUsername } = site.siteMetadata
 
   return (
-    <Helmet htmlAttributes = {{lang: 'en'}} title = {`${title} | ${siteTitle}`}>
-      <meta name = 'viewpoint' content = 'width=device-width-scale=1,maximum-scale=1, user-scalable=no' />
-      <meta name = 'description' content = {description || siteDesc} />
+    <Helmet htmlAttributes={{ lang: "en" }} title={`${title} | ${siteTitle}`}>
+      <meta
+        name="viewpoint"
+        content="width=device-width-scale=1,maximum-scale=1, user-scalable=no"
+      />
+      <meta name="description" content={description || siteDesc} />
       <meta name="HandheldFriendly" content="true"></meta>
-      <meta property = 'og:url' content = {siteUrl} />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap" />
-      <link rel="apple-touch-icon" href="../data/images/favicon/apple-touch-icon.png" />
+      <meta property="og:url" content={siteUrl} />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      />
+      <link
+        rel="apple-touch-icon"
+        href="../data/images/favicon/apple-touch-icon.png"
+      />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />
@@ -36,11 +44,11 @@ const Seo = ({ title, description }) => {
       <meta name="twitter:description" content={siteDesc} />
     </Helmet>
   )
-};
+}
 
 Seo.propTypes = {
   title: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
 }
 
 export default Seo

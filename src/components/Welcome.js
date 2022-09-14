@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react"
+import styled from "styled-components"
+import PropTypes from "prop-types"
 
 const WelcomeContainer = styled.section`
   background-color: #000000;
@@ -9,22 +9,22 @@ const WelcomeContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   height: 80vh;
-  @media(max-width: 711px){
+  @media (max-width: 711px) {
     height: 65vh;
   }
-`;
+`
 
 const ContentContainer = styled.div`
   width: 65%;
   margin: 0 auto;
-`;
+`
 
 const IntroText = styled.p`
   font-size: 2.5em;
   @media (max-width: 711px) {
     font-size: 1.3em;
   }
-`;
+`
 
 const NameSpan = styled.span`
   font-weight: 700;
@@ -32,14 +32,14 @@ const NameSpan = styled.span`
   @media (max-width: 1024px) {
     font-size: 2.5em;
   }
-`;
+`
 
 const SubText = styled.p`
   font-size: 1.5em;
   @media (max-width: 711px) {
     font-size: 1.1em;
   }
-`;
+`
 
 const Button = styled.button`
   background-color: rgb(254 68 69);
@@ -55,39 +55,36 @@ const Button = styled.button`
   @media (max-width: 1024px) {
     width: 100%;
   }
-`;
+`
 
 const ContactLink = styled.a`
   text-decoration: none;
   color: #ffffff;
-`;
+`
 
 const Welcome = ({ node }) => {
-  return(
+  return (
     <WelcomeContainer
-      id= 'welcome-section'
-      aria-label = 'intro to give webpage a pop'
+      id="welcome-section"
+      aria-label="intro to give webpage a pop"
     >
       <ContentContainer>
-        <IntroText>Hello World! My name is
+        <IntroText>
+          Hello World! My name is
           <br />
           <NameSpan>Alex Lee</NameSpan>
         </IntroText>
-        <SubText>
-          {node.node.subtext}
-        </SubText>
+        <SubText>{node.node.subtext}</SubText>
         <Button>
-          <ContactLink href = '#contact'>
-            CONTACT
-          </ContactLink>
+          <ContactLink href="#contact">CONTACT</ContactLink>
         </Button>
       </ContentContainer>
     </WelcomeContainer>
-  );
-};
+  )
+}
 
 Welcome.propTypes = {
-  node: PropTypes.object
+  node: PropTypes.object,
 }
 
 export default Welcome
