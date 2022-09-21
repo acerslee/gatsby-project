@@ -13,7 +13,7 @@ export const languageList = [
   "MongoDB (Mongoose)",
   "Front-end Tools (React, Redux, Next)",
   "React Native",
-  "Deployment Tools (Firebase, Netlify, Heroku)",
+  "Testing (Testing Library, Jest)",
 ]
 
 export const listlinks = [

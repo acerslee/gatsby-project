@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React, { useState } from "react"
+import Img from "gatsby-image"
+import styled from "styled-components"
+import PropTypes from "prop-types"
 
-import ProjectBackSide from './ProjectBackSide'
+import ProjectBackSide from "./ProjectBackSide"
 
 const ProjectElement = styled.div`
   position: relative;
@@ -26,7 +26,7 @@ const ProjectInfo = styled.div`
   height: auto;
   -webkit-box-shadow: 0 10px 6px -6px #777;
   -moz-box-shadow: 0 10px 6px -6px #777;
-      box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
   & > * {
     margin-left: 1rem;
     text-align: left;
@@ -43,40 +43,30 @@ const ProjectHeading = styled.h2`
   }
 `
 
-const Project = props => {
-  const {
-          title,
-          description,
-          githubLink,
-          projectImage,
-          deploymentLink
-        } = props
+const Project = (props) => {
+  const { title, description, githubLink, projectImage, deploymentLink } = props
 
-  const [ isFlipped, setIsFlipped ] = useState(false)
+  const [isFlipped, setIsFlipped] = useState(false)
 
-  return(
-      <ProjectElement
-        onClick={() => setIsFlipped(!isFlipped)}
-      >
-        <Img
-          fluid = {projectImage[0].fluid}
-          className = "project-img"
-          loading = "lazy"
-          alt = {title}
+  return (
+    <ProjectElement onClick={() => setIsFlipped(!isFlipped)}>
+      <Img
+        fluid={projectImage[0].fluid}
+        className="project-img"
+        loading="lazy"
+        alt={title}
+      />
+      {isFlipped && (
+        <ProjectBackSide
+          title={title}
+          description={description}
+          githubLink={githubLink}
+          deploymentLink={deploymentLink}
         />
-        {isFlipped &&
-          <ProjectBackSide
-            title={title}
-            description={description}
-            githubLink={githubLink}
-            deploymentLink={deploymentLink}
-          />
-        }
-        <ProjectInfo>
-          <ProjectHeading>
-            {title}
-          </ProjectHeading>
-        </ProjectInfo>
+      )}
+      <ProjectInfo>
+        <ProjectHeading>{title}</ProjectHeading>
+      </ProjectInfo>
     </ProjectElement>
   )
 }
@@ -86,7 +76,7 @@ Project.propTypes = {
   description: PropTypes.string,
   githubLink: PropTypes.string,
   projectImage: PropTypes.array,
-  deploymentLink: PropTypes.string
+  deploymentLink: PropTypes.string,
 }
 
 export default Project
